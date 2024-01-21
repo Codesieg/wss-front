@@ -83,7 +83,7 @@ const Games = ({joinUsFromChild, headerBottomFromChild}) => {
                     </div> */}
                 </div>
                 <div className="games-portfolio ">
-                    <div className="row game-card pc new">
+                    <div className="game-card pc new">
                         <div className="col-lg-12 col-xl-5 game-card-left my-2">  
                         <div className="js-video-button" >
                             <div className="overlay video">

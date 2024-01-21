@@ -64,13 +64,13 @@
 .slider--dot--content {
   display: flex;
   justify-content: center;
-
+  max-width: 100vw;
 }
 
 .slider--dot {
-  width: 110px;
+  /* width: 110px; */
   margin: 5px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
@@ -81,6 +81,7 @@
     opacity: 1;
   }
 }
+
 .fadeIn {
   animation: fadeIn 0.5s;
 }
