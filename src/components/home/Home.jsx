@@ -11,36 +11,36 @@ const Home = ({joinUsFromChild}) => {
     joinUsFromChild(false);
 
     const words = [ 
-        // { 
-        //     title : 'Defy the ',
-        //     word : 'system',
-        //     img : '/img/LO_1.jpg',
-        //     position : 1,
-        // },
+        { 
+            title : 'Defy the ',
+            word : 'system',
+            img : '/img/LO_1.jpg',
+            position : 1,
+        },
         { 
             title : 'Meet the team and  ',
-            word : 'fellow players',
+            word : 'fellow players.',
             img : '/img/desktop.png', 
             position : 1, 
         },
-        // { 
-        //     title : 'Craft your ',
-        //     word : 'weapons',
-        //     img : '/img/project_lo.png',
-        //     position : 1,
-        // },
-        // { 
-        //     title : 'Join our community ',
-        //     word : 'now !',
-        //     img : '/img/desktop_2.png',  
-        //     position : 1,
-        // },
-        // { 
-        //     title : 'Save the last ',
-        //     word : 'remains',
-        //     img : '/img/weapons.png', 
-        //     position : 1, 
-        // },
+        { 
+            title : 'Craft your ',
+            word : 'weapons',
+            img : '/img/project_lo.png',
+            position : 1,
+        },
+        { 
+            title : 'Join our community ',
+            word : 'now !',
+            img : '/img/desktop_2.png',  
+            position : 1,
+        },
+        { 
+            title : 'Save the last ',
+            word : 'remains',
+            img : '/img/weapons.png', 
+            position : 1, 
+        },
         
     ]; 
 
