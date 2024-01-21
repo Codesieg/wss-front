@@ -1,0 +1,26 @@
+/* --------------------------- /////////// XI. 404 PAGE /////////// --------------------------- */
+#container-404 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+#container-404 .row-fluid {
+     margin-top: 18%;
+}
+.text-404 h1 {
+    font-family: Anurati, sans-serif;
+    font-size: 4rem;
+}
+.text-404 a {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+}
+
+@media (max-width : 767px) {
+    .text-404 h1 {
+        font-size: 3.5rem;
+    }
+}

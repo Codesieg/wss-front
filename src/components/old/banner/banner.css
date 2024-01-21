@@ -1,0 +1,147 @@
+.masthead {
+    /* background-image: url('../components/assets/img/background.png'); */
+    background: url('../assets/img/background.png') center/cover no-repeat;
+    background-size: 100%;
+    background-position: 0 55%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 87vh;
+}
+
+.content-right {
+    transform: skewX(-9deg);
+    transform-origin: top left;
+    height: 100%;
+    width: 58%;
+}
+
+.content-right-img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right:  calc(-12% - 20px);
+    overflow: hidden;
+}
+
+.masthead:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 95vh;
+    width: 56vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: skewX(-9deg);
+    transform-origin: top right;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    font-size: 6rem;
+    color: #faf7f7 ;
+    width: 60%;
+    position: absolute;
+    z-index: 5;
+    padding-left: 5%;
+    left: 0;
+}
+
+.masthead img {
+    width: 100%;
+}
+
+.word-color {
+    color: #F3A70F!important;
+}
+
+
+@media screen and (max-width: 1920px) {
+    .content {
+        font-size: 2.5rem;
+        }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .content {
+        font-size: 2rem;
+        }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        font-size: 1.5rem;
+    }
+
+    .masthead:before {
+        width: 70%;
+    }
+}
+
+@media screen and (max-height: 725px) {
+    .masthead {
+        background-size: 105%, cover;
+        background-position: 35% 125%, 62%;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .title {
+        font-size: 1em;
+    }
+
+    .litte-title {
+        font-size: 0.5em;
+    }
+
+    .word-color {
+        display: flex;
+        justify-content: center;
+    }
+
+    .masthead {
+        flex-direction: column;
+        justify-content: inherit;
+        align-items: inherit;
+        background-size: 105%, cover;
+        background-position: 35% 93%, 62%;
+    }
+
+    .masthead:before {
+        height: 35%;
+        width: 100%;
+        transform: inherit;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .content {
+        position: relative;
+        font-size: 1.5rem;
+        margin: 25% 0;
+        color: #faf7f7 ;
+        width: 100%;
+        text-align: center;
+        padding-left: inherit;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .content {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .content {
+        margin-top: 6.5em;
+        margin-bottom: 5em;
+    }
+}  

@@ -1,0 +1,133 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    background-color: rgb(68, 69, 70);
+    padding: 8px;
+}
+
+.logo {
+    max-width: 100%;
+    width: 85px;
+}
+
+.content__nav {
+    max-width: 100%;
+    width: 600px;
+}
+
+.show-navbar {
+    width: 100%;
+    margin-right: 2%;
+}
+
+.menu__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu__nav__item {
+    list-style-type: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.menu__nav__line {
+    border-bottom: solid 4px #F3A70F;
+    padding-bottom: 1%;
+}
+
+
+.menu__nav__burger {
+    display: none;
+}
+
+.hide-navbar {
+    z-index: 99;
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 604px;
+}
+
+/* 
+@media screen and (max-width: 1200px) {
+
+    .show-navbar {
+        display: block;
+        top: 0;
+        left: 0;
+        height: 10vh;
+        width: 100vw;
+    }
+
+    .hide-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 10vh;
+        width: 100vw;
+        background-color: black;
+    }
+
+    .menu__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+        background-color: black;
+    }
+
+    .menu__nav__item {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    .menu__nav__burger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0);
+        border: rgba(255, 255, 255, 0);
+    }
+
+    .menu__nav__burger:hover {
+        cursor: pointer;   
+    }
+
+    .menu__nav__burger-bar, 
+    .menu__nav__burger-bar::before, 
+    .menu__nav__burger-bar::after {
+        display: block;
+        width: 40px;
+        height: 3px;
+        position: absolute;
+        top: 10px;
+        border-radius: 3px;
+        background: white;
+    }
+
+    .menu__nav__burger-bar::before, 
+    .menu__nav__burger-bar::after {
+        content: "";
+        left: 0;
+        top: 11px;
+    }
+
+    .menu__nav__burger-bar::before { 
+        transform: translateY(-12px);
+    }
+
+    .menu__nav__burger-bar::after {
+        transform: translateY(12px);
+    }
+} */

@@ -1,0 +1,70 @@
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    margin: 0.9em;
+    font-size:  1.5em;
+    position: fixed;
+    top: 50%;
+    right: 1%;
+    transform: translate(0%,-50%);
+    z-index:99;
+}
+
+.social-icons:hover {
+    /* right: 1%; */
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+    padding: 0;
+    height: 5rem;
+    width: 5rem;
+    /* right: -20%; */
+    border-radius: 100rem;
+    background-color: rgba(0, 0, 0, 0.274);
+    margin: 0.5em 0;
+    color: white!important;
+    /* transition: right 0.3s ease; */
+}
+
+.social-btn:hover {
+    background-color: rgba(0, 0, 0, 1);
+    /* right: 40%; */
+}
+
+.arrow-discord {
+    position: absolute;
+    right: 95%;
+    top: 10%;
+}
+
+@media screen and (max-width: 1920px) {
+    .social-icons {
+        font-size:  1em;
+    }
+    .social-btn {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .social-icons {
+        font-size: 1em;
+    }
+    
+    .social-btn {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .arrow-discord {
+        display: none;
+    }
+}

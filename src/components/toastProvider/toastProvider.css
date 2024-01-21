@@ -1,0 +1,23 @@
+.popup {
+    position: fixed;
+    top: 125px;
+    right: 0;
+    width: 25%;
+    background-color: rgb(29, 134, 16);
+    border-radius: 5px;
+    display: none;
+}
+.popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup--error {
+    background-color: rgba(202, 18, 18, 0.5);
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+

@@ -1,0 +1,29 @@
+
+.aboutUs {
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.aboutUs__section {
+    display: flex;
+    justify-content: center;
+    width: 92%;
+}
+
+.aboutUs__img {
+    width: 81%;
+}
+
+.aboutUs__content {
+    display: flex;
+    justify-content: center;
+    color: white;
+    max-width: 77vw;
+    max-height: 15vh;
+    text-transform: none;
+    font-size: 2em;
+}
+

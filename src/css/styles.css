@@ -1,0 +1,244 @@
+@font-face {
+	font-family: 'RedHatDisplay';
+	src: url('../components/assets/fonts/RedHatDisplay.ttf') format('truetype')
+} 
+
+/*-------------------------------------------------------------------
+[Colors]
+
+Primary Color: #E84118;
+-------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500'); /* Raleway Font */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans'); /* Open Sans Font */
+@font-face {
+    font-family: 'Anurati';
+    src: url('../components/assets/fonts/Anurati-Regular.otf')
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../components/assets/fonts/RobotoMono-VariableFont_wght.ttf')
+}
+
+/* --------------------------- /////////// I. GENERAL /////////// --------------------------- */
+
+.main-top {
+    padding-top: 85px;
+}
+
+.zero {
+    font-family: Roboto, sans-serif;
+}
+/* -Color- */
+.colored {
+    color: #E84118;
+}
+/* -Link Styling- */
+a {
+    color: #E84118;
+    font-family: Raleway, sans-serif;
+	text-decoration: none;
+}
+a:visited {
+    color: #222;
+    text-decoration: none;
+}
+a:hover {
+    color: #E84118;
+	text-decoration: underline;
+}
+a:active {
+    color: #E84118;
+    text-decoration: underline;
+}
+a:focus {
+    color: #E84118;
+    text-decoration: none;
+}
+/* -Resets- */
+html, body { 
+    background-color: #111;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../components/assets/img/bg.png);
+    background-repeat: repeat;
+    color: #222;
+    font-size: 16px;
+    line-height: 1.5rem; /* 24px */
+    max-width: 100%;
+	overflow-x: hidden;
+}
+/* -Full width fluid container- */
+.full-width {
+    padding-left: 0;
+    padding-right: 0;
+}
+/* -Text Styling */
+h1,h2,h3,h4,h5,h6 {
+	font-family: Raleway, sans-serif;
+}
+h1 {
+    font-size: 2.25rem; /* 36px */
+    font-family: Anurati, sans-serif;
+} 
+h2 {
+    font-size: 1.50rem; /* 24px */
+    font-weight: 500;
+}
+h3 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 400;
+}
+h4 {
+    font-size: 1.10rem;
+    font-weight: 300;
+}
+p {
+    font-family: Open Sans, sans-serif;
+    /* font-size: 0.9375rem; 15px */
+    padding: 5px 5px 5px 0;
+    margin: 0;
+}
+.strong {
+    font-weight: bold;
+}
+.subtle {
+	color: #999;
+}
+.spaced {
+    letter-spacing: 5px;
+}
+.text-center {
+	text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+/* -Margins and Floats- */
+.floated-left {
+    float: left;
+}
+.floated-right {
+    float: right;
+}
+.inline {
+	display: inline;
+}
+.offset {
+	margin-left: 10px;
+}
+.tiny-margin {
+    margin-bottom: 1.5em /* 24px */
+}
+.small-margin {
+	margin-bottom: 3em; /* 48px */
+}
+.medium-margin {
+	margin-bottom: 6em; /* 96px */
+}
+.large-margin {
+	margin-bottom: 12em; /* 192px */
+}
+/* -<hr>- */
+hr {
+    width: 100%;
+    height: 2px;
+    background: #E84118;
+    margin: 20px 0;
+    border: none;
+}
+.hr-short {
+    width: 100px;
+    height: 2px;
+    margin: 5px auto;
+}
+.short-hr-left::after {
+    border-top: 2px solid;
+    border-color: #E84118;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 60px;
+    margin: 13px 0 0 0;
+}
+.short-hr-center::after {
+    border-top: 2px solid;
+    border-color: #E84118;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 60px;
+    margin: 13px auto 0 auto;
+}
+/* General input fields */
+input {
+    height: 45px;
+    padding-left: 10px;
+    border: 1px solid #D4D4D4 !important;
+}
+input:focus {
+    border: 1px solid #333;
+    outline: none;
+}
+textarea {
+    height: 150px;
+	width: 100%;
+    max-width: 100%;
+	padding-top: 10px;
+	padding-left: 10px;
+    border: 1px solid #D4D4D4 !important;
+}
+textarea:focus {
+    border: 1px solid #333;
+    outline: none;
+}
+/* -General Button Styles */
+button {
+    outline: none !important;
+}
+.button {
+	background: #E84118;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+	display: block;
+	height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+    padding: 5px 15px;
+    outline: none;
+	transition: all 0.2s ease;
+    cursor: pointer;
+}
+.button:hover {
+	background: #333;
+	color: #FFF;
+}
+
+@media (max-width : 767px) {
+    .large-margin {
+	   margin-bottom: 4em; /* 96px */
+    }
+    .medium-margin {
+        margin-bottom: 3em;
+    }
+    .small-margin {
+        margin-bottom: 2em;
+    }
+    .heading {
+        font-size: 1.50rem;
+    }
+    hr {
+        margin: 0;
+    }
+}

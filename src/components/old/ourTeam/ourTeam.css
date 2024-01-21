@@ -1,0 +1,22 @@
+.ourTeam {
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.ourTeam__section {
+    display: flex;
+    justify-content: center;
+    width: 92%;
+}
+
+.ourTeam__img {
+    width: 81%;
+}
+
+.ourTeam__img__title {
+    color: white;
+}
+

@@ -1,0 +1,20 @@
+footer {
+    height: 4vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p, footer a {
+    color: white;
+    font-size: smaller;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    margin: 0;
+    z-index: 10;
+}
+
+footer a {
+    margin-left: 0.5em;
+}

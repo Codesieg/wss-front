@@ -1,0 +1,12 @@
+.section__title {
+    color: white;
+    font-size: 2.8em;
+}
+
+
+.title__line {
+    border-bottom: solid 4px #F3A70F;
+    width: 79%;
+    margin-left: 1%;
+    transform: translateY(-50%);
+}

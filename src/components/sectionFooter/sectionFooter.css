@@ -1,0 +1,12 @@
+.border {
+    border-top: 2px solid #F3A70F;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+}
+
+.triangle {
+    color: #F3A70F;
+    transform: rotate(90deg);
+    font-size: 4em;
+}

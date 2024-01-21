@@ -1,0 +1,25 @@
+/* --------------------------- /////////// X. FOOTER /////////// --------------------------- */
+.footer {
+    width: 100%;
+    min-height: 70px;
+    height: auto;
+    background: #FFF;
+    border-top: 2px solid #E84118;
+    padding: 20px 0 0 0;
+}
+
+.copyright {
+    font-size: 0.8em;
+}
+
+@media (max-width : 991px) {
+    .footer {
+        text-align: center;
+    }
+    .social-links {
+        float: none;
+    }
+    .copyright {
+        float: none;
+    }
+}
