@@ -5,10 +5,10 @@
 }
 
 .home-container {
-    height: 270px;
+    height: 280px;
     max-height: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 .home-text {
@@ -74,17 +74,17 @@
 @media (min-width : 1024px) {
 
     .home-container {
+        height: inherit;
         width: 50%;
         display: flex;
         justify-content: flex-end;
-        align-items: center;
     }
 
     .home-text {
         display: flex;
         justify-content: end;
-        /* align-items: center; */
         font-size: 1.8em;
+        align-content: center;
     }
 
     .clip-item  {
