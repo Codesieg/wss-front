@@ -39,6 +39,10 @@
     position: absolute;
     right: 95%;
     top: 10%;
+    opacity: 0.5;
+}
+.arrow-discord:hover {
+    opacity: 1;
 }
 
 @media screen and (max-width: 1920px) {

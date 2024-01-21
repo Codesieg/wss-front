@@ -37,7 +37,6 @@
 }
 
 .clip-item img {
-    /* clip-path: inherit; */
     height: 350px;
     width: 100%;
     max-width: 100%;
@@ -127,11 +126,7 @@
         mix-blend-mode: multiply;
         background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
         background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
-   
-          
     }
-
-
 
     .home {
         display: flex;

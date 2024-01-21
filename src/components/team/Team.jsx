@@ -101,14 +101,14 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
                     pageTitleBlack =  'About '
                     pageTitleColor =  'Us'
                 />
-            <div className="row tiny-margin game-card">
+            <div className="game-card py-2">
                 <div className="col-md-11">
                 <h2 className="short-hr-left fs-4 mt-4">The studio</h2>
                     <p>Welcome to Wondersoft Studio, a video game development studio nestled in the heart of Grenoble, amidst the breathtaking French Alps. Our team comprises passionate and seasoned developers committed to delivering a high-quality and engaging gaming experience. At Wondersoft, we thrive on crafting immersive narratives that strike the perfect balance between gameplay and storytelling.</p>
                    <p>Our mission is simple: to create games we love, alongside people we love, for everyone to love.</p>
                 </div>
             </div>
-            <div className="row tiny-margin">
+            <div className="tiny-margin">
                 <div className="col-md-11">
                     <h2 className="short-hr-left fs-4">Our Values</h2>
                     <p>Embracing our proximity to nature, we incorporate an ethical and ecological mindset into our work, striving to empower individuals and foster a collaborative spirit within the group. We prioritize open-source technology and collaborate with partners who share our commitment to privacy and data protection.</p>

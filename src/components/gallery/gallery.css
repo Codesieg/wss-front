@@ -64,10 +64,11 @@
 .slider--dot--content {
   display: flex;
   justify-content: center;
+
 }
 
 .slider--dot {
-  width: 10%;
+  width: 110px;
   margin: 5px;
   cursor:pointer;
 }
