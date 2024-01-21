@@ -43,8 +43,8 @@
     clip-path: inherit;
     max-width: 100%;
     height: auto;
-    overflow: hidden;
-    object-fit: cover;
+    /* overflow: hidden; */
+    object-fit: contain;
 }
 
 .word-color {
