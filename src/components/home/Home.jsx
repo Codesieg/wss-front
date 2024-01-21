@@ -18,8 +18,8 @@ const Home = ({joinUsFromChild}) => {
         //     position : 1,
         // },
         { 
-            title : 'Meet the team and fellow ',
-            word : 'players.',
+            title : 'Meet the team and  ',
+            word : 'fellow players',
             img : '/img/desktop.png', 
             position : 1, 
         },
