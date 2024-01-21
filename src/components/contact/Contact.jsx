@@ -61,24 +61,25 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
                             <p className='mx-0'>For any questions about the studio, our services, or our games, please fill out the form below.</p>
                         </div>
                     </div>
-                    <div className="row">
+                    <div>
                         {/* <div className="col-md-6"> */}
                             <h2 className="short-hr-left mb-3">LEAVE US A MESSAGE</h2>
                             <form onSubmit={handleSubmit} className="contactForm" data-toggle="validator">
-                                <div className='contactForm_name'>
-                                    <div className="form-group">
-                                        <input type="text" id="name" name="name" placeholder="Name*" size="35" data-error="Name is required"/>
+                                <div className='contactUsContainer'> 
+                                    <div className="contactUs">
+                                        <input type="text" id="name" name="name" placeholder="Name*" data-error="Name is required"/>
                                         <div className="help-block with-errors"></div>
                                     </div>
-                                    <div className="form-group">
-                                        <input type="email" id="email" name="email" placeholder="Email*" size="35" data-error="Email is required"/>
+                                    <div className="contactUs">
+                                        <input type="email" id="email" name="email" placeholder="Email*" data-error="Email is required"/>
                                         <div className="help-block with-errors"></div>
+                                    </div>
                                         <p className="subtle">* required field</p>
                                         <button type="submit" id="sendMail" className="button" >SEND MESSAGE</button>
-                                        <div className="hidden">{message}</div>
-                                    </div>
+                                    <div className="hidden">{message}</div>
                                 </div>
-                                <div className="form-group contactForm_message">
+
+                                <div className="contactUs contactForm_message">
                                     <textarea id="message" name="message" placeholder="Message*" data-error="Message cannot be empty"></textarea>
                                     <div className="help-block with-errors"></div>
                                 </div>

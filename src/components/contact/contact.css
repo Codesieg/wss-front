@@ -8,24 +8,15 @@
     /* background: #FAFAFA; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     padding: 3%;
     margin-top: 25px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.11);
 }
 
-.contactForm_name {
-    width: 590px;
-    max-width: 100%;
-}
 
-.contactForm_message {
-    width: 590px;
-    max-width: 100%;
-}
 
 .contactForm input {
-    width: 75%;
     color: #222;
     background: none;
     border-bottom: 2px solid #E84118 !important;
@@ -73,9 +64,25 @@
     margin-bottom: 15px;
 }
 
-@media (max-width : 425px) {
-    .contactForm textarea {
-        width: 75%;
-       height: 250px;
+@media (max-width : 500px) {
+    .contactUsContainer {
+        width: 100%;
+    }
+    .contactUs {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contactUs input {
+        width: 95%;
+    }
+ 
+    .contactForm_message {
+        width: 100%;
+    }
+
+    .contactForm_message textarea {
+        height: 200px;
+        width: 95%;
     }
 }
