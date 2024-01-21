@@ -4,6 +4,13 @@
     padding-top: 80px;
 }
 
+.home-container {
+    height: 270px;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .home-text {
     display: flex;
     align-items: center;
@@ -12,7 +19,6 @@
     font-size: 1.9em;
     font-weight: 600;
     font-family: Anurati, sans-serif;
-    margin: 130px 0;
 }
 
 .home-text > p, .word-color {
