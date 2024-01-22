@@ -14,7 +14,6 @@ export const isAuthenticated = () => {
     const decodedToken = decodeToken(authToken);
 
     isAdmin = decodedToken.admin;
-    console.log(authToken, decodedToken);
   } else {
     isAdmin = false;
   }
