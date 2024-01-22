@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 // import './about.css';
 
 
 const SignUp = () => { 
+
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
@@ -23,6 +26,8 @@ const SignUp = () => {
         .then(data => {
             console.log(data.message);
         });
+        navigate("/");
+
     }
 
 

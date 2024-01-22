@@ -31,7 +31,7 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
             const data = await response.json();
             localStorage.setItem("authToken", data.token);    
              if (!data.admin) {
-                 navigate("/home");
+                 navigate("/");
              } else {
                 //   création du authtoken
                 //   Authentification réussie, rediriger vers la page de tableau de bord

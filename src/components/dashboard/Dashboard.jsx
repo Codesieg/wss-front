@@ -120,7 +120,7 @@ const handleSmtpParamsChange = async (e) => {
               <form onSubmit={handleSmtpParamsChange}>
                 <input
                   className="form-control"
-                  type="text"
+                  type="hidden"
                   defaultValue={smtpParams.id}
                   name="id"
                 />
