@@ -68,7 +68,7 @@
 }
 
 .slider--dot {
-  /* width: 110px; */
+  width: 110px;
   margin: 5px;
   cursor: pointer;
 }

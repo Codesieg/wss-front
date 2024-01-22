@@ -8,13 +8,27 @@
     /* background: #FAFAFA; */
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     padding: 3%;
     margin-top: 25px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.11);
 }
 
+.contactUsContainer {
+    width: 50%;
+}
 
+.contactUs {
+    width: 100%;
+}
+
+.contactForm_message {
+    width: 50%;
+}
+
+.contactUs input {
+    width: 75%;
+}
 
 .contactForm input {
     color: #222;
@@ -27,7 +41,7 @@
 }
 .contactForm textarea {
     width: 90%;
-    height: 100%;
+    height: 95%;
     color: #222;
     background: none;
     border-bottom: 2px solid #E84118 !important;

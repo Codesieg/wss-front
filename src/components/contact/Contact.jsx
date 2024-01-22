@@ -7,7 +7,12 @@ import { ToastProvider } from '../toastProvider/ToastProvider';
 import { Helmet } from 'react-helmet';
 
 const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState([
+        { 
+            msg: " ", 
+            success: "hidden" 
+        },
+    ]);
 
     joinUsFromChild(false);
     headerBottomFromChild(false);
@@ -31,13 +36,17 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
         })
         .then(response => response.json())
         .then(data => {
-            setMessage(data.msg);
-            console.log(data.msg);
-            // if (data.success) {
-                // setDataMsg(data.msg); 
-                // setDataSucces(data.success); 
-                // showToast(data.success);
-            // }
+            data.success ? 
+            setMessage({
+               msg: data.msg,
+               success: 'text-success'
+            })
+            : 
+            setMessage({
+                msg: data.msg,
+                success: 'text-danger'
+             })
+            console.log(data.msg, data.success);
         });
     }
 
@@ -76,7 +85,7 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
                                     </div>
                                         <p className="subtle">* required field</p>
                                         <button type="submit" id="sendMail" className="button" >SEND MESSAGE</button>
-                                    <div className="hidden">{message}</div>
+                                    <div className={message.success}>{message.msg}</div>
                                 </div>
 
                                 <div className="contactUs contactForm_message">
