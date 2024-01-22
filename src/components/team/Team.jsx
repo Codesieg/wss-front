@@ -21,6 +21,7 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
             twitter: 'https://github.com/john',
             discord: 'https://github.com/john',
             github: 'https://github.com/john',
+            linkedin: 'https://www.linkedin.com/in/bastien-renaud-412708139/',
         },
         { 
             teamName: 'Clement Fortune',
@@ -30,6 +31,7 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
             twitter: 'https://github.com/john',
             discord: 'https://github.com/john',
             github: 'https://github.com/john',    
+            linkedin: 'https://www.linkedin.com/in/sk3tchf0rmscra7ch/',
         },
         { 
             teamName: 'Florian Golestin',
@@ -39,6 +41,7 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
             twitter: 'https://github.com/john',
             discord: 'https://github.com/john',
             github: 'https://github.com/john',
+            linkedin: 'https://www.linkedin.com/in/floriangolestin/',
         },
         { 
             teamName: 'Noe Daval',
@@ -48,6 +51,7 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
             twitter: 'https://github.com/john',
             discord: 'https://github.com/john',
             github: 'https://github.com/john',
+            linkedin: 'https://fr.linkedin.com/in/noe-daval-72ab9a267',
         },
         { 
             teamName: 'Jeremy Bouchet',
@@ -57,6 +61,7 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
             twitter: 'https://github.com/john',
             discord: 'https://github.com/john',
             github: 'https://github.com/john',
+            linkedin: 'https://www.linkedin.com/in/jeremie-bouchet/',
         },
         { 
             teamName: 'Fabian Salvini',
@@ -66,6 +71,7 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
             twitter: 'https://github.com/john',
             discord: 'https://github.com/john',
             github: 'https://github.com/john',
+            linkedin: 'https://www.linkedin.com/in/fabiansalvini/',
         },
 ];
 
@@ -144,9 +150,10 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
                                 {/* <p>{team.teamCaption}</p> */}
                                 <hr className="hr-short"/>
                                 <ul className='ps-0'>
-                                    <li><a href={team.discord}><i className="fa-brands fa-discord"></i></a></li>
+                                    {/* <li><a href={team.discord}><i className="fa-brands fa-discord"></i></a></li>
                                     <li><a href={team.twitter}><i className="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href={team.github}><i className="fa-brands fa-github"></i></a></li>
+                                    <li><a href={team.github}><i className="fa-brands fa-github"></i></a></li> */}
+                                    <li><a href={team.linkedin}><i className="fa-brands fa-linkedin"></i></a></li>
                                 </ul>
                             </figcaption>
                         </figure>

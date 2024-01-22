@@ -38,7 +38,7 @@ const Home = ({joinUsFromChild}) => {
         { 
             title : 'Save the last ',
             word : 'remains',
-            img : '/img/weapons.png', 
+            img : '/img/cyberpunk.png', 
             position : 1, 
         },
         

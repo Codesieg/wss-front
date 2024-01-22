@@ -45,7 +45,7 @@ const SignUp = () => {
                     <label className="form-label" htmlFor="exampleCheck1">Vérification</label>
                     <input type="password" name="check" className="form-control" id="exampleCheck1"/>
                 </div>
-                <button type="submit" className="btn btn-primary">SignUp</button>
+                <button type="submit" className="btn btn-primary">Sign up</button>
             </form>
         </>
     );
