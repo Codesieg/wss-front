@@ -5,23 +5,51 @@ sudo npm cache clean -f
 sudo npm install -g n
 sudo n stable
 
-### Installation des dépendances serveur
+### Installing server dependencies
 npm install --global yarn
 
-depuis le repertoire /etc/html/www/wss/back/server/
+from server dir, exemple :  /etc/html/www/wss/back/server/
 
 yarn install
 
-copier le fichier .env.exemple vers .env
-renseigner les informations de connexions à la bdd
+rename the file .env.exemple to .env
 
-### Mis en place du serveur node
+enter the database connection information
 
-add wss.service in /etc/systemd/system/
+### Setting up the node server
 
+# Create service file on /etc/systemd/system, exemple wss.service: 
+
+----------------------------------------
+
+[Unit]
+Description=Serveur web wondersoftStudio
+After=network.target
+
+[Service]
+WorkingDirectory=/var/www/html/
+ExecStart=/usr/local/bin/node /var/www/html/wss/back/server/server.js => replace with your own directories
+
+Restart=on-failure
+User=nicov => replace with your own user
+Group=root => replace with your own goup
+
+# Timeout of 500ms between crash and reboot
+RestartSec=500ms
+
+[Install]
+WantedBy=multi-user.target
+
+------------------------------------
+
+# saving the file in the systemctl daemon :
 sudo systemctl daemon-reload
 
-sudo systemctl start wss
+# Create symlink and active it : 
+sudo systemctl enable myservice
 
-sudo systemctl enable wss
+# Start service : 
+sudo systemctl start myservice
 
+# Check server status : 
+sudo systemctl status myservice

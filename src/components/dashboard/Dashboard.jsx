@@ -20,8 +20,9 @@ import './dashboard.css';
 //   Contact: { clickRate: '90%', bounceRate: '10%' },
 // };
 
-const Dashboard = ()=> {
-    const navigate = useNavigate();
+const Dashboard = () => {
+  const [message, setMessage] = useState('');
+    // const navigate = useNavigate();
     // const [selectedPage, setSelectedPage] = useState(pages[0]);
     const [smtpParams, setSmtpParams] = useState({
         host: '',
@@ -45,8 +46,9 @@ const Dashboard = ()=> {
                 id: data._id || '',
             });
           })
-          .catch(error => {
-            console.error('Erreur lors de la récupération de la configuration', error);
+          .catch(error => { 
+            setMessage('Error retrieving configuration');       
+            console.log(error);
           });
       }, []); 
       
@@ -68,12 +70,14 @@ const handleSmtpParamsChange = async (e) => {
             },
         });
 
+        const data = await response.json();
         if (!response.ok) {
-            throw new Error('Erreur lors de l\'enregistrement des paramêtres');
+            throw new Error(data.message);
         }
-
-        navigate("/dashboard");
+        setMessage(data.message);
+        // navigate("/dashboard");
     } catch (error) {
+        setMessage('Unable to connect to server');
         console.error('Erreur lors de la requête:', error.message);
     }
 };
@@ -164,6 +168,7 @@ const handleSmtpParamsChange = async (e) => {
                   <button type="submit" className="btn btn-primary">Enregistrer</button>
                 </div>
               </form>
+              <div className='text-danger mt-2'>{message}</div>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 
 import './login.css';
@@ -6,6 +6,8 @@ import './login.css';
 
 const Login = ({joinUsFromChild, headerBottomFromChild}) => { 
     const navigate = useNavigate();
+    const [message, setMessage] = useState('');
+
     joinUsFromChild(false);
     headerBottomFromChild(false);
 
@@ -23,17 +25,18 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
                     'Content-Type': 'application/json',
                 },
             });
-    
-            if (!response.ok) {
-                throw new Error('Erreur lors de l\'authentification');
-            }
-    
+            
             const data = await response.json();
-            localStorage.setItem("authToken", data.token);    
+            if (!response.ok) {
+                setMessage(data.message);
+                throw new Error(data.message);
+            }
+            // const data = await response.json();
              if (!data.admin) {
                  navigate("/");
              } else {
                 //   création du authtoken
+                localStorage.setItem("authToken", data.token);  
                 //   Authentification réussie, rediriger vers la page de tableau de bord
                  navigate("/dashboard");
              }
@@ -55,6 +58,7 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
                 </div>
                 <button type="submit" className="btn btn-primary">Login</button>
             </form>
+                <div className='text-danger mt-2'>{message}</div>
         </div>
     );
 };
