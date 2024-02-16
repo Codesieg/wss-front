@@ -1,14 +1,12 @@
 import './home.css';
 
 import React, { useState, useEffect } from 'react';
-import TextTransition, { presets } from 'react-text-transition';
-
-import SocialNetwork from '../socialNetwork/SocialNetwork';
-
+// import TextTransition, { presets } from 'react-text-transition';
 
 const Home = ({joinUsFromChild}) => {
+// const Home = () => {
 
-    joinUsFromChild(false);
+     joinUsFromChild(false);
 
     const words = [ 
         { 
@@ -59,8 +57,10 @@ const Home = ({joinUsFromChild}) => {
             <div className="home">
                 <div className='home-container'>
                     <div className="home-text">
-                        <p>{words[index % words.length].title}</p>
-                        <span className="word-color ps-2"><TextTransition springConfig={presets.wobbly} inline={true} >{words[index % words.length].word}</TextTransition></span>
+                        <p>{words[1].title}</p>
+                        {/* <p>{words[index % words.length].title}</p> */}
+                        {/* <span className="word-color ps-2"><TextTransition springConfig={presets.wobbly} inline={true} >{words[index % words.length].word}</TextTransition></span> */}
+                        <span className="word-color ps-2">{words[1].word}</span>
                     </div>
                 </div>
                 <div className="clip-item">                     

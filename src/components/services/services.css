@@ -3,9 +3,10 @@
     padding-top: 100px;
 }
 
+.email {
+    color: #E84118;
+    font-weight: 800;
+}
+
 
 /* --------------------------- /////////// XII. RESPONSIVE STYLES /////////// --------------------------- */
-
-@media (max-width : 767px) {
-
-}

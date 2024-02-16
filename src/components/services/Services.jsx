@@ -61,7 +61,7 @@ const Services = ({joinUsFromChild, headerBottomFromChild}) => {
                 <div className="row">
                     <div className="col-md-11 tiny-margin">
                         <p>Our company offers training, co-development and consulting services to the game industry, primarily on console and PC using Unreal Engine.</p>
-                        <p>Get in touch at <a href="mailto:consulting@wondersoftstudio.com">consulting@wondersoftstudio.com</a> or use the contact form for more information</p>  
+                        <p>Get in touch at <span className='email'>consulting@wondersoftstudio.com</span>  or use the contact form for more information</p>  
                     </div>
                     <Card 
                         table = {imgServices}
