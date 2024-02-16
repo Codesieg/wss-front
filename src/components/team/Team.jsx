@@ -25,7 +25,7 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
         },
         { 
             teamName: 'Clement Fortune',
-            subtle: 'Concept Artist',
+            subtle: 'Concetp Artiste',
             img: '/img/Clement_Fortune.jpg',
             teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
             twitter: 'https://github.com/john',

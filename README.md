@@ -6,7 +6,7 @@ sudo npm install -g n
 sudo n stable
 
 ### Installing server dependencies
-npm install --global yarn
+sudo npm install --global yarn
 
 from server dir, exemple :  /etc/html/www/wss/back/server/
 

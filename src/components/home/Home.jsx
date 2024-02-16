@@ -1,12 +1,17 @@
 import './home.css';
 
 import React, { useState, useEffect } from 'react';
-// import TextTransition, { presets } from 'react-text-transition';
+import TextTransition, { presets } from 'react-text-transition';
+
+import Loader from '../loader/Loader';
+
 
 const Home = ({joinUsFromChild}) => {
-// const Home = () => {
 
-     joinUsFromChild(false);
+    const [loading, setLoading] = useState(true);
+    const [index, setIndex] = useState(0);
+
+    joinUsFromChild(false);
 
     const words = [ 
         { 
@@ -42,7 +47,15 @@ const Home = ({joinUsFromChild}) => {
         
     ]; 
 
-    const [index, setIndex] = useState(0);
+    // useEffect(() => { 
+    //     // window.addEventListener("load", () => {
+    //     //     setLoading(false);
+    //     //   });
+    //       setTimeout(() => {
+	// 		setLoading(false)
+	// 	}, 5000)
+    // },
+    // []);
 
     useEffect(() => {
             const intervalId = setInterval(() => {
@@ -52,20 +65,27 @@ const Home = ({joinUsFromChild}) => {
         }, 
     []);
 
+    if (loading) {
+    }
+    
     return (
         <>
             <div className="home">
-                <div className='home-container'>
-                    <div className="home-text">
-                        <p>{words[1].title}</p>
-                        {/* <p>{words[index % words.length].title}</p> */}
-                        {/* <span className="word-color ps-2"><TextTransition springConfig={presets.wobbly} inline={true} >{words[index % words.length].word}</TextTransition></span> */}
-                        <span className="word-color ps-2">{words[1].word}</span>
-                    </div>
-                </div>
-                <div className="clip-item">                     
-                    <img src={words[index % words.length].img} alt={words.title}/>
-                </div>
+                {/* {loading ? <Loader /> */}
+                         {/* :  */}
+                         <>
+                                <div className='home-container'>
+
+                                    <div className="home-text">
+                                        <p>{words[index % words.length].title}</p>
+                                        <span className="word-color ps-2"><TextTransition springConfig={presets.wobbly} inline={true} >{words[index % words.length].word}</TextTransition></span>
+                                    </div>
+                                </div>
+                                <div className="clip-item">                     
+                                    <img src={words[index % words.length].img} alt={words.title}/>
+                                </div>
+                            </>      
+                {/* } */}
             </div>
         </>
     );

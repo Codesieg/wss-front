@@ -1,79 +1,23 @@
 import './css/styles.css';
 
 import { React, useState, useEffect  } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-// import { RouterProvider, createBrowserRouter, useRoutes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
 
-// import Layout from './components/Layout';
+import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Team from './components/team/Team';
 import Games from './components/games/Games';
 import Services from './components/services/Services';
 import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 import Error from './components/error/Error';
+import SocialNetwork from './components/socialNetwork/SocialNetwork';
 import Login from './components/login/Login';
 import SignUp from './components/signup/SignUp';
 import Dashboard from './components/dashboard/Dashboard'
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import SocialNetwork from './components/socialNetwork/SocialNetwork';
-// import { isAuthenticated } from './components/dashboard/auth'; // Fonction pour vérifier l'authentification
+import { isAuthenticated } from './components/dashboard/auth'; // Fonction pour vérifier l'authentification
 
-
-// const router = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <Layout />,
-//     errorElement: <Error />,
-//     children: [
-//       {
-//         path: '',
-//         element: <Home />
-//       },
-//       {
-//         path: 'login',
-//         element: <Login/>
-//       },
-//       {
-//         path: 'signup',
-//         element: <SignUp/>
-//       },
-//       {
-//         path: 'games',
-//         element: <Games/>
-//       },
-//       {
-//         path: 'services',
-//         element: <Services/>
-//       },
-//       {
-//         path: 'contact',
-//         element: <Contact/>
-//       },
-//       {
-//         path: 'dashboard',
-//         element: <Dashboard/>
-//       },
-//       {
-//         path: 'team',
-//         element: <Team/>
-//       },
-//     ]
-//   },
-  
-// ])
-
-
-
-// function App() {
-
-//   return (
-//     <>
-//       <RouterProvider router={router}/>
-//     </>
-//   )
-// }
 
 
 function App() {
@@ -81,7 +25,7 @@ function App() {
   const [headerBottom, setHeaderBottom] = useState(false);
 
   // const isAuth = true;
-  // const isAuth = isAuthenticated();
+  const isAuth = isAuthenticated();
 
   const joinUsOK = (joined) => {
       setJoinUS(joined)
@@ -103,6 +47,7 @@ function App() {
 
   return (
       <>
+        <Router>
         <ScrollToTop />
           <Header 
             headerBottom = {headerBottom}
@@ -119,6 +64,9 @@ function App() {
                   />
                 } 
               />
+          </Routes>
+          <div className="container">
+            <Routes>
                 <Route exact path="/team" 
                   element={
                     <Team 
@@ -195,7 +143,10 @@ function App() {
                 } 
               />
                 } */}
+
             </Routes>
+          </div>
+        </Router>
         <Footer />
       </>
   );
@@ -203,3 +154,18 @@ function App() {
 
 export default App
 
+{/* <Route
+            path={path}
+            exact={true}
+            render={(props) => 
+                hasRoles(roles) ? (
+                    <Component {...props} />
+                ) : (
+                    isAuth() ? (
+                        <Unauthorized />
+                    ) : (
+                        <Redirect to="/login" />
+                    )
+                )
+            }
+        /> */}

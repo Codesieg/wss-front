@@ -23,7 +23,7 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        fetch('http://localhost:8080/send-email', {
+        fetch('https://wondersoftstudio.com/send-email', {
             method: 'POST',
             body: JSON.stringify({
                 message: e.target.message.value, // Envoyer les données du formulaire

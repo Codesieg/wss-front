@@ -1,7 +1,6 @@
 
 .games {
     padding-top: 100px;
-
 }
 
 .grid-gallery {
@@ -26,10 +25,6 @@
   
   ::-webkit-scrollbar-corner {
     background: #fff3;
-  }
-
-  .projectlo {
-    display: flex;
   }
 
 .game-tags {

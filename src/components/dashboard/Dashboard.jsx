@@ -34,7 +34,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         // Effectue une requête pour récupérer la configuration depuis la base de données MongoDB
-        fetch('http://localhost:8080/dashboard/getEmailConfig')
+        fetch('https://wondersoftstudio.com:8080/dashboard/getEmailConfig')
           .then(response => response.json())
           .then(data => {
             // Met à jour le state avec les données récupérées
@@ -56,7 +56,7 @@ const Dashboard = () => {
 const handleSmtpParamsChange = async (e) => {
   e.preventDefault();
   try {
-        const response = await fetch('http://localhost:8080/dashboard/sendconf', {
+        const response = await fetch('https://wondersoftstudio.com:8080/dashboard/sendconf', {
             method: 'PUT',
             body: JSON.stringify({
                 host: e.target.host.value,

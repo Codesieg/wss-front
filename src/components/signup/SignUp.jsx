@@ -10,13 +10,13 @@ const SignUp = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        fetch('http://localhost:8080/signup', {
+        fetch('https://wondersoftstudio.com/signup', {
             method: 'POST',
             body: JSON.stringify({
                 login: e.target.login.value, // Envoyer les données du formulaire
                 email: e.target.email.value,
                 password: e.target.password.value,
-                check: e.target.check.value,
+                check: e.target.check.value, // verification du password
             }),
              headers: {
                 "Content-Type": "application/json",             

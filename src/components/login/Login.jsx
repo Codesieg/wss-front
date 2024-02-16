@@ -15,7 +15,7 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:8080/login', {
+            const response = await fetch('https://wondersoftstudio.com/login', {
                 method: 'POST',
                 body: JSON.stringify({
                     login: e.target.login.value,
@@ -33,7 +33,7 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
             }
             // const data = await response.json();
              if (!data.admin) {
-                 navigate("/");
+                 navigate("/dashboard");
              } else {
                 //   création du authtoken
                 localStorage.setItem("authToken", data.token);  
