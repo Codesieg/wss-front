@@ -1,0 +1,68 @@
+/* Tooltip container */
+.tooltips {
+    position: absolute; 
+    /* display: inline-block;
+    border-bottom: 1px dotted black;  */
+    width: 100%; /* L'élément enfant prendra la même largeur que l'élément parent */
+    height: 100%;
+  }
+  
+  /* Tooltip text */
+ .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: hsl(215.75,98.36%,52.16%);
+    color: #f7f4f4;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltips:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .tooltips .tooltiptext--right {
+    top: -5px;
+    left: 105%;
+  }
+
+  .tooltips .tooltiptext--left {
+    top: -5px;
+    right: 105%;
+  }
+
+  .tooltips .tooltiptext--top {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  }
+
+  .tooltips .tooltiptext--bottom {
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  }
+
+
+  .tooltips .tooltiptext--arrowbottom {
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  }
+
+  .tooltips .tooltiptext--arrowbottom::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 30%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent hsl(215.75,98.36%,52.16%) transparent;
+  }

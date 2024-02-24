@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 import './login.css';
 
@@ -15,7 +16,8 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://wondersoftstudio.com/login', {
+            // const response = await fetch('http://api.wondersoftstudio.com/login', {
+            const response = await fetch('http://localhost:3030/login', {
                 method: 'POST',
                 body: JSON.stringify({
                     login: e.target.login.value,
@@ -31,15 +33,11 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
                 setMessage(data.message);
                 throw new Error(data.message);
             }
-            // const data = await response.json();
-             if (!data.admin) {
-                 navigate("/dashboard");
-             } else {
-                //   création du authtoken
-                localStorage.setItem("authToken", data.token);  
-                //   Authentification réussie, rediriger vers la page de tableau de bord
-                 navigate("/dashboard");
-             }
+            //   création du authtoken
+            localStorage.setItem("authToken", data.token);  
+            //   Authentification réussie, rediriger vers la page de tableau de bord
+            navigate("/");
+             
         } catch (error) {
             console.error('Erreur lors de la requête:', error.message);
         }
@@ -57,6 +55,7 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
                     <input type="password" name="password" className="form-control" id="exampleInputPassword1"/>
                 </div>
                 <button type="submit" className="btn btn-primary">Login</button>
+                <Link to="/signup"  className= 'nav-link pb-1 fw-bold text-light'>Create Acount</Link>
             </form>
                 <div className='text-danger mt-2'>{message}</div>
         </div>

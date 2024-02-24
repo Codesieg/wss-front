@@ -1,4 +1,3 @@
-import { a } from 'react-spring';
 import './socialNetwork.css';
 
 function SocialNetwork({joinUs}) {

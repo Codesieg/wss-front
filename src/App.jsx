@@ -125,27 +125,29 @@ function App() {
                 />
              
              {/* { isAuth ?  */}
-                <Route 
-                path="/dashboard" 
-                  element={
-                    <Dashboard
-                      joinUsFromChild = {joinUsOK}
-                      headerBottomFromChild = {bottomLine}
-                    />
-                  }
-                /> 
                 {/* : <Route path="/signup" 
                 element={
                   <SignUp
-                    joinUsFromChild = {joinUsOK}
-                    headerBottomFromChild = {bottomLine}
+                  joinUsFromChild = {joinUsOK}
+                  headerBottomFromChild = {bottomLine}
                   />
                 } 
-              />
-                } */}
+                />
+              } */}
 
             </Routes>
           </div>
+          <Routes>
+              <Route 
+              path="/dashboard" 
+                element={
+                  <Dashboard
+                    joinUsFromChild = {joinUsOK}
+                    headerBottomFromChild = {bottomLine}
+                  />
+                }
+              />     
+          </Routes>
         </Router>
         <Footer />
       </>

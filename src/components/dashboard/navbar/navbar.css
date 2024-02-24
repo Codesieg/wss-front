@@ -1,0 +1,68 @@
+.dashboard__nav {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.11);
+    padding: 10px 20px;
+    margin: 15px;
+    height: 81vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.dashboard__avatar {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+}
+
+.dashboard__main__name {
+    font-family: Anurati;
+    margin-bottom: 0px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border:  solid 2px #e84118;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.dashboard__main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.dashboard__main__item {
+    text-decoration: none;
+    padding: 15px;
+    width: 100%;
+    color: black;
+    cursor: pointer;
+}
+
+.dashboard__main__item:hover {
+    text-decoration: none;
+    color: #E84118;
+    cursor: pointer;
+}
+
+.dashboard__main__item:not([href]):hover {
+    color: #E84118!important;
+}
+
+.dashboard__main__item--selected {
+    background-color: #E84118;
+    border-radius: 10px;
+    width: 100%;
+    color: white;
+}
+
+.dashboard__main__icone {
+    padding-right: 10px;
+    width: 36px;
+}
+

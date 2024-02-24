@@ -8,7 +8,7 @@ const Card = ({table}) => {
     return (
         <>
             {table.map((img, index) => (
-                <div  key={index} className="box gamer-card">
+                <div  key={index} className="box m-1 shadow col-md-3">
                     <div className="box-top">
                         <img className="box-image" src={img.url} alt={img.title}/>
                     <div className="title-flex">

@@ -1,3 +1,11 @@
+.container {
+    width: 100%;
+}
+.dashboard_container {
+    display: flex;
+    margin-top: 80px;
+}
 .loginform {
     height: 77vh;
+    width: 75vw;
 }

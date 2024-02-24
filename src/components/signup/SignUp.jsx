@@ -10,7 +10,8 @@ const SignUp = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        fetch('https://wondersoftstudio.com/signup', {
+        fetch('http://api.wondersoftstudio.com/signup', {
+        // fetch('http://localhost:3030/signup', {
             method: 'POST',
             body: JSON.stringify({
                 login: e.target.login.value, // Envoyer les données du formulaire
@@ -35,20 +36,20 @@ const SignUp = () => {
         <>
             <form onSubmit={handleSubmit} className='mt-5 pt-5'>
                 <div className="mb-3">
-                    <label className="form-label" htmlFor="exampleCheck1">Login</label>
-                    <input type="input" name="login" className="form-control" id="exampleCheck1"/>
+                    <label className="form-label" htmlFor="login">Login</label>
+                    <input type="input" name="login" className="form-control" id="login"/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    <label htmlFor="InputEmail1" className="form-label">Email address</label>
+                    <input type="email" name="email" className="form-control" id="InputEmail1" aria-describedby="emailHelp"/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1"  className="form-label">Password</label>
-                    <input type="password" name="password" className="form-control" id="exampleInputPassword1"/>
+                    <label htmlFor="InputPassword"  className="form-label">Password</label>
+                    <input type="password" name="password" className="form-control" id="InputPassword"/>
                 </div>
                 <div className="mb-3">
-                    <label className="form-label" htmlFor="exampleCheck1">Vérification</label>
-                    <input type="password" name="check" className="form-control" id="exampleCheck1"/>
+                    <label className="form-label" htmlFor="check">Vérification</label>
+                    <input type="password" name="check" className="form-control" id="check"/>
                 </div>
                 <button type="submit" className="btn btn-primary">Sign up</button>
             </form>

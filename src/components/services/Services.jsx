@@ -37,11 +37,11 @@ const Services = ({joinUsFromChild, headerBottomFromChild}) => {
             title:'Animator',
             desc: 'We animate game characters and objects to breathe life into them, ensuring that movements are smooth and captivating.'
         },
-        {
-            url:'/img/Tibetan_Restaurant.png',
-            title:'Sound Designer',
-            desc: 'We handle the game\'s sound effects and music, contributing to the immersive atmosphere and the player\'s sound experience.'
-        },   
+        // {
+        //     url:'/img/Tibetan_Restaurant.png',
+        //     title:'Sound Designer',
+        //     desc: 'We handle the game\'s sound effects and music, contributing to the immersive atmosphere and the player\'s sound experience.'
+        // },   
     ];
 
     return (
@@ -59,13 +59,13 @@ const Services = ({joinUsFromChild, headerBottomFromChild}) => {
                     positionY = {positionY}
                 />
                 <div className="row">
-                    <div className="col-md-11 tiny-margin">
+                    <div className="col-md-12 tiny-margin">
                         <p>Our company offers training, co-development and consulting services to the game industry, primarily on console and PC using Unreal Engine.</p>
-                        <p>Get in touch at <a href="mailto:consulting@wondersoftstudio.com">consulting@wondersoftstudio.com</a> or use the contact form for more information</p>  
+                        <p>Get in touch at <span className='fw-bold'>consulting@wondersoftstudio.com</span> or use the contact form for more information</p>  
                     </div>
-                    <Card 
+                       <Card 
                         table = {imgServices}
-                    />
+                       />  
                 </div>
             </div>
         </>
