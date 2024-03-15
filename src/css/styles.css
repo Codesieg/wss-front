@@ -8,6 +8,13 @@
 
 Primary Color: #E84118;
 -------------------------------------------------------------------*/
+:root {
+    --primary-color : #FFFFFF;
+    --secondary-color : #E84118;
+    --third-color : #303030;
+    --primary-font : Open Sans, sans-serif;
+    --secondary-font : Anurati, sans-serif;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500'); /* Raleway Font */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans'); /* Open Sans Font */

@@ -16,8 +16,8 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // const response = await fetch('http://api.wondersoftstudio.com/login', {
-            const response = await fetch('http://localhost:3030/login', {
+            const response = await fetch('https://api.wondersoftstudio.com/login', {
+            // const response = await fetch('http://localhost:3030/login', {
                 method: 'POST',
                 body: JSON.stringify({
                     login: e.target.login.value,
@@ -37,6 +37,7 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
             localStorage.setItem("authToken", data.token);  
             //   Authentification réussie, rediriger vers la page de tableau de bord
             navigate("/");
+            
              
         } catch (error) {
             console.error('Erreur lors de la requête:', error.message);

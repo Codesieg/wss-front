@@ -28,7 +28,7 @@ const Dashboard = () => {
   });
 
   const handleGetEmailConfig = () => {
-    fetch('http://localhost:3030/dashboard/getEmailConfig')
+    fetch('http://api.wondersoftstudio.com/dashboard/getEmailConfig')
     .then(response => response.json())
     .then(data => {
       // Met à jour le state avec les données récupérées

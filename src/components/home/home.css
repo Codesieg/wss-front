@@ -1,3 +1,5 @@
+@import url("../../css/styles.css");
+
 /* --------------------------- /////////// IV. HERO SECTION /////////// --------------------------- */
 /* -Slanted edge effect- */
 .home {
@@ -5,11 +7,12 @@
 }
 
 .home-container {
-    height: 280px;
+    height: 35vh;
     max-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .home-text {
@@ -17,50 +20,83 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    font-size: 1.9em;
-    font-weight: 600;
-    font-family: Anurati, sans-serif;
 }
 
-.home-text > p, .word-color {
-    font-size: 1.2em;
+.home-text > h2 {
+    font-size: 1.8em;
     font-weight: 600;
-    padding: 0;
-    margin: 0;
-    font-family: Anurati, sans-serif;
+    text-align: center;
+    /* text-align: right; */
+    margin: 10px 0;
+    font-family: var(--secondary-font);
 }
 
+.home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    /* height: 50px; */
+    max-width: 100%;
+    background-color: var(--secondary-color);
+    padding: 0 10px;
+    margin: 150px 0 0 0;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+
+.home-button > p, .home-button > i {
+    margin-bottom: 0;
+    color: white;
+    font-weight: 600;
+}
+
+.home-button-switch {
+    color: white;
+}
+.home-button-switch:hover {
+    background-color: rgb(248, 246, 246);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.home-button:hover > p, .home-button:hover > i {
+    color: rgb(7, 7, 7); /* Couleur que vous souhaitez appliquer au survol */
+}
+
+.home-button:hover > .home-button-switch {
+    color: rgb(7, 7, 7); /* Couleur que vous souhaitez appliquer au survol */
+
+}
 .clip-item  {
     max-width: 100%; 
-    height: 350px;
     overflow: hidden;    
 }
 
 .clip-item img {
-    height: 350px;
+    height: 400px;
     width: 100%;
-    max-width: 100%;
     object-fit: cover;
 }
 
-.word-color {
-    color: #E84118;
-}
+/* .word-color {
+    color: var(--secondary-color);
+    font-weight: 600;
+} */
+
+
 
 /* --------------------------- /////////// XII. RESPONSIVE STYLES /////////// --------------------------- */
 @media (min-width : 768px) {
-    .home-text {
-        margin: 100px 0;
-        justify-content: center;
-        height: inherit;
+    .home-container {
+        height: 45vh;
     }
-
-    .home-text > p, .word-color {
-        font-size: 1.5em;
-        font-weight: 600;
-        padding: 0;
-        margin: 0;
-        font-family: Anurati, sans-serif;
+    .home-text {
+        margin: 100px 25px 0 25px;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.2em;
     }
 
     .home {
@@ -68,57 +104,35 @@
     }
 
     .clip-item {
-        height: 100%;
+        height: 45vh;
     }
 
 }
 
-@media (min-width : 1024px) {
+@media (min-width : 1440px) {
+    .home {
+        display: flex;
+        align-items: flex-end;
+        height: 94vh;
+    }
 
     .home-container {
         width: 50%;
-        display: flex;
-        justify-content: flex-end;
+        height: 100%;
     }
 
     .home-text {
-        display: flex;
-        justify-content: end;
-        font-size: 1.8em;
-        align-content: center;
+        justify-content: flex-end;
     }
 
-    .clip-item  {
-        width: 60%;
+    .home-text > h2 {
+        font-size: 3em; 
     }
 
-    .clip-item img {
+    .clip-item {
+        width: 50%;
         height: 100%;
     }
-
-    .destructured {
-        /* background: linear-gradient(to right, transparent 100%, transparent 100%), url(../assets/img/bg.png); */
-        width: 100%;
-        height: 100%;
-        position:absolute;
-        top: 0;
-        left: 0;
-        z-index: 999;
-    } 
-
-    /* .clip-item::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 90%;
-        height: 100%;
-        background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
-        background-image: linear-gradient(to left, transparent 0%, #ffffff 100%);
-        -webkit-clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%);
-        clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%);
-        
-    } */
 
     .clip-item img {
         -webkit-clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -128,56 +142,16 @@
         background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
     }
 
-    .home {
-        display: flex;
-        max-width: 100%;
-    }
-
-    .home-text > p {
-        font-size: 1.5em;
-    }    
-
-    .home {
-        padding-top: 0px;
-    }
-
-}
-
-@media (min-width : 1440px) {
-    .home {
-        display: flex;
-        align-items: center;
-        height: 93vh;
-    }
-
-    .home-text {
-        font-size: 2.5em;
-    }
-
     .clip-item img {
         width: 100%;
+        height: 100%;
         bottom: 0px;
     }
 }
 
 @media (min-width : 2560px) {
-
-    .home {
-        display: flex;
-        height: 88vh;
-    }
-
-    .home-text {
-        font-size: 4em;
-    }
-
-    .clip-item  {  
-        overflow: hidden;
-    }
-
-    .clip-item img {
-        width: 100%;
-        overflow: hidden;
+    .home-text > h2 {
+        font-size: 3em; 
     }
 
 }
