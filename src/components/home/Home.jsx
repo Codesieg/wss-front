@@ -111,7 +111,7 @@ const Home = ({joinUsFromChild}) => {
                             <div className="clip-item">                     
                                 {/* <img src={words[index % words.length].img} alt={words.title}/> */}
                                 {/* <Canvas camera={ { fov: 45, near: 0.1, far: 200, position: [ 3, 5, 2 ] } }>                                    <Suspense fallback={null}> */}
-                                <Canvas>                                   
+                                <Canvas className='mt-5'>                                   
                                         <Model />
                                 </Canvas>
                             </div>
