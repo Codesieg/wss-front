@@ -82,12 +82,10 @@ const Home = ({joinUsFromChild}) => {
                 {/* {loading ? <Loader />
                           :  
                          <> */}
-                            <div className='home-container mt-5'>
-                                <div className="home-text">
-                                    {/* <p>{words[index % words.length].title}</p> */}
+                                <div className="home-text">                                   
                                     <h2>Defy the System, craft your weapons, save the last remains.</h2> 
                                     <h2>Meet the team and fellow players.</h2>
-                                    <a className='home-button home-button-switch' href="https://discord.gg/xsn6ZpNkCu">
+                                    {/* <a className='home-button home-button-switch' href="https://discord.gg/xsn6ZpNkCu">
                                         <motion.p 
                                             initial={{ scale: 1 }}
                                             whileHover={[
@@ -104,10 +102,8 @@ const Home = ({joinUsFromChild}) => {
                                              damping: 20
                                              }} 
                                         className="fa-brands fa-discord home-button-switch" ></motion.i>
-                                    </a>
-                                    {/* <span className="word-color ps-2"><TextTransition springConfig={presets.wobbly} inline={true} >{words[index % words.length].word}</TextTransition></span> */}
+                                    </a> */}
                                 </div>
-                            </div>
                             <div className="clip-item">                     
                                 {/* <img src={words[index % words.length].img} alt={words.title}/> */}
                                 {/* <Canvas camera={ { fov: 45, near: 0.1, far: 200, position: [ 3, 5, 2 ] } }>                                    <Suspense fallback={null}> */}
