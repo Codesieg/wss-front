@@ -103,11 +103,30 @@ const Home = ({joinUsFromChild}) => {
                                              }} 
                                         className="fa-brands fa-discord home-button-switch" ></motion.i>
                                     </a> */}
+                                  
                                 </div>
-                            <div className="clip-item">                     
+                            <div className="clip-item">  
+                                <div className='mouse-controls'>
+                                        <div className="scroll-downs">
+                                        <div className="mousey">
+                                            <div className="scroller"></div>
+                                        </div>
+                                        <div>Zoom</div>
+                                    </div>
+                                    <div className="mouse-move">
+                                        <div className="chevron chevron-top"></div>
+                                        <div className="chevron chevron-right"></div>
+                                        <div className="mousey">
+                                            <div className="scroller-fix"></div>
+                                        </div>
+                                        <div className="chevron chevron-left"></div>
+                                        <div className="chevron chevron-bottom"></div>
+                                        <div>Move</div>
+                                    </div>
+                                </div>                   
                                 {/* <img src={words[index % words.length].img} alt={words.title}/> */}
                                 {/* <Canvas camera={ { fov: 45, near: 0.1, far: 200, position: [ 3, 5, 2 ] } }>                                    <Suspense fallback={null}> */}
-                                <Canvas className='mt-5'>                                   
+                                <Canvas className='mt-5 '>                                   
                                         <Model />
                                 </Canvas>
                             </div>
