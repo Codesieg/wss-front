@@ -5,6 +5,8 @@ import './contact.css';
 import SectionTitle from '../sectionTitle/SectionTitle';
 import { ToastProvider } from '../toastProvider/ToastProvider';
 import { Helmet } from 'react-helmet';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
     const [message, setMessage] = useState([
@@ -13,6 +15,9 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
             success: "hidden" 
         },
     ]);
+
+    const [recaptchaToken, setRecaptchaToken] = useState(""); // Ajout pour stocker le token ReCAPTCHA
+
 
     joinUsFromChild(false);
     headerBottomFromChild(false);
@@ -23,13 +28,14 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        fetch('http://api.wondersoftstudio.com/send-email', {
-        // fetch('https://wondersoftstudio.com/send-email', {
+        // fetch('http://api.wondersoftstudio.com/send-email', {
+        fetch('https://localhost:3030/send-email', {
             method: 'POST',
             body: JSON.stringify({
                 message: e.target.message.value, // Envoyer les données du formulaire
                 name: e.target.name.value,
-                email: e.target.email.value
+                email: e.target.email.value,
+                recaptchaToken: recaptchaToken // Inclure le token ReCAPTCHA
             }),
              headers: {
                 "Content-Type": "application/json",             
@@ -73,6 +79,7 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
                     </div>
                     <div>
                         {/* <div className="col-md-6"> */}
+
                             <h2 className="short-hr-left mb-3">LEAVE US A MESSAGE</h2>
                             <form onSubmit={handleSubmit} className="contactForm" data-toggle="validator">
                                 <div className='contactUsContainer'> 
@@ -86,6 +93,10 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
                                     </div>
                                         <p className="subtle">* required field</p>
                                         <button type="submit" id="sendMail" className="button" >SEND MESSAGE</button>
+                                        <ReCAPTCHA
+                                            sitekey="6Le08qMpAAAAAJ82W7z9WIBf8PR_Z33CKwMYpBIK"
+                                            onChange={(token) => setRecaptchaToken(token)}
+                                        />
                                     <div className={message.success}>{message.msg}</div>
                                 </div>
 

@@ -1,23 +1,20 @@
 import './home.css';
 
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 // import TextTransition, { presets } from 'react-text-transition';
-import { motion } from  "framer-motion";
+// import { motion } from  "framer-motion";
 
-// import Loader from '../loader/Loader';
+import Loader from '../loader/Loader';
 
 import { Canvas } from '@react-three/fiber'
-
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 import Model from '../experience/Experience'
 
 
 const Home = ({joinUsFromChild}) => {
 
-    // const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     // const [index, setIndex] = useState(0);
-    // const { camera, gl } = useThree()
     joinUsFromChild(false);
 
     // const words = [ 
@@ -54,15 +51,15 @@ const Home = ({joinUsFromChild}) => {
         
     // ]; 
 
-    // useEffect(() => { 
-    //     window.addEventListener("load", () => {
-    //         setLoading(false);
-    //       });
-    //       setTimeout(() => {
-	// 		setLoading(false)
-	// 	}, 5000)
-    // },
-    // []);
+    useEffect(() => { 
+        // window.addEventListener("load", () => {
+        //     setLoading(false);
+        //   });
+          setTimeout(() => {
+			setLoading(false)
+		}, 6000)
+    },
+    []);
 
     // useEffect(() => {
     //         const intervalId = setInterval(() => {
@@ -79,9 +76,9 @@ const Home = ({joinUsFromChild}) => {
     return (
         <>
             <div className="home">
-                {/* {loading ? <Loader />
+                {loading ? <Loader />
                           :  
-                         <> */}
+                         <>
                                 <div className="home-text">                                   
                                     <h2>Defy the System, craft your weapons, save the last remains.</h2> 
                                     <h2>Meet the team and fellow players.</h2>
@@ -125,13 +122,12 @@ const Home = ({joinUsFromChild}) => {
                                     </div>
                                 </div>                   
                                 {/* <img src={words[index % words.length].img} alt={words.title}/> */}
-                                {/* <Canvas camera={ { fov: 45, near: 0.1, far: 200, position: [ 3, 5, 2 ] } }>                                    <Suspense fallback={null}> */}
                                 <Canvas className='mt-5 '>                                   
                                         <Model />
                                 </Canvas>
                             </div>
-                        {/* </>       */}
-                 {/* }  */}
+                        </>      
+                 }  
             </div>
         </>
     );

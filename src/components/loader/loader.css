@@ -36,7 +36,7 @@
   border-style:solid;
   border-width:10px;
   border-color:  #050505e7 ;
-  border-color: transparent transparent transparent #02fc6a ; 
+  border-color: transparent transparent transparent #fc1f02 ; 
   transform-origin:50%;
   animation-name:spinner-path1;
   animation-duration: 2s;
@@ -73,7 +73,7 @@
     border-radius:200px;
     border-style:solid;
     border-width:10px;
-    border-color:#ff7b0056  #ff7b0056 transparent;
+    border-color:#fc1f02  #fc1f02 transparent;
 
     transform-origin:50%;
     animation-name:spinner-after;
@@ -88,7 +88,7 @@
     top:50%;
     left:50%;
     display:block;
-    border-top:10px solid #e8cc2f;
+    border-top:10px solid #fc1f02;
     animation-name:spinner-after;
     transform-origin:50%;
     animation-duration: 1s;
