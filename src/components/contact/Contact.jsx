@@ -29,7 +29,7 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
     const handleSubmit = (e) => {
         e.preventDefault(); 
         // fetch('http://api.wondersoftstudio.com/send-email', {
-        fetch('https://localhost:3030/send-email', {
+        fetch('http://localhost:3030/send-email', {
             method: 'POST',
             body: JSON.stringify({
                 message: e.target.message.value, // Envoyer les données du formulaire
@@ -92,11 +92,13 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
                                         <div className="help-block with-errors"></div>
                                     </div>
                                         <p className="subtle">* required field</p>
-                                        <button type="submit" id="sendMail" className="button" >SEND MESSAGE</button>
-                                        <ReCAPTCHA
-                                            sitekey="6Le08qMpAAAAAJ82W7z9WIBf8PR_Z33CKwMYpBIK"
-                                            onChange={(token) => setRecaptchaToken(token)}
-                                        />
+                                        <div className='display-flex'>
+                                            <button type="submit" id="sendMail" className="button" >SEND MESSAGE</button>
+                                            <ReCAPTCHA
+                                                sitekey="6Le08qMpAAAAAJ82W7z9WIBf8PR_Z33CKwMYpBIK"
+                                                onChange={(token) => setRecaptchaToken(token)}
+                                            />
+                                        </div>
                                     <div className={message.success}>{message.msg}</div>
                                 </div>
 

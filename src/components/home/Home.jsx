@@ -1,8 +1,11 @@
 import './home.css';
 
-import React, {useState, useEffect } from 'react';
+import React, {useRef, useState, useEffect } from 'react';
 // import TextTransition, { presets } from 'react-text-transition';
 // import { motion } from  "framer-motion";
+import { Stats, OrbitControls } from '@react-three/drei'
+import * as THREE from 'three';
+import { useControls } from 'leva';
 
 import Loader from '../loader/Loader';
 
@@ -14,8 +17,53 @@ import Model from '../experience/Experience'
 const Home = ({joinUsFromChild}) => {
 
     const [loading, setLoading] = useState(true);
+    const spotRef = useRef();
+
     // const [index, setIndex] = useState(0);
     joinUsFromChild(false);
+
+    // useControls('Spot Light', {
+    //     visible: {
+    //       value: false,
+    //       onChange: (v) => {
+    //         spotRef.current.visible = v
+    //       },
+    //     },
+    //     position: {
+    //       x: 0,
+    //       y: 2.30,
+    //       z: 1.34,
+    //       onChange: (v) => {
+    //         spotRef.current.position.copy(v)
+    //       },
+    //     },
+    //     color: {
+    //       value: 'white',
+    //       onChange: (v) => {
+    //         spotRef.current.color = new THREE.Color(v)
+    //       },
+    //     },
+    //     distance: {
+    //       value: 2.8,
+    //       onChange: (v) => {
+    //         spotRef.current.distance = v
+    //       },
+    //     },
+    //     angle: {
+    //       value: Math.PI/4,
+    //       onChange: (v) => {
+    //         spotRef.current.angle = Math.PI/v
+    //       },
+    //     },
+    //     intensity: {
+    //       value: 60,
+    //       onChange: (v) => {
+    //         spotRef.current.intensity = v
+    //       },
+    //     }
+    //   })
+  
+    //   console.log(spotRef.current);
 
     // const words = [ 
     //     { 
@@ -122,8 +170,11 @@ const Home = ({joinUsFromChild}) => {
                                     </div>
                                 </div>                   
                                 {/* <img src={words[index % words.length].img} alt={words.title}/> */}
-                                <Canvas className='mt-5 '>                                   
-                                        <Model />
+                                <Canvas className='mt-5'>      
+                                <spotLight ref={spotRef} />
+                                    <Model />
+                                    <OrbitControls />
+                                    <Stats />
                                 </Canvas>
                             </div>
                         </>      

@@ -83,10 +83,15 @@ import './header.css';
                                         : <Link to="/services" className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Our services</Link>
                                     }
                                 </li>
-                                <li className="nav-item">
+                                <li className="nav-item dropdown">
+                                    <a className='nav-link pb-1 fw-bold'>Games</a>
                                     {navBar 
-                                        ? <Link to="/games" onClick={handleNavBar} className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
-                                        : <Link to="/games" className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
+                                        ? <Link to="/games" onClick={handleNavBar} className={`${navBar ? 'dropdown-content fs-3 pb-1 fw-bold text-light' : 'dropdown-content pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
+                                        : <Link to="/games" className={`${navBar ? 'dropdown-content fs-3 pb-1 fw-bold text-light' : 'dropdown-content pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
+                                    }
+                                      {navBar 
+                                        ? <Link to="/games" onClick={handleNavBar} className={`${navBar ? ' dropdown-content fs-3 pb-1 fw-bold text-light' : ' dropdown-content  pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
+                                        : <Link to="/games" className={`${navBar ? 'dropdown-content fs-3 pb-1 fw-bold text-light' : 'dropdown-content  pb-1 fw-bold'}`}>Battle Height</Link>
                                     }
                                 </li>
                                 <li className="nav-item">

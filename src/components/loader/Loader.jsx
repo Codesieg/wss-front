@@ -18,7 +18,7 @@ const Loader = () => {
                 {/* <div className='path5'></div> */}
                 <div className="path1-ters"></div>
                 <div className="path1-bis"></div>
-                <p>Loading . . .</p>
+                {/* <p>Loading . . .</p> */}
             </motion.div>
         </>
     );
