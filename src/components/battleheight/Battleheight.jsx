@@ -5,10 +5,10 @@ import SectionTitle from '../sectionTitle/SectionTitle';
 import { Helmet } from 'react-helmet';
 
 
-import './games.css';
+import './battleheight.css';
 
 
-const Games = ({joinUsFromChild, headerBottomFromChild}) => {
+const Battleheight = ({joinUsFromChild, headerBottomFromChild}) => {
     const [show, setShow] = useState(false);
 
     
@@ -57,30 +57,21 @@ const Games = ({joinUsFromChild, headerBottomFromChild}) => {
     return (
         <>
         <Helmet>
-            <title>Project L0</title>
-            <meta name="Project L0" content="Project l0" />
+            <title>Battle Height</title>
+            <meta name="Battleheight" content="Battleheight" />
             {/* Autres balises meta */}
         </Helmet>
         <div className='games'>
             <div>
                 <SectionTitle
-                    pageTitleBlack =  'Project '
-                    pageTitleColor =  {<span>L<span className='zero'>0</span></span>}
+                    pageTitleBlack =  'Battle '
+                    pageTitleColor =  'Height'
                 />
                 <div className="row ">
                     <div className="col-md-11 small-margin">
                         <p>Embark on an epic sci-fi adventure in Project L0, a top-down shooter with Hack'n'Slash mechanics. Take control of a badass android and wield a vast arsenal of weapons and customizable equipment to carve your own path to victory.
                             Guided by your trusty eVa (for electronic Victory assistant) companion, navigate a futuristic world filled with thrilling challenges and intense combat.</p>
-                    </div>
-                    {/* <div className="col-md-12">
-                        <ul className="game-tags">
-                            <li>Sort By Tag :</li>
-                            <li><a href="#" data-filter=".new">NEW</a></li>
-                            <li><a href="#" data-filter="*">ALL</a></li>
-                            <li><a href="#" data-filter=".pc">PC</a></li>
-                            <li><a href="#" data-filter=".mobile">MOBILE</a></li>
-                        </ul>
-                    </div> */}
+                    </div>           
                 </div>
                 <div className="games-portfolio ">
                     <div className="game-card">
@@ -197,4 +188,4 @@ const Games = ({joinUsFromChild, headerBottomFromChild}) => {
     );
 };
 
-export default Games;
+export default Battleheight;

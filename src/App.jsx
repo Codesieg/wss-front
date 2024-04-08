@@ -8,6 +8,7 @@ import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Team from './components/team/Team';
 import Games from './components/games/Games';
+import Battleheight from './components/battleheight/Battleheight';
 import Services from './components/services/Services';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
@@ -78,6 +79,14 @@ function App() {
                 <Route path="/games" 
                   element={
                     <Games 
+                      joinUsFromChild = {joinUsOK}
+                      headerBottomFromChild = {bottomLine}
+                    />
+                } 
+                />
+                  <Route path="/battleheight" 
+                  element={
+                    <Battleheight 
                       joinUsFromChild = {joinUsOK}
                       headerBottomFromChild = {bottomLine}
                     />
@@ -155,19 +164,3 @@ function App() {
 }
 
 export default App
-
-{/* <Route
-            path={path}
-            exact={true}
-            render={(props) => 
-                hasRoles(roles) ? (
-                    <Component {...props} />
-                ) : (
-                    isAuth() ? (
-                        <Unauthorized />
-                    ) : (
-                        <Redirect to="/login" />
-                    )
-                )
-            }
-        /> */}
