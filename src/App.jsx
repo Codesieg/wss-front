@@ -8,7 +8,7 @@ import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Team from './components/team/Team';
 import Games from './components/games/Games';
-import Battleheight from './components/battleheight/Battleheight';
+import Battleheights from './components/battleheights/Battleheights';
 import Services from './components/services/Services';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
@@ -84,9 +84,9 @@ function App() {
                     />
                 } 
                 />
-                  <Route path="/battleheight" 
+                  <Route path="/battleheights" 
                   element={
-                    <Battleheight 
+                    <Battleheights 
                       joinUsFromChild = {joinUsOK}
                       headerBottomFromChild = {bottomLine}
                     />

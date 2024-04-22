@@ -5,10 +5,10 @@ import SectionTitle from '../sectionTitle/SectionTitle';
 import { Helmet } from 'react-helmet';
 
 
-import './battleheight.css';
+import './battleheights.css';
 
 
-const Battleheight = ({joinUsFromChild, headerBottomFromChild}) => {
+const Battleheights = ({joinUsFromChild, headerBottomFromChild}) => {
     const [show, setShow] = useState(false);
 
     
@@ -17,22 +17,17 @@ const Battleheight = ({joinUsFromChild, headerBottomFromChild}) => {
     
     const Timg = [ 
         { 
-            title : 'aC9AGy.jpg ',
-            img : '/img/aC9AGy.jpg'
+            title : '5ncVZS.jpg ',
+            img : '/img/5nvVZS.jpg'
         },
         { 
-            title : 'dS7YUi.jpg',
-            img : '/img/dS7YUi.jpg'
+            title : '6xKklc.jpg',
+            img : '/img/6xKklc.png'
         },
         { 
-            title : 'mggyXg.png',
-            img : '/img/mggyXg.png'  
+            title : 'I4QXoy.png',
+            img : '/img/I4QXoy.jpg'  
         },
-        { 
-            title : 'mNALPX.png',
-            img : '/img/mNALPX.png'  
-        },
-        
     ]; 
     
     // Pour la gestion de la video youtube
@@ -65,12 +60,12 @@ const Battleheight = ({joinUsFromChild, headerBottomFromChild}) => {
             <div>
                 <SectionTitle
                     pageTitleBlack =  'Battle '
-                    pageTitleColor =  'Height'
+                    pageTitleColor =  'Heights'
                 />
                 <div className="row ">
                     <div className="col-md-11 small-margin">
-                        <p>Embark on an epic sci-fi adventure in Project L0, a top-down shooter with Hack'n'Slash mechanics. Take control of a badass android and wield a vast arsenal of weapons and customizable equipment to carve your own path to victory.
-                            Guided by your trusty eVa (for electronic Victory assistant) companion, navigate a futuristic world filled with thrilling challenges and intense combat.</p>
+                        <p><span className='fw-bold'>IMPORTANT note:</span> The game is still in active development, so before joining the server, please ensure that you have downloaded the latest version. Additionally, to ensure that there are other players available, we recommend joining our Discord Server.</p>
+                        <p>Immerse yourself in the world of BattleHeights, a bold fusion of the frenetic action of Team Fortress and the epic Heroic Fantasy saga. Our game offers dizzying battles where the void becomes as perilous as it is strategic.</p>
                     </div>           
                 </div>
                 <div className="games-portfolio ">
@@ -100,35 +95,27 @@ const Battleheight = ({joinUsFromChild, headerBottomFromChild}) => {
                                             width: "100%",
                                             height: "100%"
                                             }}
-                                            src={`https://www.youtube.com/embed/QErJtShq4Cw`}
+                                            src={`https://www.youtube.com/embed/IfmK9ZWKHdk`}
                                             frameBorder="0"
-                                            title="project lo video"
+                                            title="battle heights video"
                                         />
                                     </div>
                                 </Modal.Body>
                             </Modal>    
                         </div>   
-                        <a className="js-video-button" data-video-id="5xZfEdysp6o" data-channel="youtube" onClick={handleShow}>
+                        <a className="js-video-button" data-video-id="IfmK9ZWKHdk" data-channel="youtube" onClick={handleShow}>
                             <div className="overlay video">
                             <i className="fa fa-play fa-3x"></i>
                             </div>
                         </a>
-                            <img src="/img/EHFJXC.jpg" className="img-fluid b-lazy" alt="video thumbnail"/>
+                            <img src="/img/I4QXoy.jpg" className="img-fluid b-lazy" alt="video thumbnail"/>
                         </div>
                         <div className="col-lg-12 col-xl-7 game-card-right">
-                            <h2 className="short-hr-left">Project L<span className='zero'>0</span></h2>
+                            <h2 className="short-hr-left">Battle Heights</h2>
                             <p className="tags"><span className="subtle">Action | PC</span> </p>
-                            <p className="game-description">Dive into a fantastical universe where an AI and its horde of robots have taken control of the planet, attempting to impose a new order. With your eVa, form the core of the resistance and fight to preserve the last forms of life. Fighting fire with fire? You won't grow plants without breaking some gears. </p>
-                            <p className="game-description--line font-weight-bold">Give meaning to your battles :</p>
-                            {/*TODO:  faire une liste ici */}
-                            <ul className="game-description--line"> 
-                                <li>Explore a rich and meaningful universe</li>
-                                <li>Confront enemies with astonishing abilities</li>
-                                <li>Build your strategy by combining modules on your weapons and robot</li>
-                                <li>Assist eVa in collecting the last traces of life and the lost history of humans. </li>
-                            </ul>
+                            <p className="game-description">Master the heights ! Master the heights and conquer the void with double jumps, grappling hooks, and aerial maneuvers. Leap from cloud to cloud like an eagle hunting its prey, send your adversaries plummeting into the abyss, and unleash your aerial might in epic battles.</p>
                             <div className="steam-btn">
-                                <a href="https://wondersoftstudio.itch.io/project-l0">
+                                <a href="https://wondersoftstudio.itch.io/battleheights">
                                 <div className='d-flex align-items-center '>
                                     <i className="fa-brands fa-itch-io" ></i>
                                     <p className='mb-0 ms-2'> GET IT ON <span >ITCHIO</span></p>
@@ -143,42 +130,39 @@ const Battleheight = ({joinUsFromChild, headerBottomFromChild}) => {
                         show = {showModal}
                         handleClose = {handleClosed}
                     />
-                    <div className="d-lg-flex">
+                    <div className="d-lg-flex justify-content-between mb-5">
                         {Timg.map(({title, img,}) => (
-                            <div key={title} className="col-md-4 gallery-item mb-2" onClick={() => (handleShowModal(img))}>
-                                <div>
+                            <div key={title} className="gallery-item mb-2" onClick={() => (handleShowModal(img))}>
                                     <img src={img} data-src={img} className="img-fluid b-lazy" alt={title}/>
-                                </div>
                             </div>
                         ))}
                     </div>                   
                     </div>
-                    <div className="d-lg-flex justify-content-center justify-content-lg-around game-card p-4">
+                    
+                    <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4">
                         <div className="col-lg-12 col-xl-5 game-card-left my-2">
-                            <h2 className="short-hr-left">Key Mechanics</h2>
-                            <p className="">Unlock new recipes to enhance your capabilities.</p>
-                            <p className="">Upgrade and personalize your character's abilities</p>
-                            <p className="">Engage in battles against increasingly formidable foes </p>
+                            <p className="">Drop the the candy kaboom! Snatch this precious gem like a rugby ball, zigzag through opponents (or bulldoze them, it's more fun), and give them a taste of heat!</p>
                         </div>
-                        <div className="">
-                            <h2 className="short-hr-left">Controls</h2>
-                            <img src="/img/llYg0E.png" className="bg-dark p-4 controls_img" alt="video thumbnail"/>
+                        <div className="portal">
+                            <img src="/img/0000-0121.gif" className="mt-lg-2 controls_img--dash"  alt="video thumbnail"/>
                         </div>
                     </div>
-                    
-                    <div className="d-lg-flex justify-content-lg-around align-items-center p-4">
+
+                    <div className="d-lg-flex justify-content-lg-around align-items-center  p-4">
                         <div className="portal">
-                            <img src="/img/Ry18F4.gif" className="mt-lg-2 controls_img--dash"  alt="video thumbnail"/>
-                            <p className='text-center'>You are expected to dash through this portal ! </p>
+                            <img src="/img/O+As2E.gif" className="mt-lg-2 controls_img--dash"  alt="video thumbnail"/>
                         </div>
                         <div className="col-lg-12 col-xl-5 game-card-left my-2">
-                            <h2 className="short-hr-left">Prototype</h2>
-                            <p className="">Please note that the game is currently in its prototype stage. This demo incorporates both placeholder art and gameplay elements alongside (unoptimized) polished content. Please be aware that elements may change at any time.</p>
-                            <p className="text-center">FINISH THE DEMO</p>
-                            <p className="">Begin in the onboarding level and progress through four procedurally generated levels before confronting the final boss within the FACTORY.
-                            Defeat the final boss to return to your hub and mark the completion of the demo.
-                            STAY CONNECTED For updates and the opportunity to provide feedback on the game.</p>
-                            <a href="https://wondersoftstudio.itch.io/project-l0">Download the demo here !</a> 
+                            <p className="">It's dangerous to go alone! Take this Are you ready to strike? Poke the enemy with your blade! More into the heat of battle? Ignite the battlefield with your fireballs. Neither hot nor cold? Well, shoot them with your arrows and put them to the test!</p>
+                        </div>
+                    </div>
+
+                    <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4 mt-4">
+                        <div className="col-lg-12 col-xl-5 game-card-left my-2">
+                            <p className="">Dress for success ! No matter the outcome, always dress your best for the occasion.</p>
+                        </div>
+                        <div className="portal">
+                            <img src="/img/EqN4Ib.gif" className="mt-lg-2 controls_img--dash"  alt="video thumbnail"/>
                         </div>
                     </div>
                 </div>
@@ -188,4 +172,4 @@ const Battleheight = ({joinUsFromChild, headerBottomFromChild}) => {
     );
 };
 
-export default Battleheight;
+export default Battleheights;

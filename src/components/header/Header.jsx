@@ -90,12 +90,12 @@ import './header.css';
                                             ? 
                                             <>
                                             <Link to="/games" onClick={handleNavBar} className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link> 
-                                            <Link to="/battleheight" onClick={handleNavBar} className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Battle Height</Link>                                  
+                                            <Link to="/battleheights" onClick={handleNavBar} className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Battle Heights</Link>                                  
                                             </>
                                             : 
                                             <>
                                             <Link to="/games" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
-                                            <Link to="/battleheight" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Battle Height</Link>
+                                            <Link to="/battleheights" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Battle Heights</Link>
                                             </>
                                         
                                         }    

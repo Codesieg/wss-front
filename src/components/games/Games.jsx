@@ -117,7 +117,7 @@ const Games = ({joinUsFromChild, headerBottomFromChild}) => {
                                 </Modal.Body>
                             </Modal>    
                         </div>   
-                        <a className="js-video-button" data-video-id="5xZfEdysp6o" data-channel="youtube" onClick={handleShow}>
+                        <a className="js-video-button"  onClick={handleShow}>
                             <div className="overlay video">
                             <i className="fa fa-play fa-3x"></i>
                             </div>

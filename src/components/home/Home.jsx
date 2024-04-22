@@ -99,15 +99,15 @@ const Home = ({joinUsFromChild}) => {
         
     // ]; 
 
-    useEffect(() => { 
-        // window.addEventListener("load", () => {
-        //     setLoading(false);
-        //   });
-          setTimeout(() => {
-			setLoading(false)
-		}, 6000)
-    },
-    []);
+    // useEffect(() => { 
+    //     // window.addEventListener("load", () => {
+    //     //     setLoading(false);
+    //     //   });
+    //       setTimeout(() => {
+	// 		setLoading(false)
+	// 	}, 6000)
+    // },
+    // []);
 
     // useEffect(() => {
     //         const intervalId = setInterval(() => {
@@ -122,11 +122,11 @@ const Home = ({joinUsFromChild}) => {
 
 
     return (
-        <>
+        // <>
             <div className="home">
-                {loading ? <Loader />
+                {/* {loading ? <Loader />
                           :  
-                         <>
+                         <> */}
                                 <div className="home-text">                                   
                                     <h2>Defy the System, craft your weapons, save the last remains.</h2> 
                                     <h2>Meet the team and fellow players.</h2>
@@ -151,7 +151,7 @@ const Home = ({joinUsFromChild}) => {
                                   
                                 </div>
                             <div className="clip-item">  
-                                <div className='mouse-controls'>
+                                {/* <div className='mouse-controls'>
                                         <div className="scroll-downs">
                                         <div className="mousey">
                                             <div className="scroller"></div>
@@ -168,19 +168,39 @@ const Home = ({joinUsFromChild}) => {
                                         <div className="chevron chevron-bottom"></div>
                                         <div>Move</div>
                                     </div>
-                                </div>                   
+                                </div>                  <div className='mouse-controls'>
+                                        <div className="scroll-downs">
+                                        <div className="mousey">
+                                            <div className="scroller"></div>
+                                        </div>
+                                        <div>Zoom</div>
+                                    </div>
+                                    <div className="mouse-move">
+                                        <div className="chevron chevron-top"></div>
+                                        <div className="chevron chevron-right"></div>
+                                        <div className="mousey">
+                                            <div className="scroller-fix"></div>
+                                        </div>
+                                        <div className="chevron chevron-left"></div>
+                                        <div className="chevron chevron-bottom"></div>
+                                        <div>Move</div>
+                                    </div>
+                                </div>       */}
                                 {/* <img src={words[index % words.length].img} alt={words.title}/> */}
-                                <Canvas className='mt-5'>      
-                                <spotLight ref={spotRef} />
-                                    <Model />
-                                    <OrbitControls />
-                                    <Stats />
-                                </Canvas>
+                                <div className="youtube-video-container" style={{ overflow: 'hidden', paddingBottom: '56.25%', position: 'relative', height: 0 }}>
+                                    <iframe
+                                        style={{ left: 0, top: 0, height: '100%', width: '100%', position: 'absolute' }}
+                                        src={`https://www.youtube.com/embed/QErJtShq4Cw`}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        title="YouTube video player"
+                                    ></iframe>
+                                    </div>
                             </div>
-                        </>      
-                 }  
+                        {/* </>       */}
+                 {/* }   */}
             </div>
-        </>
+        // </>
     );
 };
 
