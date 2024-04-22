@@ -3,6 +3,7 @@
 /* --------------------------- /////////// IV. HERO SECTION /////////// --------------------------- */
 .home {
     padding-top: 80px;
+    align-items: center;
 }
 
 .home-container {
@@ -15,13 +16,13 @@
 }
 
 .home-text {
-    /* display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;
     width: 100vw;
     max-width: 100%;
-    height: 50vw;
+    /* height: 50vw;
     max-height: 100%;
     font-size: 1em;
     padding: 5px;
@@ -30,7 +31,7 @@
     transform: translateY(-50%);
     text-align: center;
     z-index: 100;
-    display:block;
+    display:block; */
 }
 
 .home-text > h2 {
@@ -42,22 +43,21 @@
     font-family: var(--secondary-font);
 }
 
-.home-button {
+/* .home-button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 500px;
-    /* height: 50px; */
     max-width: 100%;
     background-color: var(--secondary-color);
     padding: 0 10px;
     margin: 150px 0 0 0;
     border-radius: 10px;
     text-decoration: none;
-}
+} */
 
 
-.home-button > p, .home-button > i {
+/* .home-button > p, .home-button > i {
     margin-bottom: 0;
     color: white;
     font-weight: 600;
@@ -73,13 +73,13 @@
 }
 
 .home-button:hover > p, .home-button:hover > i {
-    color: rgb(7, 7, 7); /* Couleur que vous souhaitez appliquer au survol */
+    color: rgb(7, 7, 7); 
 }
 
 .home-button:hover > .home-button-switch {
-    color: rgb(7, 7, 7); /* Couleur que vous souhaitez appliquer au survol */
+    color: rgb(7, 7, 7);
+} */
 
-}
 .clip-item  {
     width: 100vw;
     max-width: 100%;  
@@ -108,22 +108,13 @@
         background: none;
     }
     .home-text {
-        /* margin: 100px 25px 0 25px; */
-        /* width: 50vw;
-        font-size: 1.2em;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         text-align: center;
-        z-index: 100;
-        display:block; */
         margin: 100px 25px 0 25px;
         width: 50vw;
         font-size: 1.2em;
         transform: inherit;
         text-align: center;
         z-index: 100;
-        display: block;
     }
 
     .home {
@@ -247,13 +238,11 @@
 @media (min-width : 1440px) {
     .home {
         display: flex;
-        align-items: flex-end;
-        height: 94vh;
+        height: 91vh;
     }
 
     .home-container {
-        /* width: 50%; */
-        height: 100%;
+        height: 91vh;
     }
 
     .home-text {
@@ -265,11 +254,12 @@
     }
 
     .clip-item {
-        width: 100%;
+        width: 50%;
         height: 100%;
+        background-color: black;
     }
 
-    .clip-item img {
+    .container-right{
         -webkit-clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
         clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
         mix-blend-mode: multiply;
