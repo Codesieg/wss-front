@@ -3,9 +3,14 @@
     padding-top: 100px;
 }
 
+.container {
+    max-width: 90%!important;
+}
 
 /* --------------------------- /////////// XII. RESPONSIVE STYLES /////////// --------------------------- */
 
-@media (max-width : 767px) {
-
+@media (min-width : 767px) {
+    .row-card {
+        display: flex;
+    }
 }

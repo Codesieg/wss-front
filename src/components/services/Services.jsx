@@ -58,16 +58,16 @@ const Services = ({joinUsFromChild, headerBottomFromChild}) => {
                     pageTitleColor =  {pageTitleColor}
                     positionY = {positionY}
                 />
-                <div className="row">
                     <div className="col-md-12 tiny-margin">
                         <p>Our company offers training, co-development and consulting services to the game industry, primarily on console and PC using Unreal Engine.</p>
                         <p>Get in touch at <span className='fw-bold'>consulting@wondersoftstudio.com</span> or use the contact form for more information</p>  
                     </div>
-                       <Card 
-                        table = {imgServices}
-                       />  
+                    <div className="row-card">
+                        <Card 
+                            table = {imgServices}
+                        />  
+                    </div>
                 </div>
-            </div>
         </>
     );
 };

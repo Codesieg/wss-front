@@ -5,12 +5,13 @@
   }
   
   .gamer-card {
-    width: 100%;
-    margin: 0 auto 3.5rem auto;
+    width: 350px;
+    max-width: 100%;
+    margin: 0 20px 56px 0px;
     min-height: 270px;
     height: auto;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.11);
-
+    padding: 15px;
   }
   
   h3 {
