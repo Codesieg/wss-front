@@ -1,63 +1,88 @@
 @import url("../../css/styles.css");
 
-/* --------------------------- /////////// IV. HERO SECTION /////////// --------------------------- */
-.home {
-    padding-top: 80px;
-    align-items: center;
-}
-
+/* --------------------------- /////////// HERO SECTION /////////// --------------------------- */
 .home-container {
-    height: 35vh;
+    height: 90vh;
     max-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.home-text {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     width: 100vw;
     max-width: 100%;
-    /* height: 50vw;
-    max-height: 100%;
-    font-size: 1em;
-    padding: 5px;
-    position: absolute;
-    top: 20%;
-    transform: translateY(-50%);
-    text-align: center;
-    z-index: 100;
-    display:block; */
+}
+
+.home {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    width: 50%;
+}
+
+.home-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100%;
 }
 
 .home-text > h2 {
     font-size: 1.8em;
     font-weight: 600;
     text-align: center;
-    /* text-align: right; */
     margin: 10px 0;
     font-family: var(--secondary-font);
 }
 
-/* .home-button {
+.clip-item  {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;    
+    width: 50%;
+}
+
+.video-box {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+}
+.video-box--title {
+    font-family: Anurati, sans-serif;
+    font-size: 4em;
+    color: white;
+
+}
+
+
+.react-player {
+
+}
+
+
+/* .word-color {
+    color: var(--secondary-color);
+    font-weight: 600;
+} */
+
+.home-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 250px;
     max-width: 100%;
     background-color: var(--secondary-color);
     padding: 0 10px;
-    margin: 150px 0 0 0;
     border-radius: 10px;
     text-decoration: none;
-} */
+}
 
 
-/* .home-button > p, .home-button > i {
+.home-button > p, .home-button > i {
     margin-bottom: 0;
     color: white;
     font-weight: 600;
@@ -65,6 +90,7 @@
 
 .home-button-switch {
     color: white;
+    padding-left: 5px;
 }
 .home-button-switch:hover {
     background-color: rgb(248, 246, 246);
@@ -78,32 +104,12 @@
 
 .home-button:hover > .home-button-switch {
     color: rgb(7, 7, 7);
-} */
-
-.clip-item  {
-    width: 100vw;
-    max-width: 100%;  
-    height: 84vh;
-    max-height: 100%;
-    overflow: hidden;    
-}
-
-.clip-item img {
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* .word-color {
-    color: var(--secondary-color);
-    font-weight: 600;
-} */
-
+} 
 
 
 /* --------------------------- /////////// XII. RESPONSIVE STYLES /////////// --------------------------- */
 @media (min-width : 768px) {
-    .home-container {
+    /* .home-container {
         height: 45vh;
         background: none;
     }
@@ -123,7 +129,7 @@
 
     .clip-item {
         height: 45vh;
-    }
+    } */
 
     .mouse-controls {
         display: flex;
@@ -245,16 +251,12 @@
         height: 91vh;
     }
 
-    .home-text {
-        justify-content: flex-end;
-    }
-
     .home-text > h2 {
         font-size: 3em; 
     }
 
     .clip-item {
-        width: 50%;
+        /* width: 60%; */
         height: 100%;
         background-color: black;
     }
@@ -263,12 +265,10 @@
         -webkit-clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
         clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
         mix-blend-mode: multiply;
-        background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
-        background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
     }
 
     .clip-item img {
-        width: 100%;
+        width: 50%;
         height: 100%;
         bottom: 0px;
     }

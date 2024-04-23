@@ -138,8 +138,7 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
                 <h2 className="short-hr-left fs-4 mt-4">The Team</h2>
                     <p>Our team comprises passionate and seasoned developers committed to delivering a high-quality and engaging gaming experience.
                     Welcome to Wondersoft Studio, a video game development studio nestled in the heart of Grenoble, amidst the breathtaking French Alps.</p>
-                    At Wondersoft, we thrive on crafting immersive narratives that strike the perfect balance between gameplay and storytelling.
-                    <p>Our mission is simple: to create games we love, alongside people we love, for everyone to love.</p>
+                    <p> At Wondersoft, we thrive on crafting immersive narratives that strike the perfect balance between gameplay and storytelling.</p>
                 </div>
                 <div className="cards">
                 {teams.map((team, index) => (
