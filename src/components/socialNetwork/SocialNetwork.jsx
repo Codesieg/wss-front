@@ -5,7 +5,7 @@ function SocialNetwork({joinUs}) {
 const socialList = [
     {
         name: 'itch-io',
-        url: 'https://wondersoftstudio.itch.io/project-l0',
+        url: 'https://wondersoftstudio.itch.io',
     },
     {
         name: 'discord',

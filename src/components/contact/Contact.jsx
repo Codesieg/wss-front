@@ -28,8 +28,8 @@ const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        // fetch('http://api.wondersoftstudio.com/send-email', {
-        fetch('http://localhost:3030/send-email', {
+        fetch('http://api.wondersoftstudio.com/send-email', {
+        // fetch('http://localhost:3030/send-email', {
             method: 'POST',
             body: JSON.stringify({
                 message: e.target.message.value, // Envoyer les données du formulaire

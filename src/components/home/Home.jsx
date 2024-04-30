@@ -15,10 +15,16 @@ const Home = ({joinUsFromChild}) => {
                     <div className="home-text">
                         <h2>Defy the System, craft your weapons, save the last remains.</h2>
                         <h2>Meet the team and fellow players.</h2>
-                        <a className='home-button home-button-switch' href="https://discord.gg/xsn6ZpNkCu">
-                            <i className="fa-brands fa-discord home-button-switch" ></i>
-                            <p className='home-button-switch'>Join us on Discord</p>
-                        </a>
+                        <div className="home-buttons">
+                            <a className='home-button home-button-switch' href="https://discord.gg/xsn6ZpNkCu">
+                                <i className="fa-brands fa-discord home-button-switch" ></i>
+                                <p className='home-button-switch'>Join us on Discord</p>
+                            </a>
+                            <a className='home-button home-button-switch' href="https://wondersoftstudio.itch.io/battleheights">
+                                <i className="fa-brands fa-itch-io home-button-switch" ></i>
+                                <p className='home-button-switch'>Download Now !</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div className="clip-item container-right"> 
@@ -30,8 +36,8 @@ const Home = ({joinUsFromChild}) => {
                             volume='0'
                             playing='true'
                             loop='true'
+                            width='100%'
                         />
-
                     </div>
                 </div>
             </div>

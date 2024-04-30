@@ -56,7 +56,7 @@ const Login = ({joinUsFromChild, headerBottomFromChild}) => {
                     <input type="password" name="password" className="form-control" id="exampleInputPassword1"/>
                 </div>
                 <button type="submit" className="btn btn-primary">Login</button>
-                <Link to="/signup"  className= 'nav-link pb-1 fw-bold text-light'>Create Acount</Link>
+                <Link to="/signup"  className= 'nav-link pb-1 fw-bold text-light'>Create Account</Link>
             </form>
                 <div className='text-danger mt-2'>{message}</div>
         </div>

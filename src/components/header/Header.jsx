@@ -63,7 +63,6 @@ import './header.css';
                                 <span className="navbar-toggler-icon"></span>
                         </button>                
                         <div className={`${navBar ? 'justify-content-end' : 'collapse navbar-collapse justify-content-end'}`}>
-                        
                             <ul className={`${navBar ? 'hide-navbar-content ' : 'navbar-nav ml-auto'}`}>
                                 <li className="nav-item active">
                                    {navBar 
@@ -84,30 +83,21 @@ import './header.css';
                                     }
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className='nav-link pb-1 fw-bold'>Games</a>
+                                    <a className='nav-link pb-1 fw-bold gameA'>Games</a>
                                     <li className='dropdown-content'>
                                             {navBar 
                                             ? 
                                             <>
-                                            <Link to="/games" onClick={handleNavBar} className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link> 
-                                            <Link to="/battleheights" onClick={handleNavBar} className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Battle Heights</Link>                                  
+                                                <Link to="/games" onClick={handleNavBar} className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link> 
+                                                <Link to="/battleheights" onClick={handleNavBar} className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Battle Heights</Link>                                  
                                             </>
                                             : 
                                             <>
-                                            <Link to="/games" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
-                                            <Link to="/battleheights" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Battle Heights</Link>
+                                                <Link to="/games" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
+                                                <Link to="/battleheights" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Battle Heights</Link>
                                             </>
-                                        
                                         }    
                                     </li>
-                                    {/* <li>
-                                        {navBar 
-                                            ? 
-                                            <Link to="/games" onClick={handleNavBar} className={`${navBar ? ' dropdown-content fs-3 pb-1 fw-bold text-light' : ' dropdown-content  pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
-                                            : 
-                                            <Link to="/games" className={`${navBar ? 'dropdown-content fs-3 pb-1 fw-bold text-light' : 'dropdown-content  pb-1 fw-bold'}`}>Battle Height</Link>
-                                        }
-                                    </li>                                                      */}
                                 </li>
                                 <li className="nav-item">
                                     {navBar 
