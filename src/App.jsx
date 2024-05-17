@@ -17,7 +17,7 @@ import SocialNetwork from './components/socialNetwork/SocialNetwork';
 import Login from './components/login/Login';
 import SignUp from './components/signup/SignUp';
 import Dashboard from './components/dashboard/Dashboard'
-import { isAuthenticated } from './components/dashboard/auth'; // Fonction pour vérifier l'authentification
+// import { isAuthenticated } from './components/dashboard/auth'; // Fonction pour vérifier l'authentification
 
 
 
@@ -26,7 +26,7 @@ function App() {
   const [headerBottom, setHeaderBottom] = useState(false);
 
   // const isAuth = true;
-  const isAuth = isAuthenticated();
+  // const isAuth = isAuthenticated();
 
   const joinUsOK = (joined) => {
       setJoinUS(joined)

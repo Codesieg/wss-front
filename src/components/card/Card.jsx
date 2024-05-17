@@ -14,7 +14,7 @@ const Card = ({table}) => {
                         <div className="title-flex">
                             <h3 className="box-title">{img.title}</h3>
                         </div>
-                        <p className="description">{img.desc}</p>
+                        {/* <p className="description">{img.desc}</p> */}
                     </div>
                 </div>
             ))}

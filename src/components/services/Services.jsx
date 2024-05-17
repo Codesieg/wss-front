@@ -18,24 +18,20 @@ const Services = ({joinUsFromChild, headerBottomFromChild}) => {
 
     const imgServices = [
         {
-            url:'/img/90e5f427e3e3bb610a927cb77fd5e925.png',
-            title:'Game Designer',
-            desc: 'We create and develop game concepts and rules, ensuring the design of an engaging and balanced gaming experience.'
+            url:'/img/download.png',
+            title:'Gameplay and tool programing',
         },
         {
-            url:'/img/Jap.resto_-_Finale.png',
-            title:'Game Developer ',
-            desc: 'We are programmers who write the game\'s source code, transforming the designers\' ideas into an interactive and functional reality.'
+            url:'/img/HighresScreenshot00020.png',
+            title:'Environment art 3D modeling ',
         },
         {
-            url:'/img/ScreenShot00011.png',
-            title:'Graphic Designer',
-            desc: 'We create visual elements such as characters, environments, and interfaces, bringing the visual universe of the game to life.'
+            url:'/img/battleH_lowpolyDiorama_004.png',
+            title:'Characters and animation',
         },
         {
-            url:'/img/ScreenShot00012.png',
-            title:'Animator',
-            desc: 'We animate game characters and objects to breathe life into them, ensuring that movements are smooth and captivating.'
+            url:'/img/Capture_decran_2024-02-23_181546.png',
+            title:'Game design and QA',
         },
         // {
         //     url:'/img/Tibetan_Restaurant.png',
