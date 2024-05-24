@@ -18,12 +18,7 @@ const Home = ({joinUsFromChild}) => {
                         <div className="video-box-icons">
                             <i className="fa-brands fa-steam video-box-icons-only" ></i>
                         </div>
-                        <div className="video-box-icons">
-                            <a className='home-button home-button-switch' href="https://discord.gg/xsn6ZpNkCu">
-                                <i className="fa-brands fa-discord home-button-switch" ></i>
-                                <p className='home-button-switch'>Join us on Discord</p>
-                            </a>                        
-                        </div>
+                        <a href='https://www.kickstarter.com/'><img className="kickstarter" src="/img/kickstarter.png" alt="" /></a>
                         <div className="home-buttons-buttons">
                             <a className='home-button home-button-switch' href="https://discord.gg/xsn6ZpNkCu">
                                 <i className="fa-brands fa-discord home-button-switch" ></i>

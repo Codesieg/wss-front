@@ -166,6 +166,14 @@
     color: rgb(7, 7, 7);
 }  */
 
+.kickstarter {
+  width: 300px;
+  max-width: 100%;
+  position : absolute;
+  top: 60%; 
+  left: 20%;
+  z-index: 50;
+}
 
 /* --------------------------- /////////// XII. RESPONSIVE STYLES /////////// --------------------------- */
 @media (min-width : 768px) {
