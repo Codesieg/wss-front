@@ -15,7 +15,7 @@
   }
   
   h3 {
-    font-size: 1.5em;
+    font-size: 1em !important;
     font-weight: 700;
   }
   
@@ -78,6 +78,8 @@
   .box-title {
     border-left: 3px solid #E84118 ;
     padding-left: 12px;
+    padding-top: 5px;
+    margin-top: 5px;
   }
   
   

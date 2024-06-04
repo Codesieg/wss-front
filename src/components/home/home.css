@@ -66,6 +66,8 @@
     border-top: solid black 2px ;
     padding-top: 150px!important;
     width: 100%;
+    margin-bottom: 0px!important;
+
 }
 
 .video-box-text {
@@ -94,7 +96,7 @@
 
 .home-buttons-buttons {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -167,12 +169,34 @@
 }  */
 
 .kickstarter {
-  width: 300px;
+  width: 100px;
   max-width: 100%;
   position : absolute;
-  top: 60%; 
-  left: 20%;
+  top: 41%; 
+  left: 2%;
   z-index: 50;
+  transform: rotate(336deg);
+}
+
+.kickstarter--arrow {
+  width: 15px;
+  max-width: 100%;
+  position : absolute;
+  top: 39%; 
+  left: 5%;
+  z-index: 60;
+  transform: scaleX(-1) rotate(336deg);
+  filter: invert(100%);
+}
+
+.kickstarter--backUs {
+  width: 100px;
+  max-width: 100%;
+  position : absolute;
+  top: 38%; 
+  left: 10%;
+  z-index: 50;
+  filter: invert(100%);
 }
 
 /* --------------------------- /////////// XII. RESPONSIVE STYLES /////////// --------------------------- */
@@ -378,6 +402,35 @@
     display: flex;
     align-items: flex-end;
     height: 100%;
+  }
+
+  .kickstarter {
+    width: 250px;
+    max-width: 100%;
+    position : absolute;
+    top: 65%; 
+    left: 25%;
+    z-index: 50;
+    transform: rotate(336deg);
+  }
+  
+  .kickstarter--arrow {
+    width: 30px;
+    max-width: 100%;
+    position : absolute;
+    top: 60%; 
+    left: 28%;
+    z-index: 60;
+    transform: scaleX(-1) rotate(336deg);
+  }
+  
+  .kickstarter--backUs {
+    width: 160px;
+    max-width: 100%;
+    position : absolute;
+    top: 60%; 
+    left: 31%;
+    z-index: 50;
   }
 }
 
