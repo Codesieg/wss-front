@@ -130,6 +130,10 @@ body {
     font-size: 0.9em;
 }
 
+.externals-btns {
+    display: flex;
+}
+
 /* -- Buttons -- */
 .steam-btn {
     display: flex;

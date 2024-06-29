@@ -114,13 +114,23 @@ const Battleheights = ({joinUsFromChild, headerBottomFromChild}) => {
                             <h2 className="short-hr-left">Battle Heights</h2>
                             <p className="tags"><span className="subtle">Action | PC</span> </p>
                             <p className="game-description">Master the heights ! Master the heights and conquer the void with double jumps, grappling hooks, and aerial maneuvers. Leap from cloud to cloud like an eagle hunting its prey, send your adversaries plummeting into the abyss, and unleash your aerial might in epic battles.</p>
-                            <div className="steam-btn">
-                                <a href="https://wondersoftstudio.itch.io/battleheights">
-                                <div className='d-flex align-items-center '>
-                                    <i className="fa-brands fa-itch-io" ></i>
-                                    <p className='mb-0 ms-2'> GET IT ON <span >ITCHIO</span></p>
+                            <div className="externals-btns">
+                                <div className="steam-btn">
+                                    <a href="https://wondersoftstudio.itch.io/battleheights">
+                                    <div className='d-flex align-items-center '>
+                                        <i className="fa-brands fa-itch-io" ></i>
+                                        <p className='mb-0 ms-2'> GET IT ON <span >ITCHIO</span></p>
+                                    </div>
+                                    </a>
                                 </div>
-                                </a>
+                                <div className="steam-btn">
+                                    <a className='ms-4' href="https://wondersoftstudio.itch.io/battleheights">
+                                    <div className='d-flex align-items-center '>
+                                        <i className="fa-brands fa-steam" ></i>
+                                        <p className='mb-0 ms-2'> SOON ON STEAM</p>
+                                    </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

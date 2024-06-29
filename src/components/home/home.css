@@ -67,6 +67,8 @@
     padding-top: 150px!important;
     width: 100%;
     margin-bottom: 0px!important;
+    z-index: 60;
+    text-decoration:none
 
 }
 
@@ -397,12 +399,24 @@
   }
 
   .video-box--title {
-    color: rgb(253, 253, 253);
+    font-family: "Barlow Condensed", sans-serif!important;
+    color: rgb(253, 253, 253)!important;
     border-top: inherit;
     display: flex;
     align-items: flex-end;
     height: 100%;
+    font-size: 8rem;
+    font-weight: 900;
+    text-shadow: 7px 5px 3px #13121299;
+
   }
+
+  .video-box--title:hover {
+      text-decoration: none !important;
+      cursor: pointer;
+  }
+
+
 
   .kickstarter {
     width: 250px;
@@ -422,6 +436,7 @@
     left: 28%;
     z-index: 60;
     transform: scaleX(-1) rotate(336deg);
+    filter: inherit;
   }
   
   .kickstarter--backUs {

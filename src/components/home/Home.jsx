@@ -1,8 +1,9 @@
 import './home.css';
 
-import TextTransition, { presets } from 'react-text-transition';
-import { motion } from  "framer-motion";
+// import TextTransition, { presets } from 'react-text-transition';
+// import { motion } from  "framer-motion";
 import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
 
 
 const Home = ({joinUsFromChild}) => {
@@ -13,12 +14,12 @@ const Home = ({joinUsFromChild}) => {
             <div className='home-container'>
                 <div className="home-buttons">
                     <div className="home-buttons-title">
-                        <p className='video-box--title'>BATTLE HEIGHTS</p>
+                    <Link to="/battleheights" className='video-box--title'>BATTLE HEIGHTS</Link>                                  
                         <p className='video-box-text'>Soon on Steam</p>
                         <div className="video-box-icons">
                             <i className="fa-brands fa-steam video-box-icons-only" ></i>
                         </div>
-                        <a href='https://www.kickstarter.com/'>
+                        <a href='https://www.kickstarter.com/projects/wondersoftstudio/battleheights'>
                             <img className="kickstarter--arrow" src="/img/arrow.png" alt="" />
                             <img className="kickstarter" src="/img/kickstarter.png" alt="" />
                             <img className="kickstarter--backUs" src="/img/back_us.png" alt="" />
