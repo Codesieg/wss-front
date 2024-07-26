@@ -124,7 +124,7 @@ const Battleheights = ({joinUsFromChild, headerBottomFromChild}) => {
                                     </a>
                                 </div>
                                 <div className="steam-btn">
-                                    <a className='ms-4' href="https://wondersoftstudio.itch.io/battleheights">
+                                    <a className='ms-4' href="">
                                     <div className='d-flex align-items-center '>
                                         <i className="fa-brands fa-steam" ></i>
                                         <p className='mb-0 ms-2'> SOON ON STEAM</p>
