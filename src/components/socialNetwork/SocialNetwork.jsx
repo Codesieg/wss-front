@@ -4,8 +4,8 @@ function SocialNetwork({joinUs}) {
 
 const socialList = [
     {
-        name: 'itch-io',
-        url: 'https://wondersoftstudio.itch.io',
+        name: 'steam',
+        url: 'https://store.steampowered.com/app/2932940/BattleHeights',
     },
     {
         name: 'discord',

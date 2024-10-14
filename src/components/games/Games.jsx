@@ -3,6 +3,7 @@ import { Modal } from 'react-bootstrap';
 import MyModal from '../modal/MyModal';
 import SectionTitle from '../sectionTitle/SectionTitle';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next' 
 
 
 import './games.css';

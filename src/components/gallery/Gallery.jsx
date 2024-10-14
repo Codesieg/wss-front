@@ -1,5 +1,6 @@
 import React, { useRef } from "react"
 import useSlider from "../../hooks/useSlider"
+import { useTranslation } from 'react-i18next' 
 
 import './gallery.css';
 

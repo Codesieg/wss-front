@@ -5,6 +5,8 @@ import './about.css';
 import SocialNetwork from '../socialNetwork/SocialNetwork';
 import SectionTitle from '../sectionTitle/SectionTitle';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next' 
+
 
 
 const About = () => {

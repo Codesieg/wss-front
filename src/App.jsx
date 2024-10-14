@@ -17,7 +17,8 @@ import Error from './components/error/Error';
 import SocialNetwork from './components/socialNetwork/SocialNetwork';
 import Login from './components/login/Login';
 import SignUp from './components/signup/SignUp';
-import Dashboard from './components/dashboard/Dashboard'
+import Dashboard from './components/dashboard/Dashboard';
+import PrivatePolicy from './components/dashboard/PivatePolicy';
 // import { isAuthenticated } from './components/dashboard/auth'; // Fonction pour vérifier l'authentification
 
 
@@ -25,6 +26,8 @@ import Dashboard from './components/dashboard/Dashboard'
 function App() {
   const [joinUs, setJoinUS] = useState(false);
   const [headerBottom, setHeaderBottom] = useState(false);
+      const { t } = useTranslation() ;
+
 
   // const isAuth = true;
   // const isAuth = isAuthenticated();
@@ -55,7 +58,7 @@ function App() {
             headerBottom = {headerBottom}
           />
           <SocialNetwork
-             joinUs = {joinUs}
+              joinUs = {joinUs}
           />
           <Routes>
               <Route exact path="/" 
@@ -133,7 +136,14 @@ function App() {
                     />
                   } 
                 />
-             
+                  <Route path="/PrivatePolicy" 
+                  element={
+                    <PrivatePolicy
+                      joinUsFromChild = {joinUsOK}
+                      headerBottomFromChild = {bottomLine}
+                    />
+                  } 
+                />
              {/* { isAuth ?  */}
                 {/* : <Route path="/signup" 
                 element={

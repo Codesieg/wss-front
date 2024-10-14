@@ -3,6 +3,7 @@ import { decodeToken } from "react-jwt";
 import Tooltip from '../tooltip/Tooltip';
 import Navbar from './navbar/Navbar';
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next' 
 
 import './dashboard.css';
 

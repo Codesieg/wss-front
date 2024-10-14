@@ -1,7 +1,8 @@
 import React from "react";
 
 import './card.css';
- 
+import { useTranslation } from 'react-i18next' 
+
 
 const Card = ({table}) => {
 

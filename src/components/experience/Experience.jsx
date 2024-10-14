@@ -4,6 +4,7 @@ import { useLoader, useThree, extend, useFrame } from '@react-three/fiber';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useGLTF, useHelper, PivotControls} from "@react-three/drei";
+import { useTranslation } from 'react-i18next' 
 
 import { useControls } from 'leva';
 

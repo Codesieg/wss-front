@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useMotionValueEvent } from  "framer-motion";
+import { useTranslation } from 'react-i18next' 
 
 import './header.css';
 
@@ -15,7 +16,7 @@ import './header.css';
     const [navBar, setNavBar] = useState(false);
     const {scrollY} = useScroll();
     const [scrolled, setScrolled] = useState(false);
- 
+
     // Adds a class to the navbar when scrolling down and removes it when scrolling up
     useMotionValueEvent(scrollY, "change", (latest) => {
         if (!navBar){

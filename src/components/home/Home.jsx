@@ -21,19 +21,14 @@ const Home = ({joinUsFromChild}) => {
                         <div className="video-box-icons">
                             <i className="fa-brands fa-steam video-box-icons-only" ></i>
                         </div> */}
-                        <a href='https://www.kickstarter.com/projects/wondersoftstudio/battleheights'>
-                            <img className="kickstarter--arrow" src="/img/arrow.png" alt="" />
-                            <img className="kickstarter" src="/img/kickstarter.png" alt="" />
-                            <img className="kickstarter--backUs" src="/img/back_us.png" alt="" />
-                        </a>
                         <div className="home-buttons-buttons">
                             <a className='home-button home-button-switch' href="https://discord.gg/xsn6ZpNkCu">
                                 <i className="fa-brands fa-discord home-button-switch" ></i>
                                 <p className='home-button-switch'>{ t( 'discord' ) } </p>
                             </a>
-                            <a className='home-button home-button-switch' href="https://wondersoftstudio.itch.io/battleheights">
-                                <i className="fa-brands fa-itch-io home-button-switch" ></i>
-                                <p className='home-button-switch'>Join The Beta Now</p>
+                            <a className='home-button home-button-switch' href="https://store.steampowered.com/app/2932940/BattleHeights">
+                                <i className="fa-brands fa-steam home-button-switch" ></i>
+                                <p className='home-button-switch'>{ t( 'steam' ) }</p>
                             </a>
                         </div>
                     </div>

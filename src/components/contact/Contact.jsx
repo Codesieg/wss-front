@@ -6,6 +6,7 @@ import SectionTitle from '../sectionTitle/SectionTitle';
 import { ToastProvider } from '../toastProvider/ToastProvider';
 import { Helmet } from 'react-helmet';
 import ReCAPTCHA from "react-google-recaptcha";
+import { useTranslation } from 'react-i18next' 
 
 
 const Contact = ({joinUsFromChild, headerBottomFromChild}) => {
