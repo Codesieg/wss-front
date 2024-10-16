@@ -12,27 +12,7 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
     joinUsFromChild(true);
     headerBottomFromChild(false);
 
-   const teams = [
-        { 
-            teamName: 'Bastien Renaud',
-            subtle: 'Modeleur 3D',
-            img: '/img/Bastien_Renaud.jpg',
-            teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-            twitter: 'https://github.com/john',
-            discord: 'https://github.com/john',
-            github: 'https://github.com/john',
-            linkedin: 'https://www.linkedin.com/in/bastien-renaud-412708139/',
-        },
-        { 
-            teamName: 'Clement Fortune',
-            subtle: 'Concetp Artiste',
-            img: '/img/Clement_Fortune.jpg',
-            teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-            twitter: 'https://github.com/john',
-            discord: 'https://github.com/john',
-            github: 'https://github.com/john',    
-            linkedin: 'https://www.linkedin.com/in/sk3tchf0rmscra7ch/',
-        },
+   const coreTeam = [
         { 
             teamName: 'Florian Golestin',
             subtle: 'CEO - Game Director',
@@ -54,16 +34,6 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
             linkedin: 'https://fr.linkedin.com/in/noe-daval-72ab9a267',
         },
         { 
-            teamName: 'Jeremy Bouchet',
-            subtle: 'Compositeur',
-            img: '/img/Jeremy_Bouchet.jpg',
-            teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-            twitter: 'https://github.com/john',
-            discord: 'https://github.com/john',
-            github: 'https://github.com/john',
-            linkedin: 'https://www.linkedin.com/in/jeremie-bouchet/',
-        },
-        { 
             teamName: 'Fabian Salvini',
             subtle: 'Game designer',
             img: '/img/Fabian_Salvini.jpg',
@@ -73,6 +43,39 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
             github: 'https://github.com/john',
             linkedin: 'https://www.linkedin.com/in/fabiansalvini/',
         },
+];
+
+const helpTeam = [
+    { 
+        teamName: 'Bastien Renaud',
+        subtle: 'Modeleur 3D',
+        img: '/img/Bastien_Renaud.jpg',
+        teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+        twitter: 'https://github.com/john',
+        discord: 'https://github.com/john',
+        github: 'https://github.com/john',
+        linkedin: 'https://www.linkedin.com/in/bastien-renaud-412708139/',
+    },
+    { 
+        teamName: 'Clement Fortune',
+        subtle: 'Concept Artist',
+        img: '/img/Clement_Fortune.jpg',
+        teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+        twitter: 'https://github.com/john',
+        discord: 'https://github.com/john',
+        github: 'https://github.com/john',    
+        linkedin: 'https://www.linkedin.com/in/sk3tchf0rmscra7ch/',
+    },
+    { 
+        teamName: 'Jeremy Bouchet',
+        subtle: 'Compositeur',
+        img: '/img/Jeremy_Bouchet.jpg',
+        teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+        twitter: 'https://github.com/john',
+        discord: 'https://github.com/john',
+        github: 'https://github.com/john',
+        linkedin: 'https://www.linkedin.com/in/jeremie-bouchet/',
+    },
 ];
 
     const images = [
@@ -135,14 +138,37 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
                 </defs>
             </svg> */}
                 <div className="col-md-11">
-                <h2 className="short-hr-left fs-4 mt-4">The Team</h2>
+                <h2 className="short-hr-left fs-4 mt-4">Core Team</h2>
                     <p>Our team comprises passionate and seasoned developers committed to delivering a high-quality and engaging gaming experience.
                     Welcome to Wondersoft Studio, a video game development studio nestled in the heart of Grenoble, amidst the breathtaking French Alps.</p>
-                    At Wondersoft, we thrive on crafting immersive narratives that strike the perfect balance between gameplay and storytelling.
-                    <p>Our mission is simple: to create games we love, alongside people we love, for everyone to love.</p>
+                    <p> At Wondersoft, we thrive on crafting immersive narratives that strike the perfect balance between gameplay and storytelling.</p>
                 </div>
                 <div className="cards">
-                {teams.map((team, index) => (
+                {coreTeam.map((team, index) => (
+                    <div key={`${team.teamName}-${index}`} className="team-card">  
+                        <figure >
+                            <img src={team.img} className="img-fluid b-lazy" alt="teammember"/>
+                            <figcaption className="team-caption">
+                                {/* <p>{team.teamCaption}</p> */}
+                                <hr className="hr-short"/>
+                                <ul className='ps-0'>
+                                    {/* <li><a href={team.discord}><i className="fa-brands fa-discord"></i></a></li>
+                                    <li><a href={team.twitter}><i className="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href={team.github}><i className="fa-brands fa-github"></i></a></li> */}
+                                    <li><a href={team.linkedin}><i className="fa-brands fa-linkedin"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                        <p className="team-name">{team.teamName}</p>
+                        <p className="subtle">{team.subtle}</p>
+                    </div>
+                    ))}
+                </div>
+                <div className="col-md-11">
+                    <h2 className="short-hr-left fs-4 mt-4">Support Team</h2>
+                </div>
+                <div className="cards">
+                {helpTeam.map((team, index) => (
                     <div key={`${team.teamName}-${index}`} className="team-card">  
                         <figure >
                             <img src={team.img} className="img-fluid b-lazy" alt="teammember"/>

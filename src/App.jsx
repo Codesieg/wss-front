@@ -1,13 +1,15 @@
 import './css/styles.css';
+import "./i18n";
 
 import { React, useState, useEffect  } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 
 
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Team from './components/team/Team';
 import Games from './components/games/Games';
+import Battleheights from './components/battleheights/Battleheights';
 import Services from './components/services/Services';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
@@ -15,17 +17,20 @@ import Error from './components/error/Error';
 import SocialNetwork from './components/socialNetwork/SocialNetwork';
 import Login from './components/login/Login';
 import SignUp from './components/signup/SignUp';
-import Dashboard from './components/dashboard/Dashboard'
-import { isAuthenticated } from './components/dashboard/auth'; // Fonction pour vérifier l'authentification
+import Dashboard from './components/dashboard/Dashboard';
+import PrivatePolicy from './components/dashboard/PivatePolicy';
+// import { isAuthenticated } from './components/dashboard/auth'; // Fonction pour vérifier l'authentification
 
 
 
 function App() {
   const [joinUs, setJoinUS] = useState(false);
   const [headerBottom, setHeaderBottom] = useState(false);
+      const { t } = useTranslation() ;
+
 
   // const isAuth = true;
-  const isAuth = isAuthenticated();
+  // const isAuth = isAuthenticated();
 
   const joinUsOK = (joined) => {
       setJoinUS(joined)
@@ -53,7 +58,7 @@ function App() {
             headerBottom = {headerBottom}
           />
           <SocialNetwork
-             joinUs = {joinUs}
+              joinUs = {joinUs}
           />
           <Routes>
               <Route exact path="/" 
@@ -78,6 +83,14 @@ function App() {
                 <Route path="/games" 
                   element={
                     <Games 
+                      joinUsFromChild = {joinUsOK}
+                      headerBottomFromChild = {bottomLine}
+                    />
+                } 
+                />
+                  <Route path="/battleheights" 
+                  element={
+                    <Battleheights 
                       joinUsFromChild = {joinUsOK}
                       headerBottomFromChild = {bottomLine}
                     />
@@ -123,7 +136,14 @@ function App() {
                     />
                   } 
                 />
-             
+                  <Route path="/PrivatePolicy" 
+                  element={
+                    <PrivatePolicy
+                      joinUsFromChild = {joinUsOK}
+                      headerBottomFromChild = {bottomLine}
+                    />
+                  } 
+                />
              {/* { isAuth ?  */}
                 {/* : <Route path="/signup" 
                 element={
@@ -155,19 +175,3 @@ function App() {
 }
 
 export default App
-
-{/* <Route
-            path={path}
-            exact={true}
-            render={(props) => 
-                hasRoles(roles) ? (
-                    <Component {...props} />
-                ) : (
-                    isAuth() ? (
-                        <Unauthorized />
-                    ) : (
-                        <Redirect to="/login" />
-                    )
-                )
-            }
-        /> */}

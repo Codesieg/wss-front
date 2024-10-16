@@ -44,13 +44,10 @@ nav {
 }
 
 .hide-navbar {
-    /* position: absolute; */
-    /* display: flex; */
     width: 100%;
     height: 100%;
     z-index: 999;
     color: #181818;
-    /* justify-content: space-evenly; */
     background: black;
 }
 
@@ -58,10 +55,7 @@ nav {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* width: 100vw; */
-    /* justify-content: space-evenly; */
     align-items: center;
-    /* align-content: center; */
     padding-left: 0;
 }
 
@@ -77,6 +71,7 @@ li > a {
     margin: 7px 0;
     transition: .3s ease-in-out;
 }
+
 /* - Mobile menu animation - */
 .hamburger .icon-bar:nth-child(1) {
     -webkit-transform-origin: left center;
@@ -113,6 +108,21 @@ li > a {
     transform: rotate(-45deg);
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 9999;
+    text-decoration: none;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
 /* --------------------------- /////////// XII. RESPONSIVE STYLES /////////// --------------------------- */
 
 @media (max-width : 991px) {
@@ -128,4 +138,24 @@ li > a {
     .scrolled {
         background-color: rgba(255,255,255,1); /* navbar background gradient */
     }
+}
+
+@media (max-width : 512px) {
+   .dropdown-content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #212529;
+        width: 200px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: flex;
+    }
+
+    .dropdown a {
+        text-decoration: none;
+        color: #f9f9f9!important;
+    }
+
 }

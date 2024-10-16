@@ -3,6 +3,7 @@ import { Modal } from 'react-bootstrap';
 import MyModal from '../modal/MyModal';
 import SectionTitle from '../sectionTitle/SectionTitle';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next' 
 
 
 import './games.css';
@@ -117,7 +118,7 @@ const Games = ({joinUsFromChild, headerBottomFromChild}) => {
                                 </Modal.Body>
                             </Modal>    
                         </div>   
-                        <a className="js-video-button" data-video-id="5xZfEdysp6o" data-channel="youtube" onClick={handleShow}>
+                        <a className="js-video-button"  onClick={handleShow}>
                             <div className="overlay video">
                             <i className="fa fa-play fa-3x"></i>
                             </div>

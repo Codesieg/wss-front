@@ -5,16 +5,17 @@
   }
   
   .gamer-card {
-    width: 100%;
-    margin: 0 auto 3.5rem auto;
+    width: 350px;
+    max-width: 100%;
+    margin: 0 20px 56px 0px;
     min-height: 270px;
     height: auto;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.11);
-
+    padding: 15px;
   }
   
   h3 {
-    font-size: 1.5em;
+    font-size: 1em !important;
     font-weight: 700;
   }
   
@@ -36,7 +37,6 @@
   
   .wrap {
     display: flex;
-    justify: space-between;
     align-items: stretch;
     width: 100%;
     gap: 24px;
@@ -78,6 +78,8 @@
   .box-title {
     border-left: 3px solid #E84118 ;
     padding-left: 12px;
+    padding-top: 5px;
+    margin-top: 5px;
   }
   
   

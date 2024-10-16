@@ -10,29 +10,22 @@
     z-index:99;
 }
 
-.social-icons:hover {
-    /* right: 1%; */
-}
 
 .social-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: relative; */
     padding: 0;
     height: 5rem;
     width: 5rem;
-    /* right: -20%; */
     border-radius: 100rem;
     background-color: rgba(0, 0, 0, 0.274);
     margin: 0.5em 0;
     color: white!important;
-    /* transition: right 0.3s ease; */
 }
 
 .social-btn:hover {
     background-color: rgba(0, 0, 0, 1);
-    /* right: 40%; */
 }
 
 .arrow-discord {

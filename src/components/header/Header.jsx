@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useMotionValueEvent } from  "framer-motion";
+import { useTranslation } from 'react-i18next' 
 
 import './header.css';
 
@@ -15,7 +16,7 @@ import './header.css';
     const [navBar, setNavBar] = useState(false);
     const {scrollY} = useScroll();
     const [scrolled, setScrolled] = useState(false);
- 
+
     // Adds a class to the navbar when scrolling down and removes it when scrolling up
     useMotionValueEvent(scrollY, "change", (latest) => {
         if (!navBar){
@@ -63,7 +64,6 @@ import './header.css';
                                 <span className="navbar-toggler-icon"></span>
                         </button>                
                         <div className={`${navBar ? 'justify-content-end' : 'collapse navbar-collapse justify-content-end'}`}>
-                        
                             <ul className={`${navBar ? 'hide-navbar-content ' : 'navbar-nav ml-auto'}`}>
                                 <li className="nav-item active">
                                    {navBar 
@@ -83,11 +83,22 @@ import './header.css';
                                         : <Link to="/services" className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Our services</Link>
                                     }
                                 </li>
-                                <li className="nav-item">
-                                    {navBar 
-                                        ? <Link to="/games" onClick={handleNavBar} className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
-                                        : <Link to="/games" className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
-                                    }
+                                <li className="nav-item dropdown">
+                                    <a className='nav-link pb-1 fw-bold gameA'>Games</a>
+                                    <li className='dropdown-content'>
+                                            {navBar 
+                                            ? 
+                                            <>
+                                                <Link to="/games" onClick={handleNavBar} className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link> 
+                                                <Link to="/battleheights" onClick={handleNavBar} className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Battle Heights</Link>                                  
+                                            </>
+                                            : 
+                                            <>
+                                                <Link to="/games" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
+                                                <Link to="/battleheights" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Battle Heights</Link>
+                                            </>
+                                        }    
+                                    </li>
                                 </li>
                                 <li className="nav-item">
                                     {navBar 
