@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './error.css';
-import { useTranslation } from 'react-i18next' 
 
 
 

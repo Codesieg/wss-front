@@ -1,6 +1,6 @@
 import React from 'react';
 import i18next from 'i18next' 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import './footer.css';
 
@@ -17,7 +17,7 @@ const Footer = () => {
                         <button onClick={() => i18next.changeLanguage( 'en' ) }> English </button> 
                         <button onClick={() => i18next.changeLanguage( 'fr' ) }> French </button>
                     </div>
-                    <Link to="/login" className='nav-link fs-4 pb-1 fw-bold text-light'>Private Policy</Link>
+                    {/* <Link to="/login" className='nav-link fs-4 pb-1 fw-bold text-light'>Login</Link> */}
                 </div>
             </footer>
         </>
