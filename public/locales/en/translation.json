@@ -71,7 +71,67 @@
         "messageError": "Message cannot be empty",
         "successMessage": "Your message has been sent successfully!",
         "errorMessage": "There was an error sending your message."
+    },
+    "footer": {
+        "copyright": "© WondersoftStudio",
+        "privacyPolicy": "Privacy Policy",
+        "language": {
+            "english": "English",
+            "french": "French"
+        }
+    },
+    "privacyPolicy": {
+        "title": "Privacy Policy",
+        "intro": "We are dedicated to protecting your privacy and handling your personal information responsibly. By using our service, you agree to the collection and use of your information as described below. This data helps us improve and provide our service.",
+        "section1": {
+            "title": "1. Information We Collect",
+            "personalInfo": "Personal Information:",
+            "personalInfoDetails": " When you sign up, make purchases, or play our games, we may collect details such as (but not limited to):",
+            "items": {
+                "name": "Name",
+                "email": "Email Address",
+                "location": "Location Data"
+            },
+            "gameData": "Game Data:",
+            "gameDataDetails": " We track your progress in the game, your scores, and your interactions.",
+            "deviceInfo": "Device Information:",
+            "deviceInfoDetails": " We may automatically collect data about your device, browser, IP address, and how you use our services to improve your experience."
+        },
+        "section2": {
+            "title": "2. Use of Information",
+            "usage": "We use your data to:",
+            "items": {
+                "manageAccount": "Manage your account and process purchases",
+                "improveExperience": "Improve and personalize your experience",
+                "respondRequests": "Respond to your requests and keep you informed about transactions",
+                "sendPromotions": "Send you promotions and offers based on your preferences"
+            },
+            "sharing": "We may share your information with trusted third-party providers (such as payment processors or data analysts) who help us provide our services. These parties are required to protect your data and use it only as indicated.",
+            "dataRetention": "We retain your data as long as necessary to provide our services or as required by law. You can access, update, or delete your information at any time through your account settings or by contacting us."
+        },
+        "section3": {
+            "title": "3. Your Rights",
+            "rights": "You have the right to:",
+            "items": {
+                "access": "Access your personal information",
+                "correct": "Correct any inaccuracies",
+                "delete": "Request deletion of your data",
+                "withdrawConsent": "Withdraw your consent to the use of your data"
+            }
+        },
+        "section4": {
+            "title": "4. Contact Us",
+            "contact": "For any privacy concerns or to exercise your rights regarding your data, please contact us at:",
+            "email": "Email:"
+        },
+        "section5": {
+            "title": "5. Policy Updates",
+            "updates": "We may update this policy from time to time. Please check here periodically for any changes."
+        },
+        "section6": {
+            "title": "6. Suspension and Termination of Services",
+            "rights": "We reserve the right to stop any part of our games or services at any time, without obligation to provide refunds or compensation."
+        }
     }
-
 }
 

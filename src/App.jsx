@@ -142,7 +142,6 @@ function App() {
                     />
                   } 
                 />
-            
              {/* { isAuth ?  */}
                 {/* : <Route path="/signup" 
                 element={
@@ -167,8 +166,8 @@ function App() {
                 }
               />     
           </Routes>
-        </Router>
         <Footer />
+        </Router>
       </>
   );
 }

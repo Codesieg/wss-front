@@ -41,7 +41,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
     return (
         <>
             <Helmet>
-                <title>Battle height</title>
+                <title>Battle heights</title>
                 <meta name="Battleheight" content="Battleheight" />
                 {/* Autres balises meta */}
             </Helmet>
@@ -49,7 +49,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                 <div>
                     <SectionTitle
                         pageTitleBlack="Battle "
-                        pageTitleColor="Height"
+                        pageTitleColor="Heights"
                     />
                     <div className="row ">
                         <div className="col-md-11 small-margin">
@@ -100,7 +100,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                 <img src="/img/I4QXoy.jpg" className="img-fluid b-lazy" alt="video thumbnail" />
                             </div>
                             <div className="col-lg-12 col-xl-7 game-card-right">
-                                <h2 className="short-hr-left">Battle Height</h2>
+                                <h2 className="short-hr-left">Battle Heights</h2>
                                 <p className="tags"><span className="subtle">Action | PC</span></p>
                                 <p className="game-description">{t('masterTheHeights')}</p>
                                 <div className="externals-btns">

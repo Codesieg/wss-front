@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion, useScroll, useMotionValueEvent } from  "framer-motion";
 import { useTranslation } from 'react-i18next' 
 
-
 import './header.css';
 
 // let isLogin = false;
@@ -20,7 +19,6 @@ import './header.css';
 
     const { t } = useTranslation() ;
 
- 
     // Adds a class to the navbar when scrolling down and removes it when scrolling up
     useMotionValueEvent(scrollY, "change", (latest) => {
         if (!navBar){
@@ -45,7 +43,6 @@ import './header.css';
             console.log("in re-render");
         }    
         console.log("out re-render");
-   
     }, [])
     
     return (

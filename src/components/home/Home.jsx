@@ -16,7 +16,7 @@ const Home = ({joinUsFromChild}) => {
             <div className='home-container'>
                 <div className="home-buttons">
                     <div className="home-buttons-title">
-                    <Link to="/battleheights" className='video-box--title'>Battle Height</Link>                                  
+                    <Link to="/battleheights" className='video-box--title'></Link>                                  
                         <div className="home-buttons-buttons">
                             <a className='home-button home-button-switch' href="https://discord.gg/xsn6ZpNkCu">
                                 <i className="fa-brands fa-discord home-button-switch" ></i>

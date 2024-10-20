@@ -10,6 +10,7 @@
 
 .copyright {
     font-size: 0.8em;
+    margin-bottom: 0!important;
 }
 
 @media (max-width : 991px) {

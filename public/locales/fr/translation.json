@@ -69,5 +69,66 @@
         "messageError": "Le message ne peut pas être vide",
         "successMessage": "Votre message a été envoyé avec succès !",
         "errorMessage": "Une erreur est survenue lors de l'envoi de votre message."
-    }
+    },
+    "footer": {
+        "copyright": "© WondersoftStudio",
+        "privacyPolicy": "Politique de confidentialité",
+        "language": {
+            "english": "Anglais",
+            "french": "Français"
+        }
+    },
+    "privacyPolicy": {
+        "title": "Politique de Confidentialité",
+        "intro": "Nous sommes dédiés à protéger votre vie privée et à gérer vos informations personnelles de manière responsable. En utilisant notre service, vous acceptez la collecte et l'utilisation de vos informations comme décrit ci-dessous. Ces données nous aident à améliorer et à fournir notre service.",
+        "section1": {
+            "title": "1. Informations que Nous Collectons",
+            "personalInfo": "Informations Personnelles :",
+            "personalInfoDetails": " Lorsque vous vous inscrivez, effectuez des achats ou jouez à nos jeux, nous pouvons collecter des détails tels que (mais sans s'y limiter) :",
+            "items": {
+                "name": "Nom",
+                "email": "Adresse e-mail",
+                "location": "Données de localisation"
+            },
+            "gameData": "Données de Jeu :",
+            "gameDataDetails": " Nous surveillons vos progrès dans le jeu, vos scores et vos interactions.",
+            "deviceInfo": "Informations sur l'Appareil :",
+            "deviceInfoDetails": " Nous pouvons recueillir automatiquement des données sur votre appareil, votre navigateur, votre adresse IP et comment vous utilisez nos services pour améliorer votre expérience."
+        },
+        "section2": {
+            "title": "2. Utilisation des Informations",
+            "usage": "Nous utilisons vos données pour :",
+            "items": {
+                "manageAccount": "Gérer votre compte et traiter les achats",
+                "improveExperience": "Améliorer et personnaliser votre expérience",
+                "respondRequests": "Répondre à vos demandes et vous tenir informé des transactions",
+                "sendPromotions": "Vous envoyer des promotions et des offres basées sur vos préférences"
+            },
+            "sharing": "Nous pouvons partager vos informations avec des fournisseurs tiers de confiance (comme des processeurs de paiement ou des analystes de données) qui nous aident à fournir nos services. Ces parties sont tenues de protéger vos données et de les utiliser uniquement comme indiqué.",
+            "dataRetention": "Nous conservons vos données aussi longtemps que nécessaire pour fournir nos services ou comme requis par la loi. Vous pouvez accéder, mettre à jour ou supprimer vos informations à tout moment via les paramètres de votre compte ou en nous contactant."
+        },
+        "section3": {
+            "title": "3. Vos Droits",
+            "rights": "Vous avez le droit de :",
+            "items": {
+                "access": "Accéder à vos informations personnelles",
+                "correct": "Corriger toute inexactitude",
+                "delete": "Demander la suppression de vos données",
+                "withdrawConsent": "Retirer votre consentement à l'utilisation de vos données"
+            }
+        },
+        "section4": {
+            "title": "4. Contactez-Nous",
+            "contact": "Pour toute préoccupation liée à la vie privée ou pour exercer vos droits sur vos données, contactez-nous à :",
+            "email": "Email :"
+        },
+        "section5": {
+            "title": "5. Mises à Jour de la Politique",
+            "updates": "Nous pouvons mettre à jour cette politique de temps à autre. Veuillez vérifier ici périodiquement pour toute modification."
+        },
+        "section6": {
+            "title": "6. Suspension et Résiliation des Services",
+            "rights": "Nous nous réservons le droit d'arrêter toute partie de nos jeux ou services à tout moment, sans obligation d'offrir des remboursements ou des compensations."
+        }
+    }    
 }
