@@ -5,46 +5,45 @@ import './services.css';
 import SectionTitle from '../sectionTitle/SectionTitle';
 import Card from '../card/Card';
 import { Helmet } from 'react-helmet';
+import { useTranslation, Trans } from 'react-i18next' 
+
 
 
 const Services = ({joinUsFromChild, headerBottomFromChild}) => {
 
     joinUsFromChild(false);
     headerBottomFromChild(false);
+    const { t } = useTranslation() ;
 
-    const pageTitleBlack = 'Our  ';
-    const pageTitleColor = 'Services';
+
+    const pageTitleBlack = t( 'ourServices1' );
+    const pageTitleColor = t( 'ourServices2' );
     const positionY = 1720;
 
     const imgServices = [
         {
             url:'/img/download.png',
-            title:'Gameplay and tool programing',
+            title: t( 'service1' ),
         },
         {
             url:'/img/HighresScreenshot00020.png',
-            title:'Environment art 3D modeling ',
+            title: t( 'service2' ),
         },
         {
             url:'/img/battleH_lowpolyDiorama_004.png',
-            title:'Characters and animation',
+            title: t( 'service3' ),
         },
         {
             url:'/img/Capture_decran_2024-02-23_181546.png',
-            title:'Game design and QA',
+            title: t( 'service4' ),
         },
-        // {
-        //     url:'/img/Tibetan_Restaurant.png',
-        //     title:'Sound Designer',
-        //     desc: 'We handle the game\'s sound effects and music, contributing to the immersive atmosphere and the player\'s sound experience.'
-        // },   
     ];
 
     return (
         <>
         <Helmet>
-            <title>Our services</title>
-            <meta name="Our services" content="Our services" />
+            <title>{ t( 'ourServices' ) }</title>
+            <meta name= { t( 'ourServices' ) } content= { t( 'ourServices' ) } />
             {/* Autres balises meta */}
         </Helmet>
 
@@ -55,8 +54,8 @@ const Services = ({joinUsFromChild, headerBottomFromChild}) => {
                     positionY = {positionY}
                 />
                     <div className="col-md-12 tiny-margin">
-                        <p>Our company offers training, co-development and consulting services to the game industry, primarily on console and PC using Unreal Engine.</p>
-                        <p>Get in touch at <span className='fw-bold'>consulting@wondersoftstudio.com</span> or use the contact form for more information</p>  
+                        <p>{ t( 'ourServicesDesc1' ) }</p>
+                        <Trans i18nKey="ourServicesDesc2"/>
                     </div>
                     <div className="row-card">
                         <Card 

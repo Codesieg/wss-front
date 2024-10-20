@@ -17,6 +17,7 @@ import Error from './components/error/Error';
 import SocialNetwork from './components/socialNetwork/SocialNetwork';
 import Login from './components/login/Login';
 import SignUp from './components/signup/SignUp';
+import PrivacyPolicy from './components/privacyPolicy/PrivacyPolicy';
 import Dashboard from './components/dashboard/Dashboard'
 // import { isAuthenticated } from './components/dashboard/auth'; // Fonction pour vérifier l'authentification
 
@@ -55,7 +56,7 @@ function App() {
             headerBottom = {headerBottom}
           />
           <SocialNetwork
-             joinUs = {joinUs}
+            joinUs = {joinUs}
           />
           <Routes>
               <Route exact path="/" 
@@ -133,7 +134,15 @@ function App() {
                     />
                   } 
                 />
-             
+                <Route path="/privacyPolicy" 
+                  element={
+                    <PrivacyPolicy
+                      joinUsFromChild = {joinUsOK}
+                      headerBottomFromChild = {bottomLine}
+                    />
+                  } 
+                />
+            
              {/* { isAuth ?  */}
                 {/* : <Route path="/signup" 
                 element={

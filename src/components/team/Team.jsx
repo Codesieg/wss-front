@@ -5,14 +5,17 @@ import './team.css';
 import SectionTitle from '../sectionTitle/SectionTitle';
 import Gallery from '../gallery/Gallery';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next' 
+
 
 
 const Team = ({joinUsFromChild, headerBottomFromChild}) => {
 
     joinUsFromChild(true);
     headerBottomFromChild(false);
+    const { t } = useTranslation() ;
 
-   const coreTeam = [
+    const coreTeam = [
         { 
             teamName: 'Florian Golestin',
             subtle: 'CEO - Game Director',
@@ -95,33 +98,33 @@ const helpTeam = [
             src:'/img/Visiter-Grenoble.png',
             text:'Visiter-Grenoble',
         },
-     ];
+    ];
 
     return (
         <>
         <Helmet>
-            <title>About Us</title>
-            <meta name="About Us" content="About Us" />
+            <title>{ t( 'aboutUs' ) }</title>
+            <meta name={ t( 'aboutUs' ) } content={ t( 'aboutUs' ) } />
             {/* Autres balises meta */}
         </Helmet>
 
         <div className="team large-margin">
             <SectionTitle
-                    pageTitleBlack =  'About '
-                    pageTitleColor =  'Us'
+                    pageTitleBlack =  { t( 'aboutUs1' ) }
+                    pageTitleColor =  { t( 'aboutUs2' ) }
                 />
             <div className="game-card py-2">
                 <div className="col-md-11">
-                <h2 className="short-hr-left fs-4 mt-4">The studio</h2>
-                    <p>Welcome to Wondersoft Studio, a video game development studio nestled in the heart of Grenoble, amidst the breathtaking French Alps. Our team comprises passionate and seasoned developers committed to delivering a high-quality and engaging gaming experience. At Wondersoft, we thrive on crafting immersive narratives that strike the perfect balance between gameplay and storytelling.</p>
-                   <p>Our mission is simple: to create games we love, alongside people we love, for everyone to love.</p>
+                <h2 className="short-hr-left fs-4 mt-4">{ t( 'studio' ) }</h2>
+                    <p>{ t( 'studioDesc1' ) }</p>
+                    <p>{ t( 'studioDesc2' ) }</p>
                 </div>
             </div>
             <div className="tiny-margin">
                 <div className="col-md-11">
-                    <h2 className="short-hr-left fs-4">Our Values</h2>
-                    <p>Embracing our proximity to nature, we incorporate an ethical and ecological mindset into our work, striving to empower individuals and foster a collaborative spirit within the group. We prioritize open-source technology and collaborate with partners who share our commitment to privacy and data protection.</p>
-                   <p>At Wondersoft, our focus is on crafting premium, original intellectual properties that leave a lasting impact.</p>
+                    <h2 className="short-hr-left fs-4">{ t( 'ourValues' ) }</h2>
+                    <p>{ t( 'ourValuesDesc1' ) }</p>
+                    <p>{ t( 'ourValuesDesc2' ) }</p>
                 </div>
             </div>
             <div className="d-flex justify-content-evenly flex-wrap tiny-margin">
@@ -139,9 +142,8 @@ const helpTeam = [
             </svg> */}
                 <div className="col-md-11">
                 <h2 className="short-hr-left fs-4 mt-4">Core Team</h2>
-                    <p>Our team comprises passionate and seasoned developers committed to delivering a high-quality and engaging gaming experience.
-                    Welcome to Wondersoft Studio, a video game development studio nestled in the heart of Grenoble, amidst the breathtaking French Alps.</p>
-                    <p> At Wondersoft, we thrive on crafting immersive narratives that strike the perfect balance between gameplay and storytelling.</p>
+                    <p>{ t( 'coreTeamDesc1' ) }</p>
+                    <p>{ t( 'coreTeamDesc2' ) }</p>
                 </div>
                 <div className="cards">
                 {coreTeam.map((team, index) => (

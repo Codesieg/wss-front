@@ -1,6 +1,8 @@
 import { React, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useMotionValueEvent } from  "framer-motion";
+import { useTranslation } from 'react-i18next' 
+
 
 import './header.css';
 
@@ -15,6 +17,9 @@ import './header.css';
     const [navBar, setNavBar] = useState(false);
     const {scrollY} = useScroll();
     const [scrolled, setScrolled] = useState(false);
+
+    const { t } = useTranslation() ;
+
  
     // Adds a class to the navbar when scrolling down and removes it when scrolling up
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -65,25 +70,25 @@ import './header.css';
                         <div className={`${navBar ? 'justify-content-end' : 'collapse navbar-collapse justify-content-end'}`}>
                             <ul className={`${navBar ? 'hide-navbar-content ' : 'navbar-nav ml-auto'}`}>
                                 <li className="nav-item active">
-                                   {navBar 
-                                        ? <Link to="/" onClick={handleNavBar}  className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Home</Link>
-                                        : <Link to="/" className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Home</Link>
+                                    {navBar 
+                                        ? <Link to="/" onClick={handleNavBar}  className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>{ t( 'home' ) }</Link>
+                                        : <Link to="/" className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>{ t( 'home' ) }</Link>
                                     }
                                 </li>
                                 <li className="nav-item">
                                     {navBar 
-                                        ? <Link to="/team" onClick={handleNavBar} className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>About Us</Link>
-                                        : <Link to="/team" className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>About Us</Link>
+                                        ? <Link to="/team" onClick={handleNavBar} className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>{ t( 'aboutUs' ) }</Link>
+                                        : <Link to="/team" className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>{ t( 'aboutUs' ) }</Link>
                                     }
                                 </li>
                                 <li className="nav-item">
                                     {navBar 
-                                        ? <Link to="/services" onClick={handleNavBar} className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Our services</Link>
-                                        : <Link to="/services" className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Our services</Link>
+                                        ? <Link to="/services" onClick={handleNavBar} className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>{ t( 'ourServices' ) }</Link>
+                                        : <Link to="/services" className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>{ t( 'ourServices' ) }</Link>
                                     }
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className='nav-link pb-1 fw-bold gameA'>Games</a>
+                                    <a className='nav-link pb-1 fw-bold gameA'>{ t( 'games' ) }</a>
                                     <li className='dropdown-content'>
                                             {navBar 
                                             ? 
@@ -106,7 +111,7 @@ import './header.css';
                                     }
                                 </li>
 
-                             { isLogin ?   
+                            { isLogin ?   
                                     <li className="nav-item">
                                             {navBar 
                                                 ? <Link to="/dashboard" onClick={handleNavBar} className={`${navBar ? 'nav-link fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>My account</Link>
