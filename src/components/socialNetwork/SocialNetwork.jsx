@@ -36,6 +36,7 @@ const socialList = [
             </div>
             {joinUs 
                 ?   <a href={socialList[1].url}>
+                        <p></p>
                         <img src="/img/discord.png" alt="" className='arrow-discord'/>
                     </a>
                 : " "
