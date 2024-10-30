@@ -15,9 +15,10 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
     const { t } = useTranslation();
 
     const Timg = [
-        { title: '5ncVZS.jpg', img: '/img/5nvVZS.jpg' },
-        { title: '6xKklc.jpg', img: '/img/6xKklc.png' },
-        { title: 'I4QXoy.png', img: '/img/I4QXoy.jpg' },
+        { title: 'image1.jpg', img: '/img/image1.jpg' },
+        { title: 'image2.jpg', img: '/img/image2.jpg' },
+        { title: 'image3.jpg', img: '/img/image3.jpg' },
+        { title: 'image5.jpg', img: '/img/image5.jpg' },
     ];
 
     // Pour la gestion de la video youtube
@@ -150,6 +151,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
 
                         <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4 mt-4">
                             <div className="col-lg-12 col-xl-5 game-card-left my-2">
+                                <h3 className="">{t('dressForSuccessTitle')}</h3>
                                 <p className="">{t('dressForSuccess')}</p>
                             </div>
                             <div className="portal">

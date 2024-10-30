@@ -96,7 +96,7 @@ import './header.css';
                                             : 
                                             <>
                                                 <Link to="/games" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link>
-                                                <Link to="/battleheights" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Battle Heights</Link>
+                                                <Link to="/battleheights" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}><img src="/img/Battleheights_menu.png" className="mt-lg-2 controls_img--dash" alt="video thumbnail"/></Link>
                                             </>
                                         }    
                                     </li>
