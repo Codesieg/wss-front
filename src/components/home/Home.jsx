@@ -23,9 +23,10 @@ const Home = ({joinUsFromChild}) => {
                                 <p className='home-button-switch'>{ t( 'discord' ) }</p>
                             </a> */}
                             <a className='home-button-steam d-flex align-items-center' href="https://store.steampowered.com/app/2932940/BattleHeights/">
-                                <p className='home-button-steam home-button-steam--margin'>{ t( 'steam' ) }</p>
+                                {/* <p className='home-button-steam home-button-steam--margin'>{ t( 'steam' ) }</p>
                                 <i className="home-button-steam fa-brands fa-steam"></i>
-                                <p className='home-button-steam home-button-steam--margin'>STEAM</p>
+                                <p className='home-button-steam home-button-steam--margin'>STEAM</p> */}
+                                <iframe src="https://store.steampowered.com/widget/2932940/" frameborder="0" width="646" height="190"></iframe>
                             </a>
                         </div>
                     </div>
