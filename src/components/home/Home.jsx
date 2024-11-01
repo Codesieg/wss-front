@@ -33,7 +33,7 @@ const Home = ({joinUsFromChild}) => {
                 <div className="clip-item container-right"> 
                     <div className="video-box">
                         <ReactPlayer 
-                            url='/img/websitevideoHome.mp4'
+                            url='/img/homepagesite.mp4'
                             className='react-player'
                             volume='0'
                             playing='true'

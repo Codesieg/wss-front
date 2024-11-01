@@ -4,6 +4,8 @@ import MyModal from '../modal/MyModal';
 import SectionTitle from '../sectionTitle/SectionTitle';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import ReactPlayer from 'react-player';
+
 
 import './battleheights.css';
 
@@ -56,6 +58,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                         <div className="col-md-11 small-margin">
                             <p><span className='fw-bold'>{t('importantNote')}</span> {t('gameDevelopment')}</p>
                             <p>{t('immersiveExperience')}</p>
+                            <img className='splash' src="/img/splash_skelleton.png" alt="" />
                         </div>
                     </div>
                     <div className="games-portfolio ">
@@ -85,7 +88,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                                         width: "100%",
                                                         height: "100%"
                                                     }}
-                                                    src={`https://www.youtube.com/embed/IfmK9ZWKHdk`}
+                                                    src={`https://www.youtube.com/embed/XrP0W63lWuA`}
                                                     frameBorder="0"
                                                     title="battle heights video"
                                                 />
@@ -109,7 +112,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                         <a className='ms-4' href="https://store.steampowered.com/app/2932940/BattleHeights/">
                                             <div className='d-flex align-items-center '>
                                                 <i className="fa-brands fa-steam"></i>
-                                                <p className='mb-0 ms-2'>{t('steam')}</p>
+                                                <p className='mb-0 ms-2'>{t('steam2')}</p>
                                             </div>
                                         </a>
                                     </div>
@@ -130,7 +133,6 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                 ))}
                             </div>
                         </div>
-
                         <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4">
                             <div className="col-lg-12 col-xl-5 game-card-left my-2">
                                 <p className="">{t('dropTheCandyKaboom')}</p>
@@ -139,24 +141,36 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                 <img src="/img/0000-0121.gif" className="mt-lg-2 controls_img--dash" alt="video thumbnail" />
                             </div>
                         </div>
-
-                        <div className="d-lg-flex justify-content-lg-around align-items-center  p-4">
-                            <div className="portal">
-                                <img src="/img/O+As2E.gif" className="mt-lg-2 controls_img--dash" alt="video thumbnail" />
-                            </div>
+                        <div className="inter">
+                            <img className="" src="/img/dont_look_up_RESIZED.png" alt="" />
+                        </div>
+                        <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4">
+                            <ReactPlayer 
+                                url='/img/Gameplay-1.mp4'
+                                className='react-playr--battleheights'
+                                volume='0'
+                                playing='true'
+                                loop='true'
+                            />                            
                             <div className="col-lg-12 col-xl-5 game-card-left my-2">
                                 <p className="">{t('dangerousToGoAlone')}</p>
                             </div>
                         </div>
-
+                        <div className="inter">
+                            <img className="" src="/img/SkeletteFireball.png" alt="" />
+                        </div>
                         <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4 mt-4">
                             <div className="col-lg-12 col-xl-5 game-card-left my-2">
                                 <h3 className="">{t('dressForSuccessTitle')}</h3>
                                 <p className="">{t('dressForSuccess')}</p>
                             </div>
-                            <div className="portal">
-                                <img src="/img/EqN4Ib.gif" className="mt-lg-2 controls_img--dash" alt="video thumbnail" />
-                            </div>
+                            <ReactPlayer 
+                                url='/img/trailer.mp4'
+                                className='react-playr--battleheights'
+                                volume='0'
+                                playing='true'
+                                loop='true'
+                            />
                         </div>
                     </div>
                 </div>

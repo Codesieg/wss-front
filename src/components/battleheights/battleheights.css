@@ -21,7 +21,7 @@ body {
     width: 5px;
     background: #fff3;
     -webkit-border-radius: 1ex;
-  }
+}
   
   ::-webkit-scrollbar-thumb {
     background: var(--accent);
@@ -84,8 +84,9 @@ body {
 
 .game-card-left {
     padding: 0;
+    /* display: flex; */
 }
-.game-card-left img {
+.game-card-left .react-player {
     height: 100%;
     width: 100%;
     min-height: 270px;
@@ -222,7 +223,6 @@ body {
 
 .reviews {
     width: auto;
-    display: inline-block;
     float: right;
     margin: 20px 0 0 0 ;
     text-align: center;
@@ -255,7 +255,7 @@ body {
 }
 
 .score-card:hover {
-     background: #111;
+    background: #111;
 }
 
 .score-card:hover .score {
@@ -296,4 +296,20 @@ body {
 
 .rating p {
     font-size: 1.5rem;
+}
+
+.inter, .inter > img {
+    width: 100%;
+}
+
+.splash {
+    width: 10%;
+    position: absolute;
+    left: -135px;
+    top: -40px;
+}
+
+.react-playr--battleheights {
+    width: 50%;
+    height: 50%;
 }
