@@ -13,10 +13,10 @@ const Games = ({ joinUsFromChild, headerBottomFromChild }) => {
     const [imageToShow, setImageToShow] = useState("");
 
     const Timg = [
-        { title: 'aC9AGy.jpg ', img: '/img/aC9AGy.jpg' },
-        { title: 'dS7YUi.jpg', img: '/img/dS7YUi.jpg' },
-        { title: 'mggyXg.png', img: '/img/mggyXg.png' },
-        { title: 'mNALPX.png', img: '/img/mNALPX.png' },
+        { title: 'aC9AGy.jpg ', img: '/img/projectLo/aC9AGy.jpg' },
+        { title: 'dS7YUi.jpg', img: '/img/projectLo/dS7YUi.jpg' },
+        { title: 'mggyXg.png', img: '/img/projectLo//mggyXg.png' },
+        { title: 'mNALPX.png', img: '/img/projectLo/mNALPX.png' },
     ];
 
     const handleClose = () => setShow(false);
@@ -90,7 +90,7 @@ const Games = ({ joinUsFromChild, headerBottomFromChild }) => {
                                         <i className="fa fa-play fa-3x"></i>
                                     </div>
                                 </a>
-                                <img src="/img/EHFJXC.jpg" className="img-fluid b-lazy" alt="video thumbnail" />
+                                <img src="/img/projectLo/EHFJXC.jpg" className="img-fluid b-lazy" alt="video thumbnail" />
                             </div>
                             <div className="col-lg-12 col-xl-7 game-card-right">
                                 <h2 className="short-hr-left">Project L<span className='zero'>0</span></h2>
@@ -138,13 +138,13 @@ const Games = ({ joinUsFromChild, headerBottomFromChild }) => {
                             </div>
                             <div className="">
                                 <h2 className="short-hr-left">{t('controls')}</h2>
-                                <img src="/img/llYg0E.png" className="bg-dark p-4 controls_img" alt="video thumbnail" />
+                                <img src="/img/projectLo/llYg0E.png" className="bg-dark p-4 controls_img" alt="video thumbnail" />
                             </div>
                         </div>
 
                         <div className="d-lg-flex justify-content-lg-around align-items-center p-4">
                             <div className="portal">
-                                <img src="/img/Ry18F4.gif" className="mt-lg-2 controls_img--dash" alt="video thumbnail" />
+                                <img src="/img/projectLo/Ry18F4.gif" className="mt-lg-2 controls_img--dash" alt="video thumbnail" />
                                 <p className='text-center'>{t('dashThroughPortal')}</p>
                             </div>
                             <div className="col-lg-12 col-xl-5 game-card-left my-2">

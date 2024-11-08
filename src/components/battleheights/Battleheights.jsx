@@ -17,10 +17,10 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
     const { t } = useTranslation();
 
     const Timg = [
-        { title: 'image1.jpg', img: '/img/image1.jpg' },
-        { title: 'image2.jpg', img: '/img/image2.jpg' },
-        { title: 'image3.jpg', img: '/img/image3.jpg' },
-        { title: 'image5.jpg', img: '/img/image5.jpg' },
+        { title: 'image1.jpg', img: '/img/battleHeigths/image1.jpg' },
+        { title: 'image2.jpg', img: '/img/battleHeigths/image2.jpg' },
+        { title: 'image3.jpg', img: '/img/battleHeigths/image3.jpg' },
+        { title: 'image5.jpg', img: '/img/battleHeigths/image5.jpg' },
     ];
 
     // Pour la gestion de la video youtube
@@ -58,7 +58,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                         <div className="col-md-11 small-margin">
                             <p><span className='fw-bold'>{t('importantNote')}</span> {t('gameDevelopment')}</p>
                             <p>{t('immersiveExperience')}</p>
-                            <img className='splash' src="/img/splash_skelleton.png" alt="" />
+                            <img className='splash' src="/img/battleHeigths/splash_skelleton.png" alt="" />
                         </div>
                     </div>
                     <div className="games-portfolio ">
@@ -101,7 +101,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                         <i className="fa fa-play fa-3x"></i>
                                     </div>
                                 </a>
-                                <img src="/img/I4QXoy.jpg" className="img-fluid b-lazy" alt="video thumbnail" />
+                                <img src="/img/battleHeigths/I4QXoy.jpg" className="img-fluid b-lazy" alt="video thumbnail" />
                             </div>
                             <div className="col-lg-12 col-xl-7 game-card-right">
                                 <h2 className="short-hr-left">Battle Heights</h2>
@@ -138,15 +138,15 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                 <p className="">{t('dropTheCandyKaboom')}</p>
                             </div>
                             <div className="portal">
-                                <img src="/img/0000-0121.gif" className="mt-lg-2 controls_img--dash" alt="video thumbnail" />
+                                <img src="/img/battleHeigths/0000-0121.gif" className="mt-lg-2 controls_img--dash" alt="video thumbnail" />
                             </div>
                         </div>
                         <div className="inter">
-                            <img className="" src="/img/dont_look_up_RESIZED.png" alt="" />
+                            <img className="" src="/img/battleHeigths/dont_look_up.png" alt="" />
                         </div>
                         <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4">
                             <ReactPlayer 
-                                url='/img/Gameplay-1.mp4'
+                                url='/videos/battleHeigths/Gameplay-1.mp4'
                                 className='react-playr--battleheights'
                                 volume='0'
                                 playing='true'
@@ -157,7 +157,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                             </div>
                         </div>
                         <div className="inter">
-                            <img className="" src="/img/SkeletteFireball.png" alt="" />
+                            <img className="" src="/img/battleHeigths/SkeletteFireball.png" alt="" />
                         </div>
                         <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4 mt-4">
                             <div className="col-lg-12 col-xl-5 game-card-left my-2">
@@ -165,7 +165,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                 <p className="">{t('dressForSuccess')}</p>
                             </div>
                             <ReactPlayer 
-                                url='/img/trailer.mp4'
+                                url='/videos/battleHeigths/trailer.mp4'
                                 className='react-playr--battleheights'
                                 volume='0'
                                 playing='true'

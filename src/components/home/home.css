@@ -192,6 +192,10 @@
     color: rgb(7, 7, 7);
 }  */
 
+.iframe-steam {
+  
+}
+
 
 /* --------------------------- /////////// XII. RESPONSIVE STYLES /////////// --------------------------- */
 @media (min-width : 768px) {
@@ -225,6 +229,16 @@
     border-radius: 25px;
     text-decoration: none;
     margin: 0 50px;
+}
+
+.home-button-steam {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 0px!important;
+  text-decoration: none;
+  text-shadow: 5px 10px 6px #13121299;
 }
 
   .video-box--title {

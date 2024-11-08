@@ -303,10 +303,10 @@ body {
 }
 
 .splash {
-    width: 10%;
-    position: absolute;
-    left: -135px;
-    top: -40px;
+    width: 5%;
+    position: fixed;
+    left: 482px;
+    top: 112px;
 }
 
 .react-playr--battleheights {

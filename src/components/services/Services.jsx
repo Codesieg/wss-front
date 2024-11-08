@@ -26,15 +26,15 @@ const Services = ({joinUsFromChild, headerBottomFromChild}) => {
             title: t( 'service1' ),
         },
         {
-            url:'/img/HighresScreenshot00020.png',
+            url:'/img/battleHeigths/HighresScreenshot00020.png',
             title: t( 'service2' ),
         },
         {
-            url:'/img/battleH_lowpolyDiorama_004.png',
+            url:'/img/battleHeigths//battleH_lowpolyDiorama_004.png',
             title: t( 'service3' ),
         },
         {
-            url:'/img/Capture_decran_2024-02-23_181546.png',
+            url:'/img/battleHeigths/Capture_decran_2024-02-23_181546.png',
             title: t( 'service4' ),
         },
     ];
