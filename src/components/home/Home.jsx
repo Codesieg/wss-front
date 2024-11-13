@@ -22,7 +22,7 @@ const Home = ({joinUsFromChild}) => {
                                 <i className="fa-brands fa-discord home-button-switch" ></i>
                                 <p className='home-button-switch'>{ t( 'discord' ) }</p>
                             </a> */}
-                            <a className='' href="https://store.steampowered.com/app/2932940/BattleHeights/">
+                            <a className='w-auto' href="https://store.steampowered.com/app/2932940/BattleHeights/">
                                 {/* <p className='home-button-steam home-button-steam--margin'>{ t( 'steam' ) }</p>
                                 <i className="home-button-steam fa-brands fa-steam"></i>
                                 <p className='home-button-steam home-button-steam--margin'>STEAM</p> */}
