@@ -22,15 +22,15 @@ body {
     background: #fff3;
     -webkit-border-radius: 1ex;
 }
-  
-  ::-webkit-scrollbar-thumb {
+
+::-webkit-scrollbar-thumb {
     background: var(--accent);
     -webkit-border-radius: 1ex;
-  }
-  
-  ::-webkit-scrollbar-corner {
+}
+
+::-webkit-scrollbar-corner {
     background: #fff3;
-  }
+}
 
 .game-tags {
     background: #FAFAFA;
@@ -305,8 +305,8 @@ body {
 .splash {
     width: 5%;
     position: fixed;
-    left: 482px;
-    top: 112px;
+    left: 202px;
+    top: 154px;
 }
 
 .react-playr--battleheights {

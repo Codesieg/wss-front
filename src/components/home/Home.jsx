@@ -14,36 +14,17 @@ const Home = ({joinUsFromChild}) => {
     
     return (
             <div className='home-container'>
-                <div className="home-buttons">
-                    <div className="home-buttons-title">
-                    <Link to="/battleheights" className='video-box--title'>Battle Heights</Link>                                  
-                        <div className="home-buttons-buttons">
-                            {/* <a className='home-button home-button-switch' href="https://discord.gg/xsn6ZpNkCu">
-                                <i className="fa-brands fa-discord home-button-switch" ></i>
-                                <p className='home-button-switch'>{ t( 'discord' ) }</p>
-                            </a> */}
-                            <a className='w-auto' href="https://store.steampowered.com/app/2932940/BattleHeights/">
-                                {/* <p className='home-button-steam home-button-steam--margin'>{ t( 'steam' ) }</p>
-                                <i className="home-button-steam fa-brands fa-steam"></i>
-                                <p className='home-button-steam home-button-steam--margin'>STEAM</p> */}
-                                <iframe className='iframe-steam' src="https://store.steampowered.com/widget/2932940/" frameborder="0" width="650" height="250" title="steam"></iframe>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="clip-item container-right"> 
-                    <div className="video-box">
-                        <ReactPlayer 
-                            url='/videos/battleHeigths/homepagesite.mp4'
-                            className='react-player'
-                            volume='0'
-                            playing='true'
-                            loop='true'
-                            width='100%'
-                            height= '100%'
-                        />
-                    </div>
-                </div>
+                <Link to="/battleheights" className='video-box--title'>Battle Heights</Link>                                  
+                <iframe className='iframe-steam' src="https://store.steampowered.com/widget/2932940/" frameborder="0" title="steam"></iframe>
+                <ReactPlayer 
+                    url='/videos/battleHeigths/homepagesite.mp4'
+                    className='react-player'
+                    volume='0'
+                    playing='true'
+                    loop='true'
+                    width='100%'
+                    height= '100%'
+                />
             </div>
     );
 };

@@ -23,10 +23,10 @@ const Footer = () => {
                             </p>
                             <Link to="/privacyPolicy" className="text-decoration-none copyright text-primary">{t('footer.privacyPolicy')}</Link>
                         </div>
-                            <div className='d-flex justify-content-center pb-3'>
+                            {/* <div className='d-flex justify-content-center pb-3'>
                                 <button onClick={() => i18next.changeLanguage('en')}> {t('footer.language.english')} </button> 
                                 <button onClick={() => i18next.changeLanguage('fr')}> {t('footer.language.french')} </button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
