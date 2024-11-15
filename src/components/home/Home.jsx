@@ -15,15 +15,17 @@ const Home = ({joinUsFromChild}) => {
                 <iframe className='iframe-steam' src="https://store.steampowered.com/widget/2932940/" frameborder="0" title="steam"></iframe>
             </div>
             <div className="video-player">
-                <ReactPlayer
-                    url='/videos/battleHeigths/homepagesite.mp4'
-                    className='react-player'
-                    volume='0'
-                    playing={true}
-                    loop={true}
-                    width='100%'
-                    height='100%'
-                />
+                <div className="video-box">
+                    <ReactPlayer
+                        url='/videos/battleHeigths/homepagesite.mp4'
+                        className='react-player'
+                        volume='0'
+                        playing={true}
+                        loop={true}
+                        width='100%'
+                        height='100%'
+                    />
+                </div>
             </div>
         </div>
     );
