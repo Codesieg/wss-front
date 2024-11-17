@@ -30,6 +30,11 @@
   margin-top: 26px;
 }
 
+.video-box--title > img {
+  width: 50%;
+  padding-top: 0px;
+}
+
 .iframe-steam {
   width: 100%;
   height: 100%;
@@ -49,14 +54,10 @@
 }
 
 .video-box--title {
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 4em;
-  font-weight: bolder;
-  color: rgb(12, 12, 12);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 120px !important;
+  padding-top: 90px !important;
   width: 100%;
   margin-bottom: 0px !important;
   z-index: 60; /* Assurer que le texte soit au-dessus de tout le reste */
@@ -80,16 +81,15 @@
 
   .video-box--title {
     justify-content: center;
-    padding-top: 0px!important;
     width: 100%;
-    font-family: "Barlow Condensed", sans-serif!important;
-    color: rgb(253, 253, 253)!important;
     border-top: inherit;
     display: flex;
     align-items: flex-end;
-    font-size: 8rem;
-    font-weight: 900;
-    text-shadow: 7px 5px 3px #13121299;
+  }
+
+  .video-box--title > img {
+    width: 30%;
+    padding-top: 0px;
   }
 
   .iframe-steam {

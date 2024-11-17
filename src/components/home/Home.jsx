@@ -11,13 +11,13 @@ const Home = ({joinUsFromChild}) => {
     return (
         <div className='home-container'>
             <div className="home-hover">
-                <Link to="/battleheights" className='video-box--title'>Battle Heights</Link>
+                <Link to="/battleheights" className='video-box--title'><img src="/img/battleHeigths/Battleheights_menu.png" alt="battle heights logo" /></Link>
                 <iframe className='iframe-steam' src="https://store.steampowered.com/widget/2932940/" frameborder="0" title="steam"></iframe>
             </div>
             <div className="video-player">
                 <div className="video-box">
                     <ReactPlayer
-                        url='/videos/battleHeigths/homepagesite.mp4'
+                        url='/videos/battleHeigths/homepagesite_final.mp4'
                         className='react-player'
                         volume='0'
                         playing={true}
