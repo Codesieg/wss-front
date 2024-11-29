@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './contact.css';
 import SectionTitle from '../sectionTitle/SectionTitle';
 import { ToastProvider } from '../toastProvider/ToastProvider';
@@ -7,6 +7,65 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from 'react-i18next';
 
 const Contact = ({ joinUsFromChild, headerBottomFromChild }) => {
+
+    useEffect(() => {
+        // Vérifiez si grecaptcha est disponible
+        if (window.grecaptcha) {
+          window.grecaptcha.enterprise.ready(() => {
+            console.log('reCAPTCHA is ready');
+          });
+        }
+      }, []);
+
+      const handleSubmitCaptcha = async () => {
+        try {
+          // Remplacez 'your_action_name' par le nom de votre action
+          const token = await window.grecaptcha.enterprise.execute('send_mail', { action: 'submit' });
+          console.log('Token:', token);
+          // Envoyez le token à votre serveur pour vérification
+        } catch (error) {
+          console.error('Error executing reCAPTCHA:', error);
+        }
+      };
+
+      const captchaverif = (e) => {
+        const token =  window.grecaptcha.enterprise.execute('send_mail', { action: 'submit' });
+        const data = {
+            event: {
+              token: "TOKEN",
+              expectedAction: "USER_ACTION",
+              siteKey: "6Lev2YcqAAAAAB08IsXOmYtBoqepSKJLNftewmFv",
+            }
+          };
+          
+          fetch('https://recaptchaenterprise.googleapis.com/v1/projects/wondersoft-studio/assessments?key=AIzaSyDsgxN18cIMRUDd2JQHUIkvj-ySasZ_UmQ', {
+            method: 'POST', // ou 'GET' selon votre besoin
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Success:', data);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+          
+        // e.preventDefault();
+        // window.grecaptcha.enterprise.ready(async () => {
+        //   const token = await window.grecaptcha.enterprise.execute('6Lev2YcqAAAAAB08IsXOmYtBoqepSKJLNftewmFv', {action: 'LOGIN'});
+        //   console.log(token);
+          
+        // });
+      }
+
     const { t } = useTranslation();
     const [message, setMessage] = useState([
         { 
@@ -24,7 +83,7 @@ const Contact = ({ joinUsFromChild, headerBottomFromChild }) => {
     const pageTitleColor = t('contact.getInTouch2');
     const positionY = 3240;
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault(); 
         fetch('http://api.wondersoftstudio.com/send-email', {
             method: 'POST',
@@ -32,7 +91,7 @@ const Contact = ({ joinUsFromChild, headerBottomFromChild }) => {
                 message: e.target.message.value,
                 name: e.target.name.value,
                 email: e.target.email.value,
-                recaptchaToken: recaptchaToken // Inclure le token ReCAPTCHA
+                recaptchaToken: await window.grecaptcha.enterprise.execute('6Lev2YcqAAAAAB08IsXOmYtBoqepSKJLNftewmFv', {action: 'LOGIN'}) // Inclure le token ReCAPTCHA
             }),
             headers: {
                 "Content-Type": "application/json",             
@@ -106,6 +165,11 @@ const Contact = ({ joinUsFromChild, headerBottomFromChild }) => {
                 </div>
             </div>
         </ToastProvider>
+        <div>
+        <h1>Mon Formulaire</h1>
+        <button onClick={captchaverif}>Soumettre</button>
+        
+    </div>
         </>
     );
 };

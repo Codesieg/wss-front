@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@google-cloud/recaptcha-enterprise": "^5.13.0",
     "@pmndrs/branding": "^0.0.8",
     "@react-spring/web": "^9.7.2",
     "@react-three/drei": "^9.66.1",
