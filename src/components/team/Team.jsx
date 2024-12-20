@@ -82,7 +82,7 @@ const helpTeam = [
     },        { 
         teamName: 'Charlotte Lavaux',
         subtle: 'Community Manager',
-        img: '/img/placeholder-woman.jpg',
+        img: '/img/Charlotte.png',
         teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
         twitter: 'https://github.com/john',
         discord: 'https://github.com/john',
