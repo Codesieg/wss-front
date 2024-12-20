@@ -32,8 +32,8 @@ const Contact = ({ joinUsFromChild, headerBottomFromChild }) => {
         const token =  window.grecaptcha.enterprise.execute('send_mail', { action: 'submit' });
         const data = {
             event: {
-              token: "TOKEN",
-              expectedAction: "USER_ACTION",
+              token: token,
+              expectedAction: "send_mail",
               siteKey: "6Lev2YcqAAAAAB08IsXOmYtBoqepSKJLNftewmFv",
             }
           };
@@ -165,11 +165,11 @@ const Contact = ({ joinUsFromChild, headerBottomFromChild }) => {
                 </div>
             </div>
         </ToastProvider>
-        <div>
+        {/* <div>
         <h1>Mon Formulaire</h1>
         <button onClick={captchaverif}>Soumettre</button>
         
-    </div>
+    </div> */}
         </>
     );
 };

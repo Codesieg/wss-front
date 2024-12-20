@@ -8,6 +8,9 @@ import './games.css';
 
 const Games = ({ joinUsFromChild, headerBottomFromChild }) => {
     const { t } = useTranslation();
+
+    const projectLoControls = t('image.projectLo.projectLoControls');    
+
     const [show, setShow] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [imageToShow, setImageToShow] = useState("");
@@ -138,7 +141,7 @@ const Games = ({ joinUsFromChild, headerBottomFromChild }) => {
                             </div>
                             <div className="">
                                 <h2 className="short-hr-left">{t('controls')}</h2>
-                                <img src="/img/projectLo/llYg0E.png" className="bg-dark p-4 controls_img" alt="video thumbnail" />
+                                <img src={`${projectLoControls}`} className="bg-dark p-4 controls_img" alt="video thumbnail" />
                             </div>
                         </div>
 

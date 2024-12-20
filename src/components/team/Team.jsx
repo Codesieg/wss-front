@@ -46,6 +46,7 @@ const Team = ({joinUsFromChild, headerBottomFromChild}) => {
             github: 'https://github.com/john',
             linkedin: 'https://www.linkedin.com/in/fabiansalvini/',
         },
+
 ];
 
 const helpTeam = [
@@ -78,6 +79,35 @@ const helpTeam = [
         discord: 'https://github.com/john',
         github: 'https://github.com/john',
         linkedin: 'https://www.linkedin.com/in/jeremie-bouchet/',
+    },        { 
+        teamName: 'Charlotte Lavaux',
+        subtle: 'Community Manager',
+        img: '/img/placeholder-woman.jpg',
+        teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+        twitter: 'https://github.com/john',
+        discord: 'https://github.com/john',
+        github: 'https://github.com/john',
+        linkedin: 'https://www.linkedin.com/in/charlotte-lavaux-6b13562bb/',
+    },
+    { 
+        teamName: 'Thomas Pierrie',
+        subtle: '3D Artiste, Animateur',
+        img: '/img/placeholder-man.jpg',
+        teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+        twitter: 'https://github.com/john',
+        discord: 'https://github.com/john',
+        github: 'https://github.com/john',
+        linkedin: 'https://www.linkedin.com/in/thomas-perrier-1608482b8/',
+    },
+    { 
+        teamName: 'Philippe Binet',
+        subtle: 'Network System',
+        img: '/img/Philippe.jpg',
+        teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+        twitter: 'https://github.com/john',
+        discord: 'https://github.com/john',
+        github: 'https://github.com/john',
+        linkedin: 'https://www.linkedin.com/in/philippe-binet-a3870a107/',
     },
 ];
 

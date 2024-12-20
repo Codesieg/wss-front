@@ -16,11 +16,13 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
 
     const { t } = useTranslation();
 
+    const battleHControls = t('image.battleHeights.battleHControls');    
+
     const Timg = [
-        { title: 'image1.jpg', img: '/img/battleHeigths/image1.jpg' },
-        { title: 'image2.jpg', img: '/img/battleHeigths/image2.jpg' },
-        { title: 'image3.jpg', img: '/img/battleHeigths/image3.jpg' },
-        { title: 'image5.jpg', img: '/img/battleHeigths/image5.jpg' },
+        { title: 'image1.png', img: '/img/battleHeigths/image1.png' },
+        { title: 'image2.png', img: '/img/battleHeigths/image2.png' },
+        { title: 'image3.png', img: '/img/battleHeigths/image3.png' },
+        { title: 'image5.png', img: '/img/battleHeigths/image5.png' },
     ];
 
     // Pour la gestion de la video youtube
@@ -137,8 +139,16 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                             <div className="col-lg-12 col-xl-5 game-card-left my-2">
                                 <p className="">{t('dropTheCandyKaboom')}</p>
                             </div>
-                            <div className="portal">
-                                <img src="/img/battleHeigths/0000-0121.gif" className="mt-lg-2 controls_img--dash" alt="video thumbnail" />
+                            <div className="portal mt-lg-2 controls_img--dash">
+                                {/* <img src="/img/battleHeigths/0000-0121.gif" className="mt-lg-2 controls_img--dash" alt="video thumbnail" /> */}
+                                <ReactPlayer
+                                    url='/videos/battleHeigths/30THNovBattleheights.mp4'
+                                    volume='0'
+                                    playing={true}
+                                    loop={true}
+                                    width='100%'
+                                    height='100%'
+                                />
                             </div>
                         </div>
                         <div className="inter">
@@ -146,7 +156,7 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                         </div>
                         <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4">
                             <ReactPlayer 
-                                url='/videos/battleHeigths/Gameplay-1.mp4'
+                                url='/videos/battleHeigths/dead_again.mp4'
                                 className='react-playr--battleheights'
                                 volume='0'
                                 playing='true'
@@ -165,12 +175,25 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                 <p className="">{t('dressForSuccess')}</p>
                             </div>
                             <ReactPlayer 
-                                url='/videos/battleHeigths/trailer.mp4'
+                                url='/videos/battleHeigths/homepagesite_final.mp4'
                                 className='react-playr--battleheights'
                                 volume='0'
                                 playing='true'
                                 loop='true'
                             />
+                        </div>
+                        <div className="d-lg-flex justify-content-center justify-content-lg-around game-card p-4">
+                            <div className="col-lg-12 col-xl-5 game-card-left my-2">
+                                <img src={`${battleHControls}`} alt="battleHControls" />  
+                                
+                            </div>     
+                            <div className="col-lg-12 col-xl-5 game-card-left my-2">
+                                <h2 className="short-hr-left">{t('keyMechanics')}</h2>
+                                <p className="">{t('incarnate')}</p>
+                                <p className="">{t('masteringClass')}</p>
+                                <p className="">{t('epicBattles')}</p>
+                                <p className="">{t('dompteevent')}</p>
+                            </div>        
                         </div>
                     </div>
                 </div>

@@ -10,11 +10,25 @@ i18n
   .use(LanguageDetector) // detects the current language
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
+      // resources: {
+      //   en: {
+      //     translation: {
+      //       battleHControls: 'img/battleHeights/BattelheightsControlesENG.png',
+      //       projecyLoControls: 'img/projectLo/Ry18F4.gif',
+      //     },
+      //   },
+      //   fr: {
+      //     translation: {
+      //       battleHControls: 'img/battleHeights/BattelheightsControlesFR.png',
+      //       projecyLoControls: 'img/projectLo/ProjectL0ControlesFR.png',          
+      //     },
+      //   },
+      // },
     fallbackLng, // default language
     detection: {
       checkWhitelist: true,
     },
-    debug: false,
+    debug: true,
     interpolation: {
       escapeValue: false, // no need for react. it escapes by default
     },

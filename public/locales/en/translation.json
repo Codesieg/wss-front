@@ -54,6 +54,10 @@
     "dropTheCandyKaboom": "Drop the the candy kaboom! Snatch this precious gem like a rugby ball, zigzag through opponents (or bulldoze them, it's more fun), and give them a taste of heat!",
     "dangerousToGoAlone": "It's dangerous to go alone! Take this Are you ready to strike? Poke the enemy with your blade! More into the heat of battle? Ignite the battlefield with your fireballs. Neither hot nor cold? Well, shoot them with your arrows and put them to the test!",
     "dressForSuccess": "Dress for success ! No matter the outcome, always dress your best for the occasion.",
+    "incarnate": "Play as a powerful mage, a precise archer, or a formidable warrior.",
+    "masteringClass":"Master the different classes: hurl fireballs, shoot deadly arrows, or hurl your enemies away.",
+    "epicBattles":"Engage in epic battles on the ground or in the air.",
+    "dompteevent": "Conquer your environment and claim victory!",
     "contact": {
         "getInTouch1": "Get in ",
         "getInTouch2": "Touch",
@@ -131,6 +135,14 @@
         "section6": {
             "title": "6. Suspension and Termination of Services",
             "rights": "We reserve the right to stop any part of our games or services at any time, without obligation to provide refunds or compensation."
+        }
+    },
+    "image": {
+        "projectLo": {
+            "projectLoControls": "/img/projectLo/ProjectL0ControlesENG.png"
+        },
+        "battleHeights": {
+            "battleHControls": "/img/battleHeigths/BattelheightsControlesEN.png"
         }
     }
 }
