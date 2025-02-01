@@ -90,7 +90,7 @@ const helpTeam = [
         linkedin: 'https://www.linkedin.com/in/charlotte-lavaux-6b13562bb/',
     },
     { 
-        teamName: 'Thomas Pierrie',
+        teamName: 'Thomas Pierrier',
         subtle: '3D Artiste, Animateur',
         img: '/img/placeholder-man.jpg',
         teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',

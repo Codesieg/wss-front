@@ -151,9 +151,9 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                 />
                             </div>
                         </div>
-                        <div className="inter">
+                        {/* <div className="inter">
                             <img className="" src="/img/battleHeigths/dont_look_up.png" alt="" />
-                        </div>
+                        </div> */}
                         <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4">
                             <ReactPlayer 
                                 url='/videos/battleHeigths/dead_again.mp4'
@@ -166,9 +166,9 @@ const Battleheights = ({ joinUsFromChild, headerBottomFromChild }) => {
                                 <p className="">{t('dangerousToGoAlone')}</p>
                             </div>
                         </div>
-                        <div className="inter">
+                        {/* <div className="inter">
                             <img className="" src="/img/battleHeigths/SkeletteFireball.png" alt="" />
-                        </div>
+                        </div> */}
                         <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4 mt-4">
                             <div className="col-lg-12 col-xl-5 game-card-left my-2">
                                 <h3 className="">{t('dressForSuccessTitle')}</h3>
