@@ -92,11 +92,13 @@ import './header.css';
                                             <>
                                                 <Link to="/games" onClick={handleNavBar} className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link> 
                                                 <Link to="/battleheights" onClick={handleNavBar} className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Battle Heights</Link>                                  
+                                                <Link to="/ssng" onClick={handleNavBar} className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Survive In Space Is Not Guaranteed</Link>                                  
                                             </>
                                             : 
                                             <>
                                                 <Link to="/games" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}><img src="/img/projectLo/Project_L0_Logo.png" className="mt-lg-2 controls_img--dash" alt="video thumbnail"/></Link>
                                                 <Link to="/battleheights" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}><img src="/img/battleHeigths/Battleheights_menu.png" className="mt-lg-2 controls_img--dash" alt="video thumbnail"/></Link>
+                                                <Link to="/ssng" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}><img src="/img/ssng/ssng_logo.png" className="mt-lg-2 controls_img--dash" alt="video thumbnail"/></Link>
                                             </>
                                         }    
                                     </li>

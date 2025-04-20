@@ -20,7 +20,7 @@ const SectionTitle = ({pageTitleBlack, pageTitleColor}) => {
                     </div>
                     <div className="col">
                     <motion.hr 
-                        initial = {{width: "0%", borderTop: "0" }}
+                        initial = {{width: "0%" }}
                         animate = {{ width: "100%", transition: { duration: 2 } }}                       
                     />
                     </div>

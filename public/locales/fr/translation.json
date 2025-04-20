@@ -146,6 +146,14 @@
         "battleHeights": {
             "battleHControls": "/img/battleHeigths/BattelheightsControlesFR.png"
         }
+    },
+    "ssng": {
+        "aboutGame": "À propos du jeu : Un jeu de survie et de construction dans l'espace. Vous vous êtes écrasé sur un astéroïde et votre réserve d'oxygène est presque épuisée. Construisez rapidement une base de survie, réparez votre vaisseau et échappez-vous. Survivrez-vous à l'immensité du vide spatial ?",
+        "gameplayMechanics": "Mécaniques de jeu",
+        "exploreAndMine": "Explorez et Minez",
+        "exploreAndMineContent": "Creusez au cœur de l'astéroïde : Explorez en profondeur l'astéroïde et découvrez des minerais précieux.",
+        "buildBase": "Construisez votre base : Établissez un avant-poste sécurisé : Créez une base fonctionnelle pour survivre aux dures réalités de l'espace.",
+        "surviveVoid": "Survivez au vide : Gérez votre réserve d'oxygène : Dans le vide impitoyable de l'espace, l'oxygène est votre ressource la plus vitale."
     }
 
 }

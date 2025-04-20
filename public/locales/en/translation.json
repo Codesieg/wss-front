@@ -144,6 +144,14 @@
         "battleHeights": {
             "battleHControls": "/img/battleHeigths/BattelheightsControlesEN.png"
         }
+    },
+    "ssng": {
+        "aboutGame": "About the Game: A space survival builder. You've crash-landed on an asteroid, and your O₂ supply is running low. Build a survival base quickly, repair your ship, and escape. Will you survive the vast emptiness of space?",
+        "gameplayMechanics": "Gameplay Mechanics",
+        "exploreAndMine": "Explore & Mine",
+        "exploreAndMineContent": "Dig deep into the Asteroid: Excavate the asteroid's core and uncover precious ores.",
+        "buildBase": "Build Your Base: Establish a Secure Outpost: Create a functional base to escape the harsh realities of space.",
+        "surviveVoid": "Survive the Void: Manage Your Oxygen Supply: In the unforgiving vacuum of space, oxygen is your most critical resource."
     }
 }
 

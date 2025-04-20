@@ -92,7 +92,7 @@ const helpTeam = [
     { 
         teamName: 'Thomas Pierrier',
         subtle: '3D Artiste, Animateur',
-        img: '/img/placeholder-man.jpg',
+        img: '/img/Thomas.png',
         teamCaption: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
         twitter: 'https://github.com/john',
         discord: 'https://github.com/john',
