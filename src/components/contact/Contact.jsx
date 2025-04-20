@@ -113,10 +113,19 @@ const Contact = ({ joinUsFromChild, headerBottomFromChild }) => {
                                 </div>
                                 <p className="subtle">{t('contact.requiredField')}</p>
                                 <div className='display-flex'>
-                                    <button type="submit" id="sendMail" className="button">{t('contact.sendMessage')}</button>
+                                    <button 
+                                        type="submit" 
+                                        id="sendMail" 
+                                        className="button"
+                                        disabled={!isVerified}
+                                    >
+                                        {t('contact.sendMessage')}
+                                    </button>
                                     <ReCAPTCHA
                                         sitekey="6Le08qMpAAAAAJ82W7z9WIBf8PR_Z33CKwMYpBIK"
-                                        onChange={(token) => setRecaptchaToken(token)}
+                                        onChange={handleRecaptchaChange}
+                                        onExpired={handleRecaptchaExpired}
+                                        onErrored={handleRecaptchaExpired}
                                     />
                                 </div>
                                 <div className={message.success}>{message.msg}</div>
