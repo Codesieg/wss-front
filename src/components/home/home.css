@@ -58,7 +58,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 90px !important;
-  width: 100%;
+  width: 130%;
   margin-bottom: 0px !important;
   z-index: 60; /* Assurer que le texte soit au-dessus de tout le reste */
   text-decoration: none !important;
@@ -81,7 +81,7 @@
 
   .video-box--title {
     justify-content: center;
-    width: 100%;
+    width: 130%;
     border-top: inherit;
     display: flex;
     align-items: flex-end;
