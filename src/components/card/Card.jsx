@@ -5,6 +5,7 @@ import './card.css';
 
 const Card = ({table}) => {
 
+    // loop on card
     return (
         <>
             {table.map((img, index) => (
