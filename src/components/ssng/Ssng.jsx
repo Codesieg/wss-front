@@ -19,10 +19,11 @@ const Ssng = ({ joinUsFromChild, headerBottomFromChild }) => {
     const battleHControls = t('image.battleHeights.battleHControls');    
 
     const Timg = [
+        { title: 'screen1.png', img: '/img/ssng/screen1.png' },
+        { title: 'screen2.png', img: '/img/ssng/screen2.png' },
+        { title: 'screen3.png', img: '/img/ssng/screen3.png' },
         { title: 'screen4.png', img: '/img/ssng/screen4.png' },
-        { title: 'screen6.png', img: '/img/ssng/screen6.png' },
-        { title: 'screen7.png', img: '/img/ssng/Screen7.png' },
-        { title: 'screen8.png', img: '/img/ssng/screen8.png' }
+        { title: 'screen5.png', img: '/img/ssng/screen5.png' }
     ];
 
     // Pour la gestion de la video youtube
@@ -72,12 +73,22 @@ const Ssng = ({ joinUsFromChild, headerBottomFromChild }) => {
                                         <Modal.Header closeButton></Modal.Header>
                                         <Modal.Body>
                                             <div className="video">
-                                                <iframe
+                                                {/* <iframe
                                                     src={`https://www.youtube.com/embed/dyp-sPZjtx4`}
                                                     frameBorder="0"
                                                     title="ssng video"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                     allowFullScreen
+                                                /> */}
+                                                 <ReactPlayer
+                                                    url='videos/ssng/SISING_TrailerGameplayv2.mp4'
+                                                    className='react-player'
+                                                    controls
+                                                    volume='0'
+                                                    playing={true}
+                                                    loop={true}
+                                                    width='100%'
+                                                    height='100%'
                                                 />
                                             </div>
                                         </Modal.Body>
@@ -130,7 +141,7 @@ const Ssng = ({ joinUsFromChild, headerBottomFromChild }) => {
                             </div>
                             <div className="portal mt-lg-2 controls_img--dash gameplay-image-container">
                                 <img 
-                                    src="/img/ssng/GIF_Mining.gif"
+                                    src="/img/ssng/Gifsteam1.gif"
                                     className="img-fluid b-lazy gameplay-image"
                                     alt="Mining gameplay"
                                 />
@@ -140,7 +151,7 @@ const Ssng = ({ joinUsFromChild, headerBottomFromChild }) => {
                         <div className="d-lg-flex justify-content-lg-around align-items-center game-card p-4">
                             <div className="portal mt-lg-2 controls_img--dash gameplay-image-container">
                                 <img 
-                                    src="/img/ssng/GIF_DoorOpen.gif"
+                                    src="/img/ssng/Gifsteam2.gif"
                                     className="gameplay-image"
                                     alt="Door opening gameplay"
                                 />
