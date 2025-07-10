@@ -11,7 +11,7 @@ const Home = ({joinUsFromChild}) => {
     return (
         <div className='home-container'>
             <div className="home-hover">
-                <Link to="/battleheights" className='video-box--title'><img src="/img/ssng/ssng_logo.png" alt="battle heights logo" /></Link>
+                <Link to="/ssng" className='video-box--title'><img src="/img/ssng/ssng_logo.png" alt="battle heights logo" /></Link>
                 <iframe className='iframe-steam' src="https://store.steampowered.com/widget/3607150/" frameborder="0" title="steam"></iframe>
             </div>
             <div className="video-player">
