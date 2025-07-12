@@ -17,7 +17,7 @@ const Home = ({joinUsFromChild}) => {
             <div className="video-player">
                 <div className="video-box">
                     <ReactPlayer
-                        url='videos/ssng/SISING_TrailerGameplayv2.mp4'
+                        url='videos/ssng/Trailer_SISING23th.mp4'
                         className='react-player'
                         volume='0'
                         playing={true}
