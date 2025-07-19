@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { decodeToken } from "react-jwt";
 import Tooltip from '../tooltip/Tooltip';
 import Navbar from './navbar/Navbar';
+import HomeCustomization from './home/HomeCustomization';
 import { useNavigate } from "react-router-dom";
 
 import './dashboard.css';
@@ -14,6 +15,7 @@ if (localStorage.getItem('authToken') !== null) {
 
 const Dashboard = () => {
   const [message, setMessage] = useState('');
+  const [activeSection, setActiveSection] = useState('email');
   const myDecodedToken = decodeToken(token);
   const [ isAdmin, setIsAdmin ] = useState(false)
 
@@ -76,7 +78,6 @@ const Dashboard = () => {
       }
   };
 
-
   useEffect(() => {
     console.log(myDecodedToken);
       if (myDecodedToken !== null && myDecodedToken.admin) {
@@ -85,65 +86,83 @@ const Dashboard = () => {
       } else {
         navigate("/login");
       }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);       
+
+  const renderActiveSection = () => {
+    switch(activeSection) {
+      case 'home':
+        return <HomeCustomization />;
+      case 'email':
+        return (
+          <div className="mt-8 p-4 bg-white shadow-md rounded-md vh-75 shadow">
+            <h3 className='mb-2 text-decoration-underline'>Configuration E-mail : </h3>
+            <form onSubmit={handleSmtpParamsChange}>
+              <input className="form-control" type="hidden" defaultValue={smtpParams.id} name="id"/>
+              <div className='ms-5'>
+                <div className="mb-4">
+                  <label className="form-label">Host </label>
+                  <input className="form-control" type="text" defaultValue={smtpParams.host} name="host"/>
+                </div>
+                <div className="mb-4">
+                  <label className="form-label">Port </label>
+                  <input
+                    className="form-control"
+                    type="text"
+                    defaultValue={smtpParams.port}
+                    name="port"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="form-label">Username </label>
+                  <input
+                    className="form-control"
+                    type="text"
+                    defaultValue={smtpParams.username}
+                    name="username"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="form-label">Password </label>
+                  <input
+                    className="form-control"
+                    type="password"
+                    defaultValue={smtpParams.password}
+                    name="password"
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary">Enregistrer</button>
+                  <button className="btn btn-primary ms-3 position-relative" onClick={handleGetEmailConfig}>
+                    <Tooltip
+                      text = {'Rafraîchir les données'}
+                      position = {'arrowbottom'}
+                    />
+                    <i className="fa-solid fa-rotate"></i>
+                  </button>
+                
+              </div>
+            </form>
+            <div className='text-danger mt-2'>{message}</div>
+          </div>
+        );
+      default:
+        return (
+          <div className="mt-8 p-4 bg-white shadow-md rounded-md vh-75 shadow">
+            <h3>Sélectionnez une section dans le menu de gauche</h3>
+          </div>
+        );
+    }
+  };
 
   return (
     <div className='dashboard_container'>
-      <Navbar />
+      <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
       <div className='ms-3'>
         <h1 className="pt-4 text-2xl font-bold">Dashboard</h1>
         <div className='d-flex flex-column align-items-start justify-content-center'>
           <div className="loginform">
           {isAdmin ? 
-                <div className="mt-8 p-4 bg-white shadow-md rounded-md vh-75 shadow">
-                  <h3 className='mb-2 text-decoration-underline'>Configuration E-mail : </h3>
-                  <form onSubmit={handleSmtpParamsChange}>
-                    <input className="form-control" type="hidden" defaultValue={smtpParams.id} name="id"/>
-                    <div className='ms-5'>
-                      <div className="mb-4">
-                        <label className="form-label">Host </label>
-                        <input className="form-control" type="text" defaultValue={smtpParams.host} name="host"/>
-                      </div>
-                      <div className="mb-4">
-                        <label className="form-label">Port </label>
-                        <input
-                          className="form-control"
-                          type="text"
-                          defaultValue={smtpParams.port}
-                          name="port"
-                        />
-                      </div>
-                      <div className="mb-4">
-                        <label className="form-label">Username </label>
-                        <input
-                          className="form-control"
-                          type="text"
-                          defaultValue={smtpParams.username}
-                          name="username"
-                        />
-                      </div>
-                      <div className="mb-4">
-                        <label className="form-label">Password </label>
-                        <input
-                          className="form-control"
-                          type="password"
-                          defaultValue={smtpParams.password}
-                          name="password"
-                        />
-                      </div>
-                      <button type="submit" className="btn btn-primary">Enregistrer</button>
-                        <button className="btn btn-primary ms-3 position-relative" onClick={handleGetEmailConfig}>
-                          <Tooltip
-                            text = {'Rafraîchir les données'}
-                            position = {'arrowbottom'}
-                          />
-                          <i className="fa-solid fa-rotate"></i>
-                        </button>
-                      
-                    </div>
-                  </form>
-                  <div className='text-danger mt-2'>{message}</div>
-                </div>
+                renderActiveSection()
             :
             <h3>You are not an user admin, please contact your administrator.</h3>
           }

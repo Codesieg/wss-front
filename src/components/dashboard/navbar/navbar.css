@@ -42,12 +42,21 @@
     width: 100%;
     color: black;
     cursor: pointer;
+    border: none;
+    background: none;
+    text-align: left;
+    font-size: inherit;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
 }
 
 .dashboard__main__item:hover {
     text-decoration: none;
     color: #E84118;
     cursor: pointer;
+    background-color: rgba(232, 65, 24, 0.1);
+    border-radius: 10px;
 }
 
 .dashboard__main__item:not([href]):hover {
@@ -58,6 +67,11 @@
     background-color: #E84118;
     border-radius: 10px;
     width: 100%;
+    color: white;
+}
+
+.dashboard__main__item--selected:hover {
+    background-color: #E84118;
     color: white;
 }
 
