@@ -1,7 +1,8 @@
 import { React, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useMotionValueEvent } from  "framer-motion";
-import { useTranslation } from 'react-i18next' 
+import { useTranslation } from 'react-i18next';
+import config from '../../config';
 
 import './header.css';
 
@@ -16,6 +17,7 @@ import './header.css';
     const [navBar, setNavBar] = useState(false);
     const {scrollY} = useScroll();
     const [scrolled, setScrolled] = useState(false);
+    const [dynamicGamePages, setDynamicGamePages] = useState([]);
 
     const { t } = useTranslation() ;
 
@@ -36,6 +38,19 @@ import './header.css';
         setNavBar(!navBar);
     }
 
+    // Charger les pages de jeux dynamiques
+    const fetchDynamicGamePages = async () => {
+        try {
+            const response = await fetch(`${config.api.baseUrl}/api/getPublishedGames`);
+            if (response.ok) {
+                const data = await response.json();
+                setDynamicGamePages(data);
+            }
+        } catch (error) {
+            console.error('Erreur lors du chargement des pages de jeux:', error);
+        }
+    };
+
     useEffect(() => {
         if (localStorage.getItem('authToken') !== null) {
             // isLogin = true;
@@ -43,6 +58,9 @@ import './header.css';
             console.log("in re-render");
         }    
         console.log("out re-render");
+        
+        // Charger les pages de jeux dynamiques
+        fetchDynamicGamePages();
     }, [])
     
     return (
@@ -92,13 +110,34 @@ import './header.css';
                                             <>
                                                 <Link to="/games" onClick={handleNavBar} className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}>Project L<span className="zero">0</span></Link> 
                                                 <Link to="/battleheights" onClick={handleNavBar} className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Battle Heights</Link>                                  
-                                                <Link to="/ssng" onClick={handleNavBar} className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Survive In Space Is Not Guaranteed</Link>                                  
+                                                <Link to="/ssng" onClick={handleNavBar} className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}>Survive In Space Is Not Guaranteed</Link>
+                                                {/* Pages de jeux dynamiques */}
+                                                {dynamicGamePages.map(game => (
+                                                    <Link 
+                                                        key={game._id}
+                                                        to={`/game/${game.slug}`} 
+                                                        onClick={handleNavBar} 
+                                                        className={`${navBar ? ' fs-3 pb-1 fw-bold text-light' : 'nav-link  pb-1 fw-bold'}`}
+                                                    >
+                                                        {game.title}
+                                                    </Link>
+                                                ))}
                                             </>
                                             : 
                                             <>
                                                 <Link to="/games" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}><img src="/img/projectLo/Project_L0_Logo.png" className="mt-lg-2 controls_img--dash" alt="video thumbnail"/></Link>
                                                 <Link to="/battleheights" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}><img src="/img/battleHeigths/Battleheights_menu.png" className="mt-lg-2 controls_img--dash" alt="video thumbnail"/></Link>
                                                 <Link to="/ssng" className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}><img src="/img/ssng/ssng_logo.png" className="mt-lg-2 controls_img--dash" alt="video thumbnail"/></Link>
+                                                {/* Pages de jeux dynamiques */}
+                                                {dynamicGamePages.map(game => (
+                                                    <Link 
+                                                        key={game._id}
+                                                        to={`/game/${game.slug}`} 
+                                                        className={`${navBar ? 'fs-3 pb-1 fw-bold text-light' : 'nav-link pb-1 fw-bold'}`}
+                                                    >
+                                                        <img src={game.logoImage} className="mt-lg-2 controls_img--dash" alt={game.title}/>
+                                                    </Link>
+                                                ))}
                                             </>
                                         }    
                                     </li>

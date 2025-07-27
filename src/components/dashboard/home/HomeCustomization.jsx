@@ -142,7 +142,7 @@ const HomeCustomization = () => {
         <div className="mt-8 p-4 bg-white shadow-md rounded-md vh-75 shadow">
             <h3 className='mb-2 text-decoration-underline'>Configuration Page d'Accueil :</h3>
             <form onSubmit={handleHomeConfigChange}>
-                <input className="form-control" type="hidden" defaultValue={homeConfig.id} name="id"/>
+                <input className="form-control" type="hidden" value={homeConfig.id} name="id" readOnly/>
                 <div className='ms-5'>
                     <div className="mb-4">
                         <label className="form-label">Vidéo de fond</label>
@@ -189,12 +189,16 @@ const HomeCustomization = () => {
                         </div>
                         {uploadProgress.image && <div className="text-info">Upload en cours...</div>}
                         {homeConfig.logoUrl && homeConfig.logoUrl.startsWith('/uploads/') && (
-                            <div className="mt-2">
+                            <div className="mt-2" key={`preview-${homeConfig.logoUrl}`}>
                                 <img 
+                                    key={homeConfig.logoUrl}
                                     src={`${config.api.baseUrl}${homeConfig.logoUrl}`} 
                                     alt="Aperçu logo" 
                                     style={{maxWidth: '100px', maxHeight: '100px'}}
                                     className="img-thumbnail"
+                                    onError={(e) => {
+                                        e.target.style.display = 'none';
+                                    }}
                                 />
                             </div>
                         )}

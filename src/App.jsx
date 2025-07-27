@@ -11,6 +11,7 @@ import Team from './components/team/Team';
 import Games from './components/games/Games';
 import Battleheights from './components/battleheights/Battleheights';
 import Ssng from './components/ssng/Ssng';
+import DynamicGame from './components/dynamicGame/DynamicGame';
 import Services from './components/services/Services';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
@@ -98,6 +99,14 @@ function App() {
                 <Route path="/ssng" 
                   element={
                     <Ssng 
+                      joinUsFromChild = {joinUsOK}
+                      headerBottomFromChild = {bottomLine}
+                    />
+                } 
+                />
+                <Route path="/game/:slug" 
+                  element={
+                    <DynamicGame 
                       joinUsFromChild = {joinUsOK}
                       headerBottomFromChild = {bottomLine}
                     />

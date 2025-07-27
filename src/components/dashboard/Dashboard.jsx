@@ -3,7 +3,9 @@ import { decodeToken } from "react-jwt";
 import Tooltip from '../tooltip/Tooltip';
 import Navbar from './navbar/Navbar';
 import HomeCustomization from './home/HomeCustomization';
+import GameManagement from './games/GameManagement';
 import { useNavigate } from "react-router-dom";
+import config from '../../config';
 
 import './dashboard.css';
 
@@ -30,7 +32,7 @@ const Dashboard = () => {
   });
 
   const handleGetEmailConfig = () => {
-    fetch('http://api.wondersoftstudio.com/dashboard/getEmailConfig')
+    fetch(`${config.api.baseUrl}/dashboard/getEmailConfig`)
     .then(response => response.json())
     .then(data => {
       // Met à jour le state avec les données récupérées
@@ -93,6 +95,8 @@ const Dashboard = () => {
     switch(activeSection) {
       case 'home':
         return <HomeCustomization />;
+      case 'game':
+        return <GameManagement />;
       case 'email':
         return (
           <div className="mt-8 p-4 bg-white shadow-md rounded-md vh-75 shadow">

@@ -1,88 +1,145 @@
-import { useEffect } from 'react'
+import { useEffect, useState, useRef, useCallback } from 'react'
 
 const useSlider = (slideImage, slideText, images, play = false) => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentText, setCurrentText] = useState('');
+    const slideCounterRef = useRef(0);
+    const intervalRef = useRef(null);
 
- let slideCounter = 0;
-
- useEffect(() => {
-        if ( play === true) {
-            const intervalId = setInterval(() => {
-                goToNextSlide()
-            } ,5000,);
-            return () => clearTimeout(intervalId);
+    // Initialize slider
+    useEffect(() => {
+        if (images && images.length > 0) {
+            startSlider();
         }
-    });
- 
- useEffect(() => startSlider())
+        return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+        };
+    }, [images]);
 
- const startSlider =() => {
-    slideImage.current.style.backgroundImage = `linear-gradient(
-        to right,
-        rgba(34, 34, 34, 0.4),
-        rgba(68, 68, 68, 0.4)
-        ), url(${images[0].src})`;
-        slideText.current.innerHTML = images[0].text;
-}
-
-const handleSlide = slide => {
-    slideImage.current.style.backgroundImage = `linear-gradient(
-      to right,
-      rgba(34, 34, 34, 0.4),
-      rgba(68, 68, 68, 0.4)
-      ), url(${images[slide - 1].src})`
-    slideText.current.innerHTML = images[slide - 1].text
-    animateSlide(slideImage)
-  }
-  
-  const animateSlide = () => {
-    slideImage.current.classList.add("fadeIn")
-    setTimeout(() => {
-      slideImage.current.classList.remove("fadeIn")
-    }, 1700)
-  }
-  const goToPreviousSlide = () => {
-    if (slideCounter === 0) {
-      handleSlide(images.length)
-      slideCounter = images.length;
-    }
-  
-      handleSlide(slideCounter)
-      slideCounter--;
-    }
-  
-  const goToNextSlide = () => {
-        if (slideCounter === images.length - 1) {
-            startSlider()
-            slideCounter = -1;
-            animateSlide(slideImage)
+    // Handle auto-play
+    useEffect(() => {
+        if (play === true && images && images.length > 1) {
+            intervalRef.current = setInterval(() => {
+                goToNextSlide();
+            }, 5000);
+            
+            return () => {
+                if (intervalRef.current) {
+                    clearInterval(intervalRef.current);
+                }
+            };
+        } else {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+                intervalRef.current = null;
+            }
         }
-    
+    }, [play, images]);
+
+    const startSlider = useCallback(() => {
+        if (!images || images.length === 0) return;
+        
+        slideCounterRef.current = 0;
+        setCurrentSlide(0);
+        setCurrentText(images[0].text || '');
+        
+        if (slideImage.current) {
+            slideImage.current.style.backgroundImage = `linear-gradient(
+                to right,
+                rgba(34, 34, 34, 0.4),
+                rgba(68, 68, 68, 0.4)
+            ), url(${images[0].src})`;
+        }
+    }, [images, slideImage]);
+
+    const handleSlide = useCallback((slideIndex) => {
+        if (!images || !images[slideIndex] || !slideImage.current) return;
+        
         slideImage.current.style.backgroundImage = `linear-gradient(
             to right,
             rgba(34, 34, 34, 0.4),
             rgba(68, 68, 68, 0.4)
-            ),url(${images[slideCounter + 1].src})`;
-        slideText.current.innerHTML = images[slideCounter + 1].text;
-        slideCounter++;
-        animateSlide(slideImage)
-    }
+        ), url(${images[slideIndex].src})`;
+        
+        setCurrentText(images[slideIndex].text || '');
+        setCurrentSlide(slideIndex);
+        animateSlide();
+    }, [images, slideImage]);
 
-    const goToSlide = (index) => {
-         slideImage.current.style.backgroundImage = `linear-gradient(
-             to right,
-             rgba(34, 34, 34, 0.4),
-             rgba(68, 68, 68, 0.4)
-             ),url(${images[index].src})`;
-         animateSlide(slideImage)
-    }
-  
+    const animateSlide = useCallback(() => {
+        if (!slideImage.current) return;
+        
+        slideImage.current.classList.add("fadeIn");
+        setTimeout(() => {
+            if (slideImage.current) {
+                slideImage.current.classList.remove("fadeIn");
+            }
+        }, 1700);
+    }, [slideImage]);
+
+    const goToPreviousSlide = useCallback(() => {
+        if (!images || images.length === 0) return;
+        
+        let newIndex;
+        if (slideCounterRef.current === 0) {
+            newIndex = images.length - 1;
+            slideCounterRef.current = images.length - 1;
+        } else {
+            slideCounterRef.current--;
+            newIndex = slideCounterRef.current;
+        }
+        
+        handleSlide(newIndex);
+    }, [images, handleSlide]);
+
+    const goToNextSlide = useCallback(() => {
+        if (!images || images.length === 0) return;
+        
+        let newIndex;
+        if (slideCounterRef.current === images.length - 1) {
+            newIndex = 0;
+            slideCounterRef.current = 0;
+        } else {
+            slideCounterRef.current++;
+            newIndex = slideCounterRef.current;
+        }
+        
+        handleSlide(newIndex);
+    }, [images, handleSlide]);
+
+    const goToSlide = useCallback((index) => {
+        if (!images || !images[index] || !slideImage.current) return;
+        
+        slideCounterRef.current = index;
+        slideImage.current.style.backgroundImage = `linear-gradient(
+            to right,
+            rgba(34, 34, 34, 0.4),
+            rgba(68, 68, 68, 0.4)
+        ), url(${images[index].src})`;
+        
+        setCurrentText(images[index].text || '');
+        setCurrentSlide(index);
+        animateSlide();
+    }, [images, slideImage, animateSlide]);
+
+    // Update text content in slideText ref when currentText changes
+    useEffect(() => {
+        if (slideText.current && currentText !== undefined) {
+            slideText.current.textContent = currentText;
+        }
+    }, [currentText, slideText]);
+
     return { 
         goToPreviousSlide, 
         goToNextSlide,
-        goToSlide
-    }
-}
-  
-export default useSlider
+        goToSlide,
+        currentSlide,
+        currentText
+    };
+};
+
+export default useSlider;
 
 
